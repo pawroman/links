@@ -118,7 +118,7 @@ Resources related to the Python programming language.
 ### Python tools
 
 - [IPython](https://ipython.org/) - An enhanced Python shell.
-- [line_\_profiler](https://github.com/rkern/line\_profiler) - Profile Python line-by-line.
+- [line\_profiler](https://github.com/rkern/line\_profiler) - Profile Python line-by-line.
 
 ## Rust
 
