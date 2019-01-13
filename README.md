@@ -6,7 +6,7 @@ Links to programming related resources I found useful or interesting. A personal
 - [Command Line Tools](#command-line-tools)
 - [Fonts](#fonts)
 - [git](#git)
-- [Management / dealing with people](#management-dealing-with-people)
+- [Management / dealing with people](#management--dealing-with-people)
 - [Python](#python)
   - [Python learning](#python-learning)
   - [Python libraries](#python-libraries)
