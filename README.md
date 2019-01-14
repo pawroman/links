@@ -1,6 +1,8 @@
 # links
+
 Links to programming related resources I found useful or interesting. A personal "awesome list".
 
+- [Prelude](#prelude)
 - [Algorithms](#algorithms)
 - [Architecture and Programming Patterns](#architecture-and-programming-patterns)
 - [Career Development](#career-development)
@@ -17,6 +19,23 @@ Links to programming related resources I found useful or interesting. A personal
   - [Python news](#python-news)
 - [Rust](#rust)
   - [Rust learning](#rust-learning)
+
+---
+
+## Prelude
+
+Some of my favourite quotes:
+
+> *"Craftsmanship over Crap"* \
+> -- Uncle Bob
+
+> *"… with proper design, the features come cheaply.
+> This approach is arduous, but continues to succeed."* \
+> -- Dennis Ritchie
+
+> *"Theory is when you know everything but nothing works. \
+> Practice is when everything works but no one knows why. \
+> In our lab, theory and practice are combined: nothing works and no one knows why."*
 
 ---
 
