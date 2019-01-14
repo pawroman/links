@@ -71,7 +71,7 @@ Principles:
 - [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
 - [Make It Work, Make It Right, Make It Fast](http://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
 - [Principle of least astonishment](https://en.wikipedia.org/wiki/Least_astonishment)
-- [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)
+- [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming\))
 
 Principle aggregates:
 
