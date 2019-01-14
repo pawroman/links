@@ -51,7 +51,9 @@ Anti-patterns:
 ## Career Development
 
 - [Apprenticeship Patterns](https://www.oreilly.com/library/view/apprenticeship-patterns/9780596806842/)
-  \- Problem-solution book for career planning. Free to read online.
+  \- Problem-solution book for career planning, in praise of
+  [software craftsmanship](https://en.wikipedia.org/wiki/Software_craftsmanship).
+  Free to read online.
 
 ## Code Quality and Good Practices
 
@@ -75,9 +77,11 @@ Principles:
 
 [rule-of-three]: https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)
 
-Principle aggregates:
+Principle aggregates / manifestos:
 
 - [Programming Principles](https://github.com/webpro/programming-principles)
+- [Software craftsmanship](https://en.wikipedia.org/wiki/Software_craftsmanship)
+    - [Manifesto for Software Craftsmanship](http://manifesto.softwarecraftsmanship.org/)
 
 Code quality measures:
 
