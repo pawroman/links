@@ -9,7 +9,9 @@ Links to programming related resources I found useful or interesting. A personal
 - [Code Quality and Good Practices](#code-quality-and-good-practices)
 - [Command Line Tools](#command-line-tools)
     - [GUI tools](#gui-tools)
-- [Fonts](#fonts)
+- [Eye Candy](#eye-candy)
+    - [Fonts](#fonts)
+    - [Themes](#themes)
 - [git](#git)
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Management / dealing with people](#management--dealing-with-people)
@@ -141,11 +143,18 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 - [QDirStat](https://github.com/shundhammer/qdirstat) - Analyze disk usage by directory / file type.
 
-## Fonts
+## Eye Candy
+
+### Fonts
 
 Programming fonts I found the most eye-pleasing and readable.
 
 - [Hack](https://sourcefoundry.org/hack/) - My font of choice. Very easy on the eyes, and very unambiguous.
+
+### Themes
+
+- [Adapta-gtk-theme](https://github.com/adapta-project/adapta-gtk-theme)
+    \- GTK / desktop theme I use. Works great with [Cinnamon](https://github.com/linuxmint/Cinnamon).
 
 ## git
 
