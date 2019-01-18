@@ -8,17 +8,19 @@ Links to programming related resources I found useful or interesting. A personal
 - [Career Development](#career-development)
 - [Code Quality and Good Practices](#code-quality-and-good-practices)
 - [Command Line Tools](#command-line-tools)
+    - [GUI tools](#gui-tools)
 - [Fonts](#fonts)
 - [git](#git)
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Management / dealing with people](#management--dealing-with-people)
 - [Programming Languages](#programming-languages)
 - [Python](#python)
-  - [Python learning](#python-learning)
-  - [Python libraries](#python-libraries)
-  - [Python news](#python-news)
+    - [Python learning](#python-learning)
+    - [Python libraries](#python-libraries)
+    - [Python news](#python-news)
 - [Rust](#rust)
-  - [Rust learning](#rust-learning)
+    - [Rust learning](#rust-learning)
+    - [Rust talks](#rust-talks)
 
 ---
 
@@ -114,6 +116,8 @@ Other:
 ## Command Line Tools
 
 - [bat](https://github.com/sharkdp/bat) - Syntax and git-aware `cat` clone, with automated paging.
+- [DBCLI](https://www.dbcli.com/) - Collection of great CLI database clients,
+    e.g. [pgcli](https://www.pgcli.com/), [mycli](https://www.mycli.net/) etc.
 - [exa](https://github.com/ogham/exa) - Better than `ls`. Also has a `tree`-like switch (`-T`).
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
 - [htop](https://hisham.hm/htop/) - Excellent process viewer.
@@ -163,7 +167,7 @@ Programming fonts I found the most eye-pleasing and readable.
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
 - [Unlearning toxic behaviors in a code review culture](https://medium.freecodecamp.org/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
 
-## Programming languages
+## Programming Languages
 
 Resources for no particular language, useful for comparing them.
 
@@ -175,6 +179,9 @@ Resources for no particular language, useful for comparing them.
 ## Python
 
 Resources related to the Python programming language.
+
+Note that you should only be using Python 3, as
+Python 2 will retire (early 2020): [Python 2.7 Countdown](https://pythonclock.org/)
 
 ### Python learning
 
@@ -230,3 +237,7 @@ Advanced:
 
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [Writing an OS in Rust (Second Edition)](https://os.phil-opp.com/)
+
+### Rust talks
+
+- [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
