@@ -122,6 +122,7 @@ Other:
     e.g. [pgcli](https://www.pgcli.com/), [mycli](https://www.mycli.net/) etc.
 - [exa](https://github.com/ogham/exa) - Better than `ls`. Also has a `tree`-like switch (`-T`).
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
+- [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
 - [htop](https://hisham.hm/htop/) - Excellent process viewer.
 - [HTTPie](https://httpie.org/) - cURL for humans. Uses Python + requests.
 - [hyperfine](https://github.com/sharkdp/hyperfine) - CLI benchmarking tool.
@@ -230,6 +231,11 @@ Python internals:
 - [WebSockets](https://websockets.readthedocs.io/en/stable/) - `asyncio` compatible, no-frills WebSocket client/server.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Extract data from XML just like JSON.
 
+Less known, but very useful things in the standard library:
+
+- [types.MappingProxyType](https://docs.python.org/3/library/types.html#types.MappingProxyType)
+    \- Read-only view into a `dict`, suitable for constants.
+
 ### Python news
 
 - [PyCoder's Weekly newsletter](https://pycoders.com/)
@@ -237,6 +243,7 @@ Python internals:
 ### Python tools
 
 - [IPython](https://ipython.org/) - An enhanced Python shell.
+    - [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled debugger.
 - [line\_profiler](https://github.com/rkern/line\_profiler) - Profile Python line-by-line.
 
 ## Rust
