@@ -217,6 +217,8 @@ Python internals:
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Pythonic HTML/XML parsing.
 - [click](https://click.palletsprojects.com/en/7.x/) - Command line argument parser and then some.
 - [Jinja2](http://jinja.pocoo.org/) - The only Python template engine worth your time.
+- [Lark](https://github.com/lark-parser/lark) - Fast parsing library.
+    Good alternative to [pyparsing](https://github.com/pyparsing/pyparsing/).
 - [Numba](https://numba.pydata.org/) - JIT compiler for NumPy code. Produces very fast code.
 - [pathlib](https://docs.python.org/3/library/pathlib.html) - Excellent standard library module for filesystem path manipulation.
 - [Pendulum](https://pendulum.eustace.io/) - A date/time library with nice API.
