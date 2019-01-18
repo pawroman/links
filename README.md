@@ -216,6 +216,7 @@ Python internals:
 - [attrs](https://attrs.readthedocs.io/en/stable/) - Alternative to 3.7's dataclasses.
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Pythonic HTML/XML parsing.
 - [click](https://click.palletsprojects.com/en/7.x/) - Command line argument parser and then some.
+- [janus](https://github.com/aio-libs/janus/) - Queue class that bridges the worlds of `threading` and `asyncio`.
 - [Jinja2](http://jinja.pocoo.org/) - The only Python template engine worth your time.
 - [Lark](https://github.com/lark-parser/lark) - Fast parsing library.
     Good alternative to [pyparsing](https://github.com/pyparsing/pyparsing/).
