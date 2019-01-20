@@ -1,0 +1,4 @@
+beautifulsoup4 >=4.4.0, <5
+mistune >=0.8.4, <0.9
+pytest >=4.1.1
+requests >=2.0

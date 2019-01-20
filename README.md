@@ -1,6 +1,10 @@
 # links
 
+[![Build Status](https://travis-ci.org/pawroman/links.svg?branch=master)](https://travis-ci.org/pawroman/links)
+
 Links to programming related resources I found useful or interesting. A personal "awesome list".
+
+## Table of Contents
 
 - [Prelude](#prelude)
 - [Algorithms](#algorithms)
@@ -91,8 +95,10 @@ The Clean trilogy from Robert C. Martin ("Uncle Bob"):
 
 Programming overall:
 
-- [The Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer) - An absolute classic of a book.
-  - [Take-home reference](https://blog.codinghorror.com/a-pragmatic-quick-reference/) - Sums up the book.
+- [The Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer)
+  \- An absolute classic of a book.
+  - [Take-home reference](https://blog.codinghorror.com/a-pragmatic-quick-reference/)
+    \- Sums up the book.
   
 Principles:
 
@@ -116,7 +122,8 @@ Code quality measures:
 Other:
 
 - [API Evolution the Right Way](https://emptysqua.re/blog/api-evolution-the-right-way/)
-- [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code) - Learn what not to do :)
+- [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
+  \- Learn what not to do :)
 
 ## Command Line Tools
 
@@ -155,25 +162,27 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 Programming fonts I found the most eye-pleasing and readable.
 
-- [Hack](https://sourcefoundry.org/hack/) - My font of choice. Very easy on the eyes, and very unambiguous.
+- [Hack](https://sourcefoundry.org/hack/)
+  \- My font of choice. Very easy on the eyes, and very unambiguous.
 
 ### Themes
 
 - [Adapta-gtk-theme](https://github.com/adapta-project/adapta-gtk-theme)
-    \- GTK / desktop theme I use. Works great with [Cinnamon](https://github.com/linuxmint/Cinnamon).
+  \- GTK / desktop theme I use. Works great with [Cinnamon](https://github.com/linuxmint/Cinnamon).
 
 ## git
 
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
-    \- Get simple statistics for your repo.
-- [Git in a Nutshell](http://www.aosabook.org/en/git.html) - Overview of how git is implemented.
+  \- Get simple statistics for your repo.
+- [Git in a Nutshell](http://www.aosabook.org/en/git.html)
+  \- Overview of how git is implemented.
 
 ### git help
 
 - [git-flight-rules](https://github.com/k88hudson/git-flight-rules)
-    \- "Lessons learned" guide to git.
+  \- "Lessons learned" guide to git.
 - [Oh shit, git!](http://ohshitgit.com/)
-    \- How to revert common git mess-ups.
+  \- How to revert common git mess-ups.
 
 ## Hardware and CPUs
 
@@ -185,8 +194,10 @@ Programming fonts I found the most eye-pleasing and readable.
 
 ## Management / dealing with people
 
-- [Every Time Zone](https://everytimezone.com/) - A readable time zone overview. Useful for scheduling meetings.
-- [How to Deal with Difficult People on Software Projects](https://people.neilon.software/) - We all know "that one guy"...
+- [Every Time Zone](https://everytimezone.com/)
+  \- A readable time zone overview. Useful for scheduling meetings.
+- [How to Deal with Difficult People on Software Projects](https://people.neilon.software/)
+  \- We all know "that one guy"...
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
 - [Unlearning toxic behaviors in a code review culture](https://medium.freecodecamp.org/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
 
@@ -206,14 +217,19 @@ Resources related to the Python programming language.
 Note that you should only be using Python 3, as
 Python 2 will retire (early 2020): [Python 2.7 Countdown](https://pythonclock.org/)
 
+Also see: [Status of Python branches](https://devguide.python.org/#status-of-python-branches)
+
 ### Python learning
 
-- [Fluent Python](http://shop.oreilly.com/product/0636920032519.do) - Good book if you know Python basics.
+- [Fluent Python](http://shop.oreilly.com/product/0636920032519.do)
+  \- Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
   \- Book collecting Python antipatterns and common mistakes. Free PDF.
-- [PyVideo](https://pyvideo.org/) - A huge collection of Python related videos: conference / meetup talks etc.
+- [PyVideo](https://pyvideo.org/)
+  \- A huge collection of Python related videos: conference / meetup talks etc.
 - [Python API Checklist](https://devchecklists.com/python-api-checklist/)
-- [Python 3 Module of the Week](https://pymotw.com/3/) - Tutorials for standard library modules.
+- [Python 3 Module of the Week](https://pymotw.com/3/)
+  \- Tutorials for standard library modules.
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 - [Using Asyncio in Python 3](https://www.oreilly.com/library/view/using-asyncio-in/9781491999691/) - Worth a read before doing any asyncio.
 
@@ -247,7 +263,7 @@ Python internals:
 Less known, but very useful things in the standard library:
 
 - [types.MappingProxyType](https://docs.python.org/3/library/types.html#types.MappingProxyType)
-    \- Read-only view into a `dict`, suitable for constants.
+  \- Read-only view into a `dict`, suitable for constants.
 
 ### Python news
 
@@ -278,4 +294,4 @@ Advanced:
 - [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
 - [The Evolution of a Rust Programmer](http://antoyo.ml/evolution-rust-programmer)
-    \- Tongue-in-cheek post on different Rust programming styles.
+  \- Tongue-in-cheek post on different Rust programming styles.
