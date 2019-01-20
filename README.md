@@ -13,6 +13,7 @@ Links to programming related resources I found useful or interesting. A personal
     - [Fonts](#fonts)
     - [Themes](#themes)
 - [git](#git)
+    - [git help](#git-help)
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Management / dealing with people](#management--dealing-with-people)
 - [Programming Languages](#programming-languages)
@@ -22,7 +23,7 @@ Links to programming related resources I found useful or interesting. A personal
     - [Python news](#python-news)
 - [Rust](#rust)
     - [Rust learning](#rust-learning)
-    - [Rust talks](#rust-talks)
+    - [Rust posts and talks](#rust-posts-and-talks)
 
 ---
 
@@ -64,7 +65,9 @@ Other:
 - [Design Patterns](https://sourcemaking.com/design_patterns) - Describes the classic OO patterns.
 - [Game Programming Patterns](http://gameprogrammingpatterns.com/contents.html)
   \- An excellent book on OO patterns found in games. When performance matters.
-- [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html) 
+- [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html)
+- [The Internals of PostgreSQL](http://www.interdb.jp/pg/)
+  \- "for database administrators and system developers".
 
 Anti-patterns:
 
@@ -123,6 +126,8 @@ Other:
 - [exa](https://github.com/ogham/exa) - Better than `ls`. Also has a `tree`-like switch (`-T`).
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
 - [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
+- [git-quick-stats](https://github.com/arzzen/git-quick-stats)
+    \- Get simple statistics for your repo.
 - [htop](https://hisham.hm/htop/) - Excellent process viewer.
 - [HTTPie](https://httpie.org/) - cURL for humans. Uses Python + requests.
 - [hyperfine](https://github.com/sharkdp/hyperfine) - CLI benchmarking tool.
@@ -159,8 +164,16 @@ Programming fonts I found the most eye-pleasing and readable.
 
 ## git
 
+- [git-quick-stats](https://github.com/arzzen/git-quick-stats)
+    \- Get simple statistics for your repo.
 - [Git in a Nutshell](http://www.aosabook.org/en/git.html) - Overview of how git is implemented.
-- [Oh shit, git!](http://ohshitgit.com/) - How to revert common git mess-ups.
+
+### git help
+
+- [git-flight-rules](https://github.com/k88hudson/git-flight-rules)
+    \- "Lessons learned" guide to git.
+- [Oh shit, git!](http://ohshitgit.com/)
+    \- How to revert common git mess-ups.
 
 ## Hardware and CPUs
 
@@ -251,6 +264,7 @@ Less known, but very useful things in the standard library:
 ### Rust learning
 
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
+- [Rust Language Cheat Sheet](https://cheats.rs/)
 - [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
 
 Advanced:
@@ -258,6 +272,10 @@ Advanced:
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [Writing an OS in Rust (Second Edition)](https://os.phil-opp.com/)
 
-### Rust talks
+### Rust posts and talks
 
+- [How I Wrote a Modern C++ Library in Rust](https://hsivonen.fi/modern-cpp-in-rust/)
 - [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
+- [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
+- [The Evolution of a Rust Programmer](http://antoyo.ml/evolution-rust-programmer)
+    \- Tongue-in-cheek post on different Rust programming styles.
