@@ -59,6 +59,7 @@ Some of my favourite quotes:
 Articles:
 
 - [Dijkstra's in Disguise](https://blog.evjang.com/2018/08/dijkstras.html)
+- [The Wavefunction Collapse Algorithm explained very clearly](https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
 
 Books:
 
@@ -238,6 +239,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- Tutorials for standard library modules.
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 - [Using Asyncio in Python 3](https://www.oreilly.com/library/view/using-asyncio-in/9781491999691/) - Worth a read before doing any asyncio.
+- [wtfpython](https://github.com/satwikkansal/wtfpython)
+  \- A collection of common Python pitfalls and unexpected behaviours.
 
 Python internals:
 
