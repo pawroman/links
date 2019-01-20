@@ -10,6 +10,9 @@ import requests
 
 
 README_FILE_PATH = pathlib.Path(__file__).parent.parent / "README.md"
+SKIP_HEADER_LINK_CHECKS = frozenset((
+    "links", "Table of Contents"
+))
 
 
 @dataclass
@@ -122,3 +125,11 @@ def test_internal_links_are_all_valid(internal_links, headers):
         slug = anchor.lstrip("#")
 
         assert slug in slugs
+
+
+def test_all_headers_are_linked_to(internal_links, headers):
+    link_slugs = {link.url.lstrip("#") for link in internal_links}
+    header_slugs = {header.slug for header in headers
+                    if header.text not in SKIP_HEADER_LINK_CHECKS}
+
+    assert link_slugs == header_slugs

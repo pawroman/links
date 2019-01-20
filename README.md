@@ -2,7 +2,12 @@
 
 [![Build Status](https://travis-ci.org/pawroman/links.svg?branch=master)](https://travis-ci.org/pawroman/links)
 
-Links to programming related resources I found useful or interesting. A personal "awesome list".
+Links to programming related resources I found useful or interesting.
+A personal "awesome list".
+
+All the links are tested after every commit and weekly by
+[Travis](https://travis-ci.org/pawroman/links),
+but if you see anything that's not working, please let me know!
 
 ## Table of Contents
 
@@ -25,6 +30,7 @@ Links to programming related resources I found useful or interesting. A personal
     - [Python learning](#python-learning)
     - [Python libraries](#python-libraries)
     - [Python news](#python-news)
+    - [Python tools](#python-tools)
 - [Rust](#rust)
     - [Rust learning](#rust-learning)
     - [Rust posts and talks](#rust-posts-and-talks)
