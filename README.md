@@ -34,6 +34,7 @@ but if you see anything that's not working, please let me know!
 - [Rust](#rust)
     - [Rust learning](#rust-learning)
     - [Rust posts and talks](#rust-posts-and-talks)
+- [Visualization](#visualization)
 
 ---
 
@@ -252,6 +253,8 @@ Python internals:
 
 ### Python libraries
 
+- [aio-libs](https://github.com/aio-libs)
+  \- A collection of `asyncio` compatible libraries.
 - [attrs](https://attrs.readthedocs.io/en/stable/) - Alternative to 3.7's dataclasses.
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Pythonic HTML/XML parsing.
 - [click](https://click.palletsprojects.com/en/7.x/) - Command line argument parser and then some.
@@ -262,8 +265,12 @@ Python internals:
 - [Numba](https://numba.pydata.org/) - JIT compiler for NumPy code. Produces very fast code.
 - [pathlib](https://docs.python.org/3/library/pathlib.html) - Excellent standard library module for filesystem path manipulation.
 - [Pendulum](https://pendulum.eustace.io/) - A date/time library with nice API.
+- [psutil](https://github.com/giampaolo/psutil)
+  \- Swiss army knife for process management and system monitoring.
 - [pytest](https://docs.pytest.org/en/latest/) - The only Python test runner worth using these days.
   - Also see [my blog post on basic pytest setup](https://iwwn.pl/post/pytest-basic-setup/)
+- [quamash](https://github.com/harvimt/quamash)
+  \- Use `asyncio` with Qt event loop.
 - [requests](http://docs.python-requests.org/en/master/) - The HTTP library for Python.
 - [tqdm](https://github.com/tqdm/tqdm) - Nice progress bar library and command line tool.
 - [WebSockets](https://websockets.readthedocs.io/en/stable/) - `asyncio` compatible, no-frills WebSocket client/server.
@@ -271,6 +278,8 @@ Python internals:
 
 Less known, but very useful things in the standard library:
 
+- [String constants](https://docs.python.org/3/library/string.html#string-constants)
+  \- Contains ASCII characters in categorized constants.
 - [types.MappingProxyType](https://docs.python.org/3/library/types.html#types.MappingProxyType)
   \- Read-only view into a `dict`, suitable for constants.
 
@@ -283,6 +292,8 @@ Less known, but very useful things in the standard library:
 - [IPython](https://ipython.org/) - An enhanced Python shell.
     - [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled debugger.
 - [line\_profiler](https://github.com/rkern/line\_profiler) - Profile Python line-by-line.
+- [memory\_profiler](https://github.com/pythonprofilers/memory\_profiler)
+  \- Profile Python memory usage line-by-line.
 
 ## Rust
 
@@ -304,3 +315,11 @@ Advanced:
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
 - [The Evolution of a Rust Programmer](http://antoyo.ml/evolution-rust-programmer)
   \- Tongue-in-cheek post on different Rust programming styles.
+
+## Visualization
+
+Links related to data visualization.
+
+- [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+  \- A book that is meant "as a guide to making visualizations that accurately
+  reflect the data, tell a story, and look professional."
