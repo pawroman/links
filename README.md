@@ -81,6 +81,8 @@ Other:
 - [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html)
 - [The Internals of PostgreSQL](http://www.interdb.jp/pg/)
   \- "for database administrators and system developers".
+- [The Twelve-Factor App](https://12factor.net/)
+  \- 12 good rules for "service" type software.
 
 Anti-patterns:
 
