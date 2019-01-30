@@ -34,6 +34,7 @@ but if you see anything that's not working, please let me know!
 - [Rust](#rust)
     - [Rust learning](#rust-learning)
     - [Rust posts and talks](#rust-posts-and-talks)
+    - [Rust tools](#rust-tools)
 - [Visualization](#visualization)
 
 ---
@@ -138,6 +139,7 @@ Other:
 - [bat](https://github.com/sharkdp/bat) - Syntax and git-aware `cat` clone, with automated paging.
 - [DBCLI](https://www.dbcli.com/) - Collection of great CLI database clients,
     e.g. [pgcli](https://www.pgcli.com/), [mycli](https://www.mycli.net/) etc.
+- [ctop](https://github.com/bcicen/ctop) - `top` for containers.
 - [exa](https://github.com/ogham/exa) - Better than `ls`. Also has a `tree`-like switch (`-T`).
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
 - [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
@@ -315,6 +317,11 @@ Advanced:
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
 - [The Evolution of a Rust Programmer](http://antoyo.ml/evolution-rust-programmer)
   \- Tongue-in-cheek post on different Rust programming styles.
+
+### Rust tools
+
+- [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz)
+  \- [Fuzzing](https://en.wikipedia.org/wiki/Fuzzing) Rust code.
 
 ## Visualization
 
