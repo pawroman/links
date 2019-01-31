@@ -9,7 +9,8 @@ import pytest
 import requests
 
 
-README_FILE_PATH = pathlib.Path(__file__).parent.parent / "README.md"
+# ../README.md  (relative to current file)
+README_FILE_PATH = pathlib.Path(__file__).parents[1] / "README.md"
 
 SKIP_HEADER_LINK_CHECKS = frozenset((
     "links", "Table of Contents"
@@ -31,6 +32,8 @@ class Header:
 
 @dataclass(frozen=True)
 class Link:
+    # only use url for hashing and comparison
+    # -- we use this to deduplicate links for accessing them
     url: str = field(compare=True, hash=True)
     title: str = field(compare=False, hash=False)
     text: str = field(compare=False, hash=False)
@@ -58,10 +61,21 @@ class StructuredRenderer(mistune.Renderer):
         return super().header(text, level, raw=raw)
 
     def link(self, link, title, text):
-        normalized_link = link.replace(r"\_", "_")
-        self._links.append(Link(normalized_link, title, text))
+        self._register_link(link, title, text)
 
         return super().link(link, title, text)
+
+    def image(self, src, title, text):
+        self._register_link(src, title, text)
+
+        return super().image(src, title, text)
+
+    def _register_link(self, url, title, text):
+        # markdown escaping messes up underscores in links
+        normalized_url = url.replace(r"\_", "_")
+
+        link = Link(normalized_url, title, text)
+        self._links.append(link)
 
 
 def github_slugify(text: str):
