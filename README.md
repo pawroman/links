@@ -50,6 +50,10 @@ Some of my favourite quotes:
 > This approach is arduous, but continues to succeed."* \
 > -- Dennis Ritchie
 
+> *"Code is a way you treat your coworkers.
+> We interact through the things we make."* \
+> -- [Michael Feathers](https://vimeo.com/293912618/5ccecc85d4)
+
 > *"Theory is when you know everything but nothing works. \
 > Practice is when everything works but no one knows why. \
 > In our lab, theory and practice are combined: nothing works and no one knows why."*
@@ -133,8 +137,17 @@ Code quality measures:
 Other:
 
 - [API Evolution the Right Way](https://emptysqua.re/blog/api-evolution-the-right-way/)
+- [Empathy is Code Deep](https://vimeo.com/293912618/5ccecc85d4)
+  \- A talk on applying empathy and thinking about others in coding.
+     Code matters and people do too.
 - [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
   \- Learn what not to do :)
+- [Superior Testing: Stop Stopping](https://arturdryomov.online/posts/superior-testing-stop-stopping/)
+  \- Great post on why testing matters.
+- [The AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007)
+  \- Looking to do AI? Better sort out the basics and foundations first.
+  Contains the "AI pyramid of needs". I would add "Solid engineering" at the
+  very bottom of the pyramid though!
 
 ## Command Line Tools
 
