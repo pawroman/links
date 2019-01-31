@@ -1,12 +1,13 @@
+import asyncio
 import pathlib
 import re
 
 from dataclasses import dataclass, field
 from typing import List, Set
 
+import aiohttp
 import mistune
 import pytest
-import requests
 
 
 # ../README.md  (relative to current file)
@@ -128,17 +129,33 @@ def headers(renderer: StructuredRenderer) -> List[Header]:
     return renderer.headers
 
 
-def test_external_links_are_all_valid(external_links):
-    session = requests.Session()
+@pytest.mark.asyncio
+async def test_external_links_are_all_valid(external_links, event_loop):
+    # fetch all responses fully asynchronously, iterate as completed
 
-    for link in external_links:
-        response = session.get(link.url)
-        print(f"Opening: {link} -> {response}")
-
+    async for link, response in fetch_all_links(external_links, event_loop):
         if link.url in IGNORE_ERRORS_FOR_URLS:
-            print(f"Ignored response: {response.status_code} for: {link}")
+            print(f"Ignored response: {response.status} {response.reason} for: {link}")
         else:
-            assert response.ok, f"Couldn't open: {link}"
+            assert response.status == 200, f"Couldn't open: {link}"
+
+
+async def fetch_all_links(external_links, event_loop):
+    async with aiohttp.ClientSession(loop=event_loop) as session:
+        fetch_coros = [
+            fetch_link(link, session) for link in external_links
+        ]
+
+        for fetch_task in asyncio.as_completed(fetch_coros, loop=event_loop):
+            result = await fetch_task
+            yield result
+
+
+async def fetch_link(link, session):
+    async with session.get(link.url) as response:
+        print(f"Opening: {link} -> {response.status} {response.reason}")
+
+        return link, response
 
 
 def test_internal_links_are_all_valid(internal_links, headers):
