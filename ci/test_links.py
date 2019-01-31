@@ -1,8 +1,8 @@
 import pathlib
 import re
 
-from dataclasses import dataclass
-from typing import List
+from dataclasses import dataclass, field
+from typing import List, Set
 
 import mistune
 import pytest
@@ -10,12 +10,18 @@ import requests
 
 
 README_FILE_PATH = pathlib.Path(__file__).parent.parent / "README.md"
+
 SKIP_HEADER_LINK_CHECKS = frozenset((
     "links", "Table of Contents"
 ))
 
+IGNORE_ERRORS_FOR_URLS = frozenset((
+    # Travis CI gets 403 Forbidden here :(
+    "https://vimeo.com/293912618/5ccecc85d4",
+))
 
-@dataclass
+
+@dataclass(frozen=True)
 class Header:
     text: str
     level: int
@@ -23,11 +29,11 @@ class Header:
     slug: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class Link:
-    url: str
-    title: str
-    text: str
+    url: str = field(compare=True, hash=True)
+    title: str = field(compare=False, hash=False)
+    text: str = field(compare=False, hash=False)
 
 
 class StructuredRenderer(mistune.Renderer):
@@ -87,11 +93,12 @@ def renderer() -> StructuredRenderer:
 
 
 @pytest.fixture(scope="session")
-def external_links(renderer: StructuredRenderer) -> List[Link]:
-    return [
+def external_links(renderer: StructuredRenderer) -> Set[Link]:
+    # deduplicate as there might be repeats
+    return {
         link for link in renderer.links
         if link.url.startswith(("http", "https"))
-    ]
+    }
 
 
 @pytest.fixture(scope="session")
@@ -114,7 +121,10 @@ def test_external_links_are_all_valid(external_links):
         response = session.get(link.url)
         print(f"Opening: {link} -> {response}")
 
-        assert response.ok, f"Couldn't open: {link}"
+        if link.url in IGNORE_ERRORS_FOR_URLS:
+            print(f"Ignored response: {response.status_code} for: {link}")
+        else:
+            assert response.ok, f"Couldn't open: {link}"
 
 
 def test_internal_links_are_all_valid(internal_links, headers):
