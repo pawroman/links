@@ -1,6 +1,7 @@
 # links
 
 [![Build Status](https://travis-ci.org/pawroman/links.svg?branch=master)](https://travis-ci.org/pawroman/links)
+![Python version used for testing](https://img.shields.io/badge/python-3.7-blue.svg)
 
 Links to programming related resources I found useful or interesting.
 A personal "awesome list".
