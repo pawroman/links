@@ -217,7 +217,7 @@ Programming fonts I found the most eye-pleasing and readable.
   \- Exceptionally good article on how modern CPUs work. This explains why a lot of low-level
   optimizations work.
 
-Precision of IEEE 754 Floating Point Values (credit: [wikipedia](https://en.wikipedia.org/wiki/IEEE_754):
+Precision of IEEE 754 Floating Point Values (credit: [wikipedia](https://en.wikipedia.org/wiki/IEEE_754)):
 
 ![](https://upload.wikimedia.org/wikipedia/commons/3/3f/IEEE754.png)
 
