@@ -19,6 +19,8 @@ but if you see anything that's not working, please let me know!
 - [Code Quality and Good Practices](#code-quality-and-good-practices)
 - [Command Line Tools](#command-line-tools)
     - [GUI tools](#gui-tools)
+- [Data](#data)
+    - [Databases](#databases)
 - [Eye Candy](#eye-candy)
     - [Fonts](#fonts)
     - [Themes](#themes)
@@ -71,7 +73,8 @@ Articles:
 Books:
 
 - [Algorithms by Jeff Erickson](http://jeffe.cs.illinois.edu/teaching/algorithms/)
-- [The Algorithm Design Manual](http://www.algorist.com/)
+- [The Algorithm Design Manual](https://www.goodreads.com/book/show/10144324-the-algorithm-design-manual)
+  \- An excellent resource for all sorts of algorithms, full of references.
 
 Other:
 
@@ -182,6 +185,13 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 - [QDirStat](https://github.com/shundhammer/qdirstat) - Analyze disk usage by directory / file type.
 
+## Data
+
+### Databases
+
+- [Lessons learned scaling PostgreSQL database to 1.2bn records/month](https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067)
+  \- Very insightful article.
+
 ## Eye Candy
 
 ### Fonts
@@ -202,6 +212,8 @@ Programming fonts I found the most eye-pleasing and readable.
   \- Get simple statistics for your repo.
 - [Git in a Nutshell](http://www.aosabook.org/en/git.html)
   \- Overview of how git is implemented.
+- [Little Things I Like to Do with Git](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/)
+  \- A few useful tips.
 
 ### git help
 
@@ -217,6 +229,8 @@ Programming fonts I found the most eye-pleasing and readable.
 - [Modern Microprocessors - A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
   \- Exceptionally good article on how modern CPUs work. This explains why a lot of low-level
   optimizations work.
+- [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
+  \- An in-depth paper on computer memory from (mainly) programming perspective.
 
 Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wikipedia.org/wiki/IEEE_754)):
 
@@ -269,6 +283,8 @@ Python internals:
 
 - [CPython internals](http://pgbovine.net/cpython-internals.htm)
   \- Video lectures on Python 2.7 source code. Dated, but still mostly relevant.
+- [How Python does Unicode](https://www.b-list.org/weblog/2017/sep/05/how-python-does-unicode/)
+  \- Learn how `str` works under the hood and what does `len(str)` actually return.
 - [Inside Python dict](https://just-taking-a-ride.com/inside_python_dict/chapter1.html)
 - [Modern Dictionaries (video)](https://www.youtube.com/watch?v=p33CVV29OG8)
 
