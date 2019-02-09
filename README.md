@@ -21,6 +21,7 @@ but if you see anything that's not working, please let me know!
     - [GUI tools](#gui-tools)
 - [Data](#data)
     - [Databases](#databases)
+- [Design](#design)
 - [Eye Candy](#eye-candy)
     - [Fonts](#fonts)
     - [Themes](#themes)
@@ -191,6 +192,11 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 - [Lessons learned scaling PostgreSQL database to 1.2bn records/month](https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067)
   \- Very insightful article.
+  
+## Design
+
+- [Brutalist Web Design](https://www.brutalist-web.design/)
+  \- A set of very reasonable guidelines for designing websites.
 
 ## Eye Candy
 
@@ -296,6 +302,7 @@ Python internals:
 - [attrs](https://attrs.readthedocs.io/en/stable/) - Alternative to 3.7's dataclasses.
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Pythonic HTML/XML parsing.
 - [click](https://click.palletsprojects.com/en/7.x/) - Command line argument parser and then some.
+- [irc3](https://github.com/gawel/irc3/) - IRC client based on `asyncio`.
 - [janus](https://github.com/aio-libs/janus/) - Queue class that bridges the worlds of `threading` and `asyncio`.
 - [Jinja2](http://jinja.pocoo.org/) - The only Python template engine worth your time.
 - [Lark](https://github.com/lark-parser/lark) - Fast parsing library.
