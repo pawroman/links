@@ -277,7 +277,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- Book collecting Python antipatterns and common mistakes. Free PDF.
 - [PyVideo](https://pyvideo.org/)
   \- A huge collection of Python related videos: conference / meetup talks etc.
-- [Python API Checklist](https://devchecklists.com/python-api-checklist/)
+- [Python API Checklist](https://github.com/vintasoftware/python-api-checklist/blob/master/checklist-en.md)
 - [Python 3 Module of the Week](https://pymotw.com/3/)
   \- Tutorials for standard library modules.
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
