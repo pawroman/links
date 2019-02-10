@@ -29,6 +29,7 @@ but if you see anything that's not working, please let me know!
     - [git help](#git-help)
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Management / dealing with people](#management--dealing-with-people)
+- [Privacy](#privacy)
 - [Programming Languages](#programming-languages)
 - [Python](#python)
     - [Python learning](#python-learning)
@@ -250,6 +251,25 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   \- We all know "that one guy"...
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
 - [Unlearning toxic behaviors in a code review culture](https://medium.freecodecamp.org/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
+
+## Privacy
+
+Articles
+
+- [Nothing to hide argument](https://en.wikipedia.org/wiki/Nothing_to_hide_argument)
+  \- A Wikipedia article discussing the "I have nothing to hide"
+     privacy argument.
+- [Three Reasons Why the "Nothing to Hide" Argument is Flawed](https://spreadprivacy.com/three-reasons-why-the-nothing-to-hide-argument-is-flawed/)
+   
+Resources  
+   
+- [Pi-hole](https://pi-hole.net/)
+  \- Your custom DNS server, with a lot of features.
+     Can run on a Raspberry Pi.
+- [privacytools.io](https://www.privacytools.io/)
+  \- A grab-bag of resources for the privacy-minded.
+- [WireGuard](https://www.wireguard.com/)
+  \- The next-generation, fast & easy to use VPN.
 
 ## Programming Languages
 
