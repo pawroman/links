@@ -337,10 +337,10 @@ Python internals:
 - [Jinja2](http://jinja.pocoo.org/) - The only Python template engine worth your time.
 - [Lark](https://github.com/lark-parser/lark) - Fast parsing library.
     Good alternative to [pyparsing](https://github.com/pyparsing/pyparsing/).
-- [Numba](https://numba.pydata.org/) - JIT compiler for NumPy code. Produces very fast code.
 - [NetworkX](https://networkx.github.io/)
   \- [Graph][graph] ("network") manipulation and analysis library.
      Comprehensive yet simple and easy to use.
+- [Numba](https://numba.pydata.org/) - JIT compiler for NumPy code. Produces very fast code.
 - [pathlib](https://docs.python.org/3/library/pathlib.html) - Excellent standard library module for filesystem path manipulation.
 - [Pendulum](https://pendulum.eustace.io/) - A date/time library with nice API.
 - [psutil](https://github.com/giampaolo/psutil)
