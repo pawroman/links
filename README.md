@@ -69,6 +69,7 @@ Some of my favourite quotes:
 
 ## Other Lists
 
+- [Awesome Python](https://github.com/vinta/awesome-python)
 - [The Book of Secret Knowledge](https://github.com/trimstray/the-book-of-secret-knowledge)
 
 ## Algorithms
