@@ -346,7 +346,7 @@ Python internals:
 - [psutil](https://github.com/giampaolo/psutil)
   \- Swiss army knife for process management and system monitoring.
 - [pytest](https://docs.pytest.org/en/latest/) - The only Python test runner worth using these days.
-  - Also see [my blog post on basic pytest setup](https://iwwn.pl/post/pytest-basic-setup/)
+  - Also see [my blog post on basic pytest setup](https://pawroman.gitlab.io/pytest-basic-setup/)
 - [quamash](https://github.com/harvimt/quamash)
   \- Use `asyncio` with Qt event loop.
 - [requests](http://docs.python-requests.org/en/master/) - The HTTP library for Python.
