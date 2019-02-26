@@ -13,6 +13,7 @@ but if you see anything that's not working, please let me know!
 ## Table of Contents
 
 - [Prelude](#prelude)
+- [Other Lists](#other-lists)
 - [Algorithms](#algorithms)
 - [Architecture and Programming Patterns](#architecture-and-programming-patterns)
 - [Career Development](#career-development)
@@ -38,6 +39,7 @@ but if you see anything that's not working, please let me know!
     - [Python tools](#python-tools)
 - [Rust](#rust)
     - [Rust learning](#rust-learning)
+    - [Rust libraries](#rust-libraries)
     - [Rust posts and talks](#rust-posts-and-talks)
     - [Rust tools](#rust-tools)
 - [Visualization](#visualization)
@@ -64,6 +66,10 @@ Some of my favourite quotes:
 > In our lab, theory and practice are combined: nothing works and no one knows why."*
 
 ---
+
+## Other Lists
+
+- [The Book of Secret Knowledge](https://github.com/trimstray/the-book-of-secret-knowledge)
 
 ## Algorithms
 
@@ -301,6 +307,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- Quite a few boxes to tick for good Python APIs. 
 - [Python 3 Module of the Week](https://pymotw.com/3/)
   \- Tutorials for standard library modules.
+- [Python Cheatsheet](https://github.com/gto76/python-cheatsheet)
+  \- A pretty comprehensive cheatsheet.
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 - [Using Asyncio in Python 3](https://www.oreilly.com/library/view/using-asyncio-in/9781491999691/) - Worth a read before doing any asyncio.
 - [wtfpython](https://github.com/satwikkansal/wtfpython)
@@ -314,7 +322,8 @@ Python internals:
   \- Learn how `str` works under the hood and what does `len(str)` actually return.
 - [Inside Python dict](https://just-taking-a-ride.com/inside_python_dict/chapter1.html)
 - [Modern Dictionaries (video)](https://www.youtube.com/watch?v=p33CVV29OG8)
-
+- [The CPython Bytecode Compiler is Dumb](https://nullprogram.com/blog/2019/02/24/)
+  \- A post explaining how dumb (simple) it is (non-optimizing).
 
 ### Python libraries
 
@@ -329,6 +338,9 @@ Python internals:
 - [Lark](https://github.com/lark-parser/lark) - Fast parsing library.
     Good alternative to [pyparsing](https://github.com/pyparsing/pyparsing/).
 - [Numba](https://numba.pydata.org/) - JIT compiler for NumPy code. Produces very fast code.
+- [NetworkX](https://networkx.github.io/)
+  \- [Graph][graph] ("network") manipulation and analysis library.
+     Comprehensive yet simple and easy to use.
 - [pathlib](https://docs.python.org/3/library/pathlib.html) - Excellent standard library module for filesystem path manipulation.
 - [Pendulum](https://pendulum.eustace.io/) - A date/time library with nice API.
 - [psutil](https://github.com/giampaolo/psutil)
@@ -341,6 +353,8 @@ Python internals:
 - [tqdm](https://github.com/tqdm/tqdm) - Nice progress bar library and command line tool.
 - [WebSockets](https://websockets.readthedocs.io/en/stable/) - `asyncio` compatible, no-frills WebSocket client/server.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Extract data from XML just like JSON.
+
+[graph]: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
 
 Less known, but very useful things in the standard library:
 
@@ -365,14 +379,31 @@ Less known, but very useful things in the standard library:
 
 ### Rust learning
 
+- [A Quick Look at Trait Objects in Rust](https://tratt.net/laurie/blog/entries/a_quick_look_at_trait_objects_in_rust.html)
+  \- Explains static vs dynamic dispatch (trait objects).
+- [Allocations in Rust](https://speice.io/2019/02/understanding-allocations-in-rust.html)
+  \- Good, in depth intro to how different memory allocation mechanisms
+     work in Rust.
+- [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
+  \- Practical guide to handling errors the Rust way.
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
 - [Rust Language Cheat Sheet](https://cheats.rs/)
+- [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
+  \- An interesting take on mutability, ownership and borrowing in Rust,
+     using alternative terminology.
+- [The Edition Guide](https://rust-lang-nursery.github.io/edition-guide/introduction.html)
+  \- Learn about Rust 2018 features.
 - [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
 
 Advanced:
 
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [Writing an OS in Rust (Second Edition)](https://os.phil-opp.com/)
+
+### Rust libraries
+
+- [parking_lot](https://github.com/Amanieu/parking\_lot)
+  \- Synchronization primitives faster than standard library.
 
 ### Rust posts and talks
 
@@ -386,6 +417,9 @@ Advanced:
 
 - [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz)
   \- [Fuzzing](https://en.wikipedia.org/wiki/Fuzzing) Rust code.
+- [std::dbg](https://doc.rust-lang.org/std/macro.dbg.html)
+  \- Standard library debug macro, to replace ad-hoc `println!` debugging.
+     Stabilized in 1.32.0.
 
 ## Visualization
 
