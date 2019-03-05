@@ -77,6 +77,11 @@ Some of my favourite quotes:
 Articles:
 
 - [Dijkstra's in Disguise](https://blog.evjang.com/2018/08/dijkstras.html)
+- [Introduction to the A* Algorithm](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
+  \- Explained very clearly, with great interactive examples.
+     Also explores BFS and Dijkstra's algorithm.
+  - [Implementation of A*](https://www.redblobgames.com/pathfinding/a-star/implementation.html)
+    \- A follow up on the article, with implementation tips.
 - [The Wavefunction Collapse Algorithm explained very clearly](https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
 
 Books:
