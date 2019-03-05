@@ -320,7 +320,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 - [wtfpython](https://github.com/satwikkansal/wtfpython)
   \- A collection of common Python pitfalls and unexpected behaviours.
 
-Python internals:
+Python internals and advanced topics:
 
 - [CPython internals](http://pgbovine.net/cpython-internals.htm)
   \- Video lectures on Python 2.7 source code. Dated, but still mostly relevant.
@@ -330,6 +330,8 @@ Python internals:
 - [Modern Dictionaries (video)](https://www.youtube.com/watch?v=p33CVV29OG8)
 - [The CPython Bytecode Compiler is Dumb](https://nullprogram.com/blog/2019/02/24/)
   \- A post explaining how dumb (simple) it is (non-optimizing).
+- [What I've Learned About Optimizing Python](https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/)
+  \- Post listing some performance pitfalls related to CPython implementation.
 
 ### Python libraries
 
@@ -380,6 +382,8 @@ Less known, but very useful things in the standard library:
 - [line\_profiler](https://github.com/rkern/line\_profiler) - Profile Python line-by-line.
 - [memory\_profiler](https://github.com/pythonprofilers/memory\_profiler)
   \- Profile Python memory usage line-by-line.
+- [py-spy](https://github.com/benfred/py-spy)
+  \- A low-overhead sampling Python profiler.
 
 ## Rust
 
