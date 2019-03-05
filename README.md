@@ -186,6 +186,8 @@ Other:
 - [mtr](https://github.com/traviscross/mtr) - Better than `ping`.
 - [ncdu](https://dev.yorhel.nl/ncdu) - Disk usage analyzer.
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - Fast file content searcher.
+- [rmlint](https://github.com/sahib/rmlint)
+  \- Free up disk space (e.g. duplicate files).
 - [speedtest-cli](https://github.com/sivel/speedtest-cli) - Speedtest from a command line.
 - [tealdeer](https://github.com/dbrgn/tealdeer) - A very fast [tldr](https://github.com/tldr-pages/tldr) client.
 - [thefuck](https://github.com/nvbn/thefuck) - Correct the previous command.
