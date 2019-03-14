@@ -22,7 +22,7 @@ but if you see anything that's not working, please let me know!
     - [GUI tools](#gui-tools)
 - [Data](#data)
     - [Databases](#databases)
-- [Design](#design)
+- [Design and Web](#design-and-web)
 - [Eye Candy](#eye-candy)
     - [Fonts](#fonts)
     - [Themes](#themes)
@@ -31,6 +31,7 @@ but if you see anything that's not working, please let me know!
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Management / dealing with people](#management--dealing-with-people)
 - [Privacy](#privacy)
+- [Productivity](#productivity)
 - [Programming Languages](#programming-languages)
 - [Python](#python)
     - [Python learning](#python-learning)
@@ -132,7 +133,7 @@ Programming overall:
   \- An absolute classic of a book.
   - [Take-home reference](https://blog.codinghorror.com/a-pragmatic-quick-reference/)
     \- Sums up the book.
-  
+
 Principles:
 
 - [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
@@ -207,9 +208,11 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 - [Lessons learned scaling PostgreSQL database to 1.2bn records/month](https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067)
   \- Very insightful article.
-  
-## Design
 
+## Design and Web
+
+- [A JavaScript-Free Frontend](https://dev.to/winduptoy/a-javascript-free-frontend-2d3e)
+  \- You can do without JavaScript.
 - [Brutalist Web Design](https://www.brutalist-web.design/)
   \- A set of very reasonable guidelines for designing websites.
 
@@ -275,7 +278,7 @@ Articles
      privacy argument.
 - [Three Reasons Why the "Nothing to Hide" Argument is Flawed](https://spreadprivacy.com/three-reasons-why-the-nothing-to-hide-argument-is-flawed/)
    
-Resources  
+Resources
    
 - [Pi-hole](https://pi-hole.net/)
   \- Your custom DNS server, with a lot of features.
@@ -284,6 +287,12 @@ Resources
   \- A grab-bag of resources for the privacy-minded.
 - [WireGuard](https://www.wireguard.com/)
   \- The next-generation, fast & easy to use VPN.
+
+## Productivity
+
+- [Mental models](https://www.defmacro.org/2016/12/22/models.html)
+  \- A list of mental models to boost your work
+     productivity and efficiency, among other things.
 
 ## Programming Languages
 
