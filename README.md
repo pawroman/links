@@ -106,6 +106,11 @@ Other:
   \- "for database administrators and system developers".
 - [The Twelve-Factor App](https://12factor.net/)
   \- 12 good rules for "service" type software.
+- [Vertical Slice Architecture](https://jimmybogard.com/vertical-slice-architecture/)
+  \- Argues that architecture should be sliced "vertically" (across business domains)
+     rather than "horizontally".
+  - [PresentationDomainDataLayering](https://martinfowler.com/bliki/PresentationDomainDataLayering.html)
+    \- Similar concept from Martin Fowler.
 
 Anti-patterns:
 
@@ -137,6 +142,8 @@ Programming overall:
 Principles:
 
 - [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
+  - [DRY (Don't Repeat Yourself) is a Fallacy](https://adamcod.es/2017/07/14/dry-is-a-fallacy.html)
+    \- Argues that DRY is mostly about **knowledge**, not just code.
 - [Make It Work, Make It Right, Make It Fast](http://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
 - [Principle of least astonishment](https://en.wikipedia.org/wiki/Least_astonishment)
 - [Rule of three][rule-of-three]
@@ -167,6 +174,10 @@ Other:
   \- Looking to do AI? Better sort out the basics and foundations first.
   Contains the "AI pyramid of needs". I would add "Solid engineering" at the
   very bottom of the pyramid though!
+- [Write code that is easy to delete, not easy to extend.](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to)
+  \- Iterating on code design should be easy.
+   > Good code isn't about getting it right the first time.
+     Good code is just legacy code that doesn't get in the way.
 
 ## Command Line Tools
 
@@ -408,6 +419,8 @@ Less known, but very useful things in the standard library:
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
   \- Practical guide to handling errors the Rust way.
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
+- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
+  \- How to accomplish common tasks using idiomatic Rust and libraries.
 - [Rust Language Cheat Sheet](https://cheats.rs/)
 - [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
   \- An interesting take on mutability, ownership and borrowing in Rust,
