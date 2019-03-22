@@ -77,6 +77,8 @@ Some of my favourite quotes:
 
 Articles:
 
+- [Consistent Hashing](https://en.wikipedia.org/wiki/Consistent_hashing)
+  - [The Ultimate Guide to Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
 - [Dijkstra's in Disguise](https://blog.evjang.com/2018/08/dijkstras.html)
 - [Introduction to the A* Algorithm](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
   \- Explained very clearly, with great interactive examples.
