@@ -165,6 +165,7 @@ Code quality measures:
 Other:
 
 - [API Evolution the Right Way](https://emptysqua.re/blog/api-evolution-the-right-way/)
+- [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
 - [Empathy is Code Deep](https://vimeo.com/293912618/5ccecc85d4)
   \- A talk on applying empathy and thinking about others in coding.
      Code matters and people do too.
@@ -275,11 +276,15 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 
 ## Management / dealing with people
 
+- [Developer to Manager](https://devtomanager.com/)
+  \- Collection of interviews with developers who became managers.
 - [Every Time Zone](https://everytimezone.com/)
   \- A readable time zone overview. Useful for scheduling meetings.
+- [How to be a manager](https://getweeklyupdate.com/manager-guide)
 - [How to Deal with Difficult People on Software Projects](https://people.neilon.software/)
   \- We all know "that one guy"...
-- [How to be a manager](https://getweeklyupdate.com/manager-guide)
+- [How to Deliver Constructive Feedback in Difficult Situations](https://medium.dave-bailey.com/the-essential-guide-to-difficult-conversations-41f736e63ccf)
+  \- In praise of Nonviolent Communication (NVC) principles.
 - [Unlearning toxic behaviors in a code review culture](https://medium.freecodecamp.org/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
 
 ## Privacy
@@ -377,6 +382,8 @@ Python internals and advanced topics:
 - [Pendulum](https://pendulum.eustace.io/) - A date/time library with nice API.
 - [psutil](https://github.com/giampaolo/psutil)
   \- Swiss army knife for process management and system monitoring.
+- [pyjwt](https://github.com/jpadilla/pyjwt)
+  \- Work with JSON Web Tokens (JWT).
 - [pytest](https://docs.pytest.org/en/latest/) - The only Python test runner worth using these days.
   - Also see [my blog post on basic pytest setup](https://pawroman.gitlab.io/pytest-basic-setup/)
 - [quamash](https://github.com/harvimt/quamash)
