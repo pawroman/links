@@ -103,6 +103,8 @@ Other:
 - [Design Patterns](https://sourcemaking.com/design_patterns) - Describes the classic OO patterns.
 - [Game Programming Patterns](http://gameprogrammingpatterns.com/contents.html)
   \- An excellent book on OO patterns found in games. When performance matters.
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+  \- Concepts behind modern(-ish) large-scale systems, with plenty of references.
 - [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html)
 - [The Internals of PostgreSQL](http://www.interdb.jp/pg/)
   \- "for database administrators and system developers".
