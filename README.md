@@ -77,7 +77,10 @@ Some of my favourite quotes:
 
 Articles:
 
+- [Cache replacement policies](https://en.wikipedia.org/wiki/Cache_replacement_policies)
+  \- Algorithms that tell you how to evict entries from the cache.
 - [Consistent Hashing](https://en.wikipedia.org/wiki/Consistent_hashing)
+  - [The Simple Magic of Consistent Hashing](https://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
   - [The Ultimate Guide to Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
 - [Dijkstra's in Disguise](https://blog.evjang.com/2018/08/dijkstras.html)
 - [Introduction to the A* Algorithm](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
