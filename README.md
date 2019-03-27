@@ -271,15 +271,21 @@ Programming fonts I found the most eye-pleasing and readable.
   \- The best explanation I've ever seen.
 - [Gallery of Processor Cache Effects](https://igoro.com/archive/gallery-of-processor-cache-effects/)
   \- Concise examples showing how cache affects code run time, with good explanations.
+- [Latency Numbers Every Programmer Should Know](https://gist.github.com/GLMeece/b00c9c97a06a957af7426b1be5bc8be6)
+  \- Know your latencies.
 - [Modern Microprocessors - A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
   \- Exceptionally good article on how modern CPUs work. This explains why a lot of low-level
   optimizations work.
 - [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
   \- An in-depth paper on computer memory from (mainly) programming perspective.
 
+Latency visualized:
+
+[![](https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67)](https://gist.github.com/GLMeece/b00c9c97a06a957af7426b1be5bc8be6)
+
 Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wikipedia.org/wiki/IEEE_754)):
 
-![](https://upload.wikimedia.org/wikipedia/commons/3/3f/IEEE754.png)
+[![](https://upload.wikimedia.org/wikipedia/commons/3/3f/IEEE754.png)](https://en.wikipedia.org/wiki/IEEE_754#Basic_and_interchange_formats)
 
 ## Management / dealing with people
 
