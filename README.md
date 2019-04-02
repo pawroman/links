@@ -89,6 +89,8 @@ Articles:
      Also explores BFS and Dijkstra's algorithm.
   - [Implementation of A*](https://www.redblobgames.com/pathfinding/a-star/implementation.html)
     \- A follow up on the article, with implementation tips.
+- [In Search of an Understandable Consensus Algorithm](https://raft.github.io/raft.pdf)
+  \- (PDF) paper describing the [Raft][raft] consensus algorithm.
 - [The Wavefunction Collapse Algorithm explained very clearly](https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
 
 Books:
@@ -100,6 +102,10 @@ Books:
 Other:
 
 - [Big-O Complexity Cheat Sheet](http://bigocheatsheet.com/)
+- [Raft Consensus Algorithm Visualization](http://thesecretlivesofdata.com/raft/)
+  \- [Raft][raft] Visualized in a very easy to follow way.
+  
+[raft]: https://raft.github.io/
 
 ## Architecture and Programming Patterns
 
@@ -278,7 +284,7 @@ Programming fonts I found the most eye-pleasing and readable.
   \- Exceptionally good article on how modern CPUs work. This explains why a lot of low-level
   optimizations work.
 - [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
-  \- An in-depth paper on computer memory from (mainly) programming perspective.
+  \- (PDF) An in-depth paper on computer memory from (mainly) programming perspective.
 
 Latency visualized:
 
@@ -351,7 +357,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 - [Fluent Python](http://shop.oreilly.com/product/0636920032519.do)
   \- Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
-  \- Book collecting Python antipatterns and common mistakes. Free PDF.
+  \- (PDF). Free book collecting Python antipatterns and common mistakes.
 - [PyVideo](https://pyvideo.org/)
   \- A huge collection of Python related videos: conference / meetup talks etc.
 - [Python API Checklist](https://devchecklists.com/python-api-checklist/)
@@ -373,7 +379,7 @@ Python internals and advanced topics:
   \- Learn how `str` works under the hood and what does `len(str)` actually return.
 - [Inside Python dict](https://just-taking-a-ride.com/inside_python_dict/chapter1.html)
 - [Inside the New GIL](https://www.dabeaz.com/python/NewGIL.pdf)
-  \- Slides from David Beazley on "new" GIL implementation (introduced in 3.2).
+  \- (PDF) Slides from David Beazley on "new" GIL implementation (introduced in 3.2).
 - [Modern Dictionaries (video)](https://www.youtube.com/watch?v=p33CVV29OG8)
 - [The CPython Bytecode Compiler is Dumb](https://nullprogram.com/blog/2019/02/24/)
   \- A post explaining how dumb (simple) it is (non-optimizing).
