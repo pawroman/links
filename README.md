@@ -43,6 +43,7 @@ but if you see anything that's not working, please let me know!
     - [Rust libraries](#rust-libraries)
     - [Rust posts and talks](#rust-posts-and-talks)
     - [Rust tools](#rust-tools)
+- [Testing](#testing)
 - [Visualization](#visualization)
 
 ---
@@ -293,6 +294,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   \- Collection of interviews with developers who became managers.
 - [Every Time Zone](https://everytimezone.com/)
   \- A readable time zone overview. Useful for scheduling meetings.
+- [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
+  \- Good advice on what not to focus on during an interview.
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
 - [How to Deal with Difficult People on Software Projects](https://people.neilon.software/)
   \- We all know "that one guy"...
@@ -442,6 +445,7 @@ Less known, but very useful things in the standard library:
      work in Rust.
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
   \- Practical guide to handling errors the Rust way.
+- [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
   \- How to accomplish common tasks using idiomatic Rust and libraries.
@@ -478,6 +482,11 @@ Advanced:
 - [std::dbg](https://doc.rust-lang.org/std/macro.dbg.html)
   \- Standard library debug macro, to replace ad-hoc `println!` debugging.
      Stabilized in 1.32.0.
+
+## Testing
+
+- [Big List of Naughty Strings](https://github.com/minimaxir/big-list-of-naughty-strings)
+  \- "list of strings which have a high probability of causing issues when used as user-input data"
 
 ## Visualization
 
