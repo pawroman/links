@@ -152,10 +152,14 @@ async def fetch_all_links(external_links, event_loop):
 
 
 async def fetch_link(link, session):
-    async with session.get(link.url) as response:
-        print(f"Opening: {link} -> {response.status} {response.reason}")
+    try:
+        async with session.get(link.url) as response:
+            print(f"Opening: {link} -> {response.status} {response.reason}")
 
-        return link, response
+            return link, response
+    except aiohttp.ClientError as e:
+        print(f"Error opening {link}: {e}")
+        raise
 
 
 def test_internal_links_are_all_valid(internal_links, headers):

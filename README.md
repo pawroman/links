@@ -378,8 +378,8 @@ Python internals and advanced topics:
 - [How Python does Unicode](https://www.b-list.org/weblog/2017/sep/05/how-python-does-unicode/)
   \- Learn how `str` works under the hood and what does `len(str)` actually return.
 - [Inside Python dict](https://just-taking-a-ride.com/inside_python_dict/chapter1.html)
-- [Inside the New GIL](https://www.dabeaz.com/python/NewGIL.pdf)
-  \- (PDF) Slides from David Beazley on "new" GIL implementation (introduced in 3.2).
+- [Inside the New GIL](https://speakerdeck.com/dabeaz/inside-the-new-gil)
+  \- Slides from David Beazley on "new" GIL implementation (introduced in 3.2).
 - [Modern Dictionaries (video)](https://www.youtube.com/watch?v=p33CVV29OG8)
 - [The CPython Bytecode Compiler is Dumb](https://nullprogram.com/blog/2019/02/24/)
   \- A post explaining how dumb (simple) it is (non-optimizing).
@@ -398,6 +398,9 @@ Python internals and advanced topics:
 - [Jinja2](http://jinja.pocoo.org/) - The only Python template engine worth your time.
 - [Lark](https://github.com/lark-parser/lark) - Fast parsing library.
     Good alternative to [pyparsing](https://github.com/pyparsing/pyparsing/).
+- [lxml](https://lxml.de/)
+  \- A very fast and featureful (e.g. can use XPath),
+     albeit a bit low-level XML and HTML parsing library.
 - [NetworkX](https://networkx.github.io/)
   \- [Graph][graph] ("network") manipulation and analysis library.
      Comprehensive yet simple and easy to use.
