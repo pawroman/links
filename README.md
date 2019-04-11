@@ -285,6 +285,8 @@ Programming fonts I found the most eye-pleasing and readable.
   optimizations work.
 - [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
   \- (PDF) An in-depth paper on computer memory from (mainly) programming perspective.
+- [The microarchitecture of Intel, AMD and VIA CPUs. An optimization guide for assembly programmers and compiler makers](https://www.agner.org/optimize/microarchitecture.pdf)
+  \- (PDF) Very in-depth description of inner workings, ins and outs of various CPUs.
 
 Latency visualized:
 
@@ -298,6 +300,9 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 
 - [Developer to Manager](https://devtomanager.com/)
   \- Collection of interviews with developers who became managers.
+- [Deadlines Are Killing Us, And Almost Everything Else I Know About Leadership](https://medium.com/@duncanr/deadlines-are-killing-us-and-almost-everything-else-i-know-about-leadership-7032a5fb12ac)
+  \- Good article on deadlines, employee motivation, narcissists and management
+     overall.
 - [Every Time Zone](https://everytimezone.com/)
   \- A readable time zone overview. Useful for scheduling meetings.
 - [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
@@ -307,7 +312,11 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   \- We all know "that one guy"...
 - [How to Deliver Constructive Feedback in Difficult Situations](https://medium.dave-bailey.com/the-essential-guide-to-difficult-conversations-41f736e63ccf)
   \- In praise of Nonviolent Communication (NVC) principles.
+- [Top 12 Things That Destroy Developer Productivity](https://hackernoon.com/top-12-things-that-destroy-developer-productivity-2ddf0abc190)
 - [Unlearning toxic behaviors in a code review culture](https://medium.freecodecamp.org/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
+- [Your Company Culture is Who You Hire, Fire, and Promote](https://www.linkedin.com/pulse/your-companys-culture-who-you-hire-fire-promote-part-1-sepah)
+  - Part 2: [Anatomy of an Asshole](https://www.linkedin.com/pulse/your-company-culture-who-you-hire-fire-promote-part-2-sepah)
+  - Part 3: [Breaking Bad: Why Good People Become Evil Bosses](https://www.linkedin.com/pulse/breaking-bad-why-good-people-become-evilbosses-dr-cameron-sepah)
 
 ## Privacy
 
@@ -330,9 +339,13 @@ Resources
 
 ## Productivity
 
+- [Busy Person Patterns](https://hillside.net/plop/2006/Papers/Library/PLoP%20Busy%20Person%20Pattern%20v8.pdf)
+  \- (PDF) How to be less overwhelmed by the lack of time.
 - [Mental models](https://www.defmacro.org/2016/12/22/models.html)
   \- A list of mental models to boost your work
      productivity and efficiency, among other things.
+- [Mental Models: The Best Way to Make Intelligent Decisions (109 Models Explained)](https://fs.blog/mental-models/)
+
 
 ## Programming Languages
 
