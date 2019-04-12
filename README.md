@@ -318,6 +318,20 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   - Part 2: [Anatomy of an Asshole](https://www.linkedin.com/pulse/your-company-culture-who-you-hire-fire-promote-part-2-sepah)
   - Part 3: [Breaking Bad: Why Good People Become Evil Bosses](https://www.linkedin.com/pulse/breaking-bad-why-good-people-become-evilbosses-dr-cameron-sepah)
 
+Estimating time:
+
+- [PERT (Program evaluation and review technique)](https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique#Time)
+  ```
+  te = (o + 4m + p) / 6
+  sigma_te = (p - o) / 6
+  
+  Where:
+  * o - optimistic estimate (time)
+  * m - most likely estimate
+  * p - pessimistic estimate
+  * te, sigma_te - expected time and its stdev
+  ```
+
 ## Privacy
 
 Articles
@@ -328,7 +342,7 @@ Articles
 - [Three Reasons Why the "Nothing to Hide" Argument is Flawed](https://spreadprivacy.com/three-reasons-why-the-nothing-to-hide-argument-is-flawed/)
    
 Resources
-   
+
 - [Pi-hole](https://pi-hole.net/)
   \- Your custom DNS server, with a lot of features.
      Can run on a Raspberry Pi.
