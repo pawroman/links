@@ -22,6 +22,9 @@ IGNORE_ERRORS_FOR_URLS = frozenset((
     "https://vimeo.com/293912618/5ccecc85d4",
 ))
 
+DEFAULT_TIMEOUT_SECONDS = 30
+DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
+
 
 @dataclass(frozen=True)
 class Header:
@@ -151,13 +154,13 @@ async def fetch_all_links(external_links, event_loop):
             yield result
 
 
-async def fetch_link(link, session):
+async def fetch_link(link, session: aiohttp.ClientSession):
     try:
-        async with session.get(link.url) as response:
+        async with session.get(link.url, timeout=DEFAULT_TIMEOUT) as response:
             print(f"Opening: {link} -> {response.status} {response.reason}")
 
             return link, response
-    except aiohttp.ClientError as e:
+    except (aiohttp.ClientError, asyncio.TimeoutError) as e:
         print(f"Error opening {link}: {e}")
         raise
 
