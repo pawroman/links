@@ -36,12 +36,13 @@ but if you see anything that's not working, please let me know!
 - [Python](#python)
     - [Python learning](#python-learning)
     - [Python libraries](#python-libraries)
-    - [Python news](#python-news)
+    - [Python news and community](#python-news-and-community)
     - [Python tools](#python-tools)
 - [Rust](#rust)
     - [Rust learning](#rust-learning)
     - [Rust libraries](#rust-libraries)
     - [Rust posts and talks](#rust-posts-and-talks)
+    - [Rust news and community](#rust-news-and-community)
     - [Rust tools](#rust-tools)
 - [Testing](#testing)
 - [Visualization](#visualization)
@@ -441,6 +442,8 @@ Python internals and advanced topics:
   \- Swiss army knife for process management and system monitoring.
 - [pyjwt](https://github.com/jpadilla/pyjwt)
   \- Work with JSON Web Tokens (JWT).
+- [PyPDF2](https://github.com/mstamy2/PyPDF2)
+  \- Read and manipulate (e.g. merge) PDF files.
 - [pytest](https://docs.pytest.org/en/latest/) - The only Python test runner worth using these days.
   - Also see [my blog post on basic pytest setup](https://pawroman.gitlab.io/pytest-basic-setup/)
 - [quamash](https://github.com/harvimt/quamash)
@@ -459,7 +462,7 @@ Less known, but very useful things in the standard library:
 - [types.MappingProxyType](https://docs.python.org/3/library/types.html#types.MappingProxyType)
   \- Read-only view into a `dict`, suitable for constants.
 
-### Python news
+### Python news and community
 
 - [PyCoder's Weekly newsletter](https://pycoders.com/)
 
@@ -505,6 +508,10 @@ Advanced:
 
 - [parking_lot](https://github.com/Amanieu/parking\_lot)
   \- Synchronization primitives faster than standard library.
+  
+### Rust news and community
+
+- [Rust Reddit](https://www.reddit.com/r/rust)
 
 ### Rust posts and talks
 
