@@ -487,6 +487,8 @@ Less known, but very useful things in the standard library:
      work in Rust.
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
   \- Practical guide to handling errors the Rust way.
+- [Generic returns in Rust](https://blog.jcoglan.com/2019/04/22/generic-returns-in-rust/)
+  \- On handling `From/Into` traits and how `Iterator::collect()` works.
 - [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)

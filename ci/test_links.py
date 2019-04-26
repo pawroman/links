@@ -137,10 +137,13 @@ async def test_external_links_are_all_valid(external_links, event_loop):
     # fetch all responses fully asynchronously, iterate as completed
 
     async for link, response in fetch_all_links(external_links, event_loop):
-        if link.url in IGNORE_ERRORS_FOR_URLS:
+        is_ok = response.status == 200
+
+        if not is_ok and link.url in IGNORE_ERRORS_FOR_URLS:
             print(f"Ignored response: {response.status} {response.reason} for: {link}")
-        else:
-            assert response.status == 200, f"Couldn't open: {link}"
+            continue
+
+        assert is_ok, f"Couldn't open: {link}"
 
 
 async def fetch_all_links(external_links, event_loop):
