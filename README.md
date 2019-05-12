@@ -45,6 +45,7 @@ but if you see anything that's not working, please let me know!
     - [Rust news and community](#rust-news-and-community)
     - [Rust tools](#rust-tools)
 - [Testing](#testing)
+- [Shell](#shell)
 - [Visualization](#visualization)
 
 ---
@@ -92,6 +93,7 @@ Articles:
     \- A follow up on the article, with implementation tips.
 - [In Search of an Understandable Consensus Algorithm](https://raft.github.io/raft.pdf)
   \- (PDF) paper describing the [Raft][raft] consensus algorithm.
+- [Rendezvous hashing](https://en.wikipedia.org/wiki/Rendezvous_hashing)
 - [The Wavefunction Collapse Algorithm explained very clearly](https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
 
 Books:
@@ -105,6 +107,8 @@ Other:
 - [Big-O Complexity Cheat Sheet](http://bigocheatsheet.com/)
 - [Raft Consensus Algorithm Visualization](http://thesecretlivesofdata.com/raft/)
   \- [Raft][raft] Visualized in a very easy to follow way.
+- [xoshiro / xoroshiro generators and the PRNG shootout](http://xoshiro.di.unimi.it/)
+  \- Small and fast Pseudo-Random Number Generators.
   
 [raft]: https://raft.github.io/
 
@@ -126,6 +130,8 @@ Other:
      rather than "horizontally".
   - [PresentationDomainDataLayering](https://martinfowler.com/bliki/PresentationDomainDataLayering.html)
     \- Similar concept from Martin Fowler.
+- [You are not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)
+  \- Words of caution on architecture and scale.
 
 Anti-patterns:
 
@@ -184,6 +190,8 @@ Other:
      Code matters and people do too.
 - [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
   \- Learn what not to do :)
+- [Storing UTC is not a silver bullet](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
+  \- Why "just store all times in UTC" is sometimes not the best approach.
 - [Superior Testing: Stop Stopping](https://arturdryomov.online/posts/superior-testing-stop-stopping/)
   \- Great post on why testing matters.
 - [The AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007)
@@ -235,6 +243,8 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 ### Databases
 
+- [Don't Do This (PostgreSQL wiki)](https://wiki.postgresql.org/wiki/Don't_Do_This)
+  \- What not to do in Postgres.
 - [Lessons learned scaling PostgreSQL database to 1.2bn records/month](https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067)
   \- Very insightful article.
 
@@ -301,6 +311,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 
 ## Management / dealing with people
 
+- [Commit messages guide](https://github.com/RomuloOliveira/commit-messages-guide)
+  \- How to write commit messages well.
 - [Developer to Manager](https://devtomanager.com/)
   \- Collection of interviews with developers who became managers.
 - [Deadlines Are Killing Us, And Almost Everything Else I Know About Leadership](https://medium.com/@duncanr/deadlines-are-killing-us-and-almost-everything-else-i-know-about-leadership-7032a5fb12ac)
@@ -363,7 +375,6 @@ Resources
   \- A list of mental models to boost your work
      productivity and efficiency, among other things.
 - [Mental Models: The Best Way to Make Intelligent Decisions (109 Models Explained)](https://fs.blog/mental-models/)
-
 
 ## Programming Languages
 
@@ -511,6 +522,11 @@ Advanced:
 - [parking_lot](https://github.com/Amanieu/parking\_lot)
   \- Synchronization primitives faster than standard library.
   
+Less known, but very useful things in the standard library:
+
+- [std::mem::discriminant](https://doc.rust-lang.org/std/mem/fn.discriminant.html)
+  \- Compare enum types statically.
+
 ### Rust news and community
 
 - [Rust Reddit](https://www.reddit.com/r/rust)
@@ -530,6 +546,13 @@ Advanced:
 - [std::dbg](https://doc.rust-lang.org/std/macro.dbg.html)
   \- Standard library debug macro, to replace ad-hoc `println!` debugging.
      Stabilized in 1.32.0.
+
+## Shell
+
+- [gitstatus](https://github.com/romkatv/gitstatus)
+  \- Faster `git status` alternative for shells.
+- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+  \- ZSH configuration framework.
 
 ## Testing
 
