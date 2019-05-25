@@ -416,14 +416,14 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
   \- (PDF). Free book collecting Python antipatterns and common mistakes.
-- [PyVideo](https://pyvideo.org/)
-  \- A huge collection of Python related videos: conference / meetup talks etc.
-- [Python API Checklist](https://devchecklists.com/python-api-checklist/)
-  \- Quite a few boxes to tick for good Python APIs. 
 - [Python 3 Module of the Week](https://pymotw.com/3/)
   \- Tutorials for standard library modules.
+- [Python API Checklist](https://devchecklists.com/python-api-checklist/)
+  \- Quite a few boxes to tick for good Python APIs.
 - [Python Cheatsheet](https://github.com/gto76/python-cheatsheet)
   \- A pretty comprehensive cheatsheet.
+- [PyVideo](https://pyvideo.org/)
+  \- A huge collection of Python related videos: conference / meetup talks etc.
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 - [Using Asyncio in Python 3](https://www.oreilly.com/library/view/using-asyncio-in/9781491999691/) - Worth a read before doing any asyncio.
 - [wtfpython](https://github.com/satwikkansal/wtfpython)

@@ -1,9 +1,10 @@
 import asyncio
+import itertools
 import pathlib
 import re
 
 from dataclasses import dataclass, field
-from typing import List, Set
+from typing import Iterable, List, Optional
 
 import aiohttp
 import mistune
@@ -15,6 +16,12 @@ README_FILE_PATH = pathlib.Path(__file__).parents[1] / "README.md"
 
 SKIP_HEADER_LINK_CHECKS = frozenset((
     "links", "Table of Contents"
+))
+
+CHECK_HEADER_LINKS_UP_TO_LEVEL = 3
+
+SKIP_HEADER_SORT_CHECKS = frozenset((
+    "links", "Table of Contents", "Prelude", "Other Lists",
 ))
 
 IGNORE_ERRORS_FOR_URLS = frozenset((
@@ -35,6 +42,14 @@ class Header:
     slug: str
 
 
+class MarkdownList:
+    pass
+
+
+class ListItem:
+    pass
+
+
 @dataclass(frozen=True)
 class Link:
     # only use url for hashing and comparison
@@ -43,10 +58,17 @@ class Link:
     title: str = field(compare=False, hash=False)
     text: str = field(compare=False, hash=False)
 
+    header: Optional[Header] = field(compare=False, hash=False)
+    list: Optional[MarkdownList] = field(compare=False, hash=False)
+    list_item: Optional[ListItem] = field(compare=False, hash=False)
+
 
 class StructuredRenderer(mistune.Renderer):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        self._current_list: Optional[List] = None
+        self._current_list_item: Optional[ListItem] = None
 
         self._headers: List[Header] = []
         self._links: List[Link] = []
@@ -61,7 +83,9 @@ class StructuredRenderer(mistune.Renderer):
 
     def header(self, text, level, raw=None):
         slug = github_slugify(text)
-        self._headers.append(Header(text, level, slug=slug))
+        header = Header(text, level, slug=slug)
+
+        self._headers.append(header)
 
         return super().header(text, level, raw=raw)
 
@@ -69,6 +93,16 @@ class StructuredRenderer(mistune.Renderer):
         self._register_link(link, title, text)
 
         return super().link(link, title, text)
+
+    def list(self, body, ordered=True):
+        self._current_list = MarkdownList()
+
+        return super().list(body, ordered=ordered)
+
+    def list_item(self, text):
+        self._current_list_item = ListItem()
+
+        return super().list_item(text)
 
     def image(self, src, title, text):
         self._register_link(src, title, text)
@@ -79,7 +113,10 @@ class StructuredRenderer(mistune.Renderer):
         # markdown escaping messes up underscores in links
         normalized_url = url.replace(r"\_", "_")
 
-        link = Link(normalized_url, title, text)
+        link = Link(normalized_url, title, text,
+                    header=self._headers[-1],
+                    list=self._current_list,
+                    list_item=self._current_list_item)
         self._links.append(link)
 
 
@@ -100,6 +137,18 @@ def github_slugify(text: str):
     return re.sub(r"[^a-z0-9-]", "", spaces_as_dashes)
 
 
+def assert_sorted(iterable: Iterable):
+    assert list(iterable) == sorted(iterable)
+
+
+def assert_attr_sorted(iterable: Iterable, attr: str, casefold=True):
+    attrs = (getattr(obj, attr) for obj in iterable)
+    normalized_attrs = [attr.casefold() if casefold else attr
+                        for attr in attrs]
+
+    assert_sorted(normalized_attrs)
+
+
 @pytest.fixture(scope="session")
 def renderer() -> StructuredRenderer:
     rend = StructuredRenderer()
@@ -112,12 +161,14 @@ def renderer() -> StructuredRenderer:
 
 
 @pytest.fixture(scope="session")
-def external_links(renderer: StructuredRenderer) -> Set[Link]:
-    # deduplicate as there might be repeats
-    return {
-        link for link in renderer.links
+def external_links(renderer: StructuredRenderer) -> List[Link]:
+    # deduplicate as there might be repeats, but keep original order
+    unique_links = dict.fromkeys(renderer.links)
+
+    return [
+        link for link in unique_links
         if link.url.startswith(("http", "https"))
-    }
+    ]
 
 
 @pytest.fixture(scope="session")
@@ -193,6 +244,51 @@ def test_internal_links_are_all_valid(internal_links, headers):
 def test_all_headers_are_linked_to(internal_links, headers):
     link_slugs = {link.url.lstrip("#") for link in internal_links}
     header_slugs = {header.slug for header in headers
-                    if header.text not in SKIP_HEADER_LINK_CHECKS}
+                    if header.text not in SKIP_HEADER_LINK_CHECKS
+                    and header.level <= CHECK_HEADER_LINKS_UP_TO_LEVEL}
 
     assert link_slugs == header_slugs
+
+
+def test_second_level_headers_are_sorted(headers):
+    second_level_headers = [
+        header for header in headers
+        if header.level == 2
+           and header.text not in SKIP_HEADER_SORT_CHECKS
+    ]
+
+    assert_attr_sorted(second_level_headers, "text")
+
+
+def test_third_level_headers_are_sorted(headers):
+    headers_iter = iter(headers)
+
+    for header in headers_iter:
+        group = []
+
+        for third_level in itertools.takewhile(lambda h: h.level == 3, headers_iter):
+            group.append(third_level)
+
+        print(f"Testing 3rd level headers under '{header.text}'")
+        assert_attr_sorted(group, "text")
+
+
+def test_external_links_are_sorted_in_lists(external_links):
+    for (header, markdown_list), links in itertools.groupby(external_links,
+                                                            lambda link: (link.header, link.list)):
+        if header.level < CHECK_HEADER_LINKS_UP_TO_LEVEL:
+            continue
+
+        # skip repeated list items (e.g. we only want first link in a list item)
+        first_links = []
+        seen_list_items = set()
+
+        for link in links:
+            if link.list_item in seen_list_items:
+                continue
+
+            first_links.append(link)
+            seen_list_items.add(link.list_item)
+
+        print(f"Testing whether links are sorted under {header}")
+        assert_attr_sorted(first_links, "text")
