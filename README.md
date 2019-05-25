@@ -511,9 +511,9 @@ Less known, but very useful things in the standard library:
 
 - [A Quick Look at Trait Objects in Rust](https://tratt.net/laurie/blog/entries/a_quick_look_at_trait_objects_in_rust.html)
   \- Explains static vs dynamic dispatch (trait objects).
-- [Allocations in Rust](https://speice.io/2019/02/understanding-allocations-in-rust.html)
+- [Allocations in Rust](https://webcache.googleusercontent.com/search?q=cache:dEddeFq1R_gJ:https://speice.io/2019/02/understanding-allocations-in-rust.html)
   \- Good, in depth intro to how different memory allocation mechanisms
-     work in Rust.
+     work in Rust.  Google web cache link because the original site is down :(
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
   \- Practical guide to handling errors the Rust way.
 - [Generic returns in Rust](https://blog.jcoglan.com/2019/04/22/generic-returns-in-rust/)
