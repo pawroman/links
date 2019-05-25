@@ -22,7 +22,7 @@ IGNORE_ERRORS_FOR_URLS = frozenset((
     "https://vimeo.com/293912618/5ccecc85d4",
 ))
 
-DEFAULT_TIMEOUT_SECONDS = 30
+DEFAULT_TIMEOUT_SECONDS = 40
 DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
 
 
