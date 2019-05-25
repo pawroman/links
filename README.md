@@ -29,6 +29,7 @@ but if you see anything that's not working, please let me know!
 - [git](#git)
     - [git help](#git-help)
 - [Hardware and CPUs](#hardware-and-cpus)
+- [Kubernetes](#kubernetes)
 - [Management / dealing with people](#management--dealing-with-people)
 - [Privacy](#privacy)
 - [Productivity](#productivity)
@@ -173,6 +174,7 @@ Principles:
 
 Principle aggregates / manifestos:
 
+- [hacker-laws](https://github.com/dwmkerr/hacker-laws)
 - [Programming Principles](https://github.com/webpro/programming-principles)
 - [Software craftsmanship](https://en.wikipedia.org/wiki/Software_craftsmanship)
     - [Manifesto for Software Craftsmanship](http://manifesto.softwarecraftsmanship.org/)
@@ -215,18 +217,22 @@ Other:
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
 - [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
-    \- Get simple statistics for your repo.
+  \- Get simple statistics for your repo.
 - [htop](https://hisham.hm/htop/) - Excellent process viewer.
 - [HTTPie](https://httpie.org/) - cURL for humans. Uses Python + requests.
 - [hyperfine](https://github.com/sharkdp/hyperfine) - CLI benchmarking tool.
+- [kubectx](https://github.com/ahmetb/kubectx)
+  \- Switch between Kubernetes contexts (clusters) and namespaces easily.
 - [Midnight Commander (mc)](https://midnight-commander.org/) - The best file manager.
-- [mosh](https://mosh.org/) - like `ssh`, but with local echo and roaming. Good for poor connections.
+- [mosh](https://mosh.org/) - Like `ssh`, but with local echo and roaming. Good for poor connections.
 - [mtr](https://github.com/traviscross/mtr) - Better than `ping`.
 - [ncdu](https://dev.yorhel.nl/ncdu) - Disk usage analyzer.
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - Fast file content searcher.
 - [rmlint](https://github.com/sahib/rmlint)
   \- Free up disk space (e.g. duplicate files).
 - [speedtest-cli](https://github.com/sivel/speedtest-cli) - Speedtest from a command line.
+- [storm](https://github.com/emre/storm)
+  \- Manage SSH connections (`.ssh/config`).
 - [tealdeer](https://github.com/dbrgn/tealdeer) - A very fast [tldr](https://github.com/tldr-pages/tldr) client.
 - [thefuck](https://github.com/nvbn/thefuck) - Correct the previous command.
 - [tmux](https://github.com/tmux/tmux) - A terminal multiplexer, more user-friendly than screen.
@@ -308,6 +314,16 @@ Latency visualized:
 Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wikipedia.org/wiki/IEEE_754)):
 
 [![](https://upload.wikimedia.org/wikipedia/commons/3/3f/IEEE754.png)](https://en.wikipedia.org/wiki/IEEE_754#Basic_and_interchange_formats)
+
+## Kubernetes
+
+- [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/)
+  \- A map grouping all the current and emerging "cloud native" technologies
+     (mostly related to Kubernetes).
+  - [Cloud Native Trail Map](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
+    \- The migration path to "cloud native".
+- [Kubernetes Failure Stories](https://k8s.af/)
+  \- Learn from other people's mistakes.
 
 ## Management / dealing with people
 
@@ -434,6 +450,8 @@ Python internals and advanced topics:
   \- A collection of `asyncio` compatible libraries.
 - [attrs](https://attrs.readthedocs.io/en/stable/) - Alternative to 3.7's dataclasses.
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Pythonic HTML/XML parsing.
+- [bleach](https://github.com/mozilla/bleach)
+  \- Sanitize untrusted strings so that they are HTML safe.
 - [click](https://click.palletsprojects.com/en/7.x/) - Command line argument parser and then some.
 - [irc3](https://github.com/gawel/irc3/) - IRC client based on `asyncio`.
 - [janus](https://github.com/aio-libs/janus/) - Queue class that bridges the worlds of `threading` and `asyncio`.
@@ -521,6 +539,8 @@ Advanced:
 
 - [parking_lot](https://github.com/Amanieu/parking\_lot)
   \- Synchronization primitives faster than standard library.
+- [static_assertions](https://github.com/nvzqz/static-assertions-rs)
+  \- Static (compile time) assertions, for API stability and `const` expressions.
   
 Less known, but very useful things in the standard library:
 
@@ -558,6 +578,8 @@ Less known, but very useful things in the standard library:
 
 - [Big List of Naughty Strings](https://github.com/minimaxir/big-list-of-naughty-strings)
   \- "list of strings which have a high probability of causing issues when used as user-input data"
+- [TDD, Where Did It All Go Wrong (video)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
+  \- A talk on how to do TDD right.
 
 ## Visualization
 
