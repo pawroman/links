@@ -20,6 +20,7 @@ SKIP_HEADER_LINK_CHECKS = frozenset((
 IGNORE_ERRORS_FOR_URLS = frozenset((
     # Travis CI gets 403 Forbidden here :(
     "https://vimeo.com/293912618/5ccecc85d4",
+    "https://webcache.googleusercontent.com/search?q=cache:dEddeFq1R_gJ:https://speice.io/2019/02/understanding-allocations-in-rust.html",
 ))
 
 DEFAULT_TIMEOUT_SECONDS = 40
