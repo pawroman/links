@@ -413,6 +413,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 
 ### Python learning
 
+- [Advanced asyncio: Solving Real-world Production Problems - PyCon 2019 (video)](https://www.youtube.com/watch?v=bckD_GK80oY)
+  - [Slides](https://speakerdeck.com/roguelynn/advanced-asyncio-solving-real-world-production-problems)
 - [Fluent Python](http://shop.oreilly.com/product/0636920032519.do)
   \- Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
@@ -426,6 +428,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 - [PyVideo](https://pyvideo.org/)
   \- A huge collection of Python related videos: conference / meetup talks etc.
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
+- [Type hinting (and mypy) - PyCon 2019 (video)](https://www.youtube.com/watch?v=hTrjTAPnA_k)
+  - [Blog post](https://www.bernat.tech/the-state-of-type-hints-in-python/)
 - [Using Asyncio in Python 3](https://www.oreilly.com/library/view/using-asyncio-in/9781491999691/) - Worth a read before doing any asyncio.
 - [wtfpython](https://github.com/satwikkansal/wtfpython)
   \- A collection of common Python pitfalls and unexpected behaviours.

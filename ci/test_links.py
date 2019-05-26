@@ -141,15 +141,17 @@ def github_slugify(text: str):
     return re.sub(r"[^a-z0-9-]", "", spaces_as_dashes)
 
 
-def assert_sorted(iterable: Iterable):
-    assert list(iterable) == sorted(iterable)
+def assert_sorted(iterable: Iterable, message: str = ""):
+    assert list(iterable) == sorted(iterable), message
 
 
-def assert_attr_sorted(iterable: Iterable, attr: str, casefold=True):
+def assert_attr_sorted(
+    iterable: Iterable, attr: str, message: str = "", casefold: bool = True
+):
     attrs = (getattr(obj, attr) for obj in iterable)
     normalized_attrs = [attr.casefold() if casefold else attr for attr in attrs]
 
-    assert_sorted(normalized_attrs)
+    assert_sorted(normalized_attrs, message=message)
 
 
 @pytest.fixture(scope="session")
@@ -182,6 +184,7 @@ def headers(renderer: StructuredRenderer) -> List[Header]:
 
 
 @pytest.mark.asyncio
+@pytest.mark.external
 async def test_external_links_are_all_valid(external_links, event_loop):
     # fetch all responses fully asynchronously, iterate as completed
 
@@ -257,7 +260,7 @@ def test_second_level_headers_are_sorted(headers):
         if header.level == 2 and header.text not in SKIP_HEADER_SORT_CHECKS
     ]
 
-    assert_attr_sorted(second_level_headers, "text")
+    assert_attr_sorted(second_level_headers, "text", "2nd level headers not sorted")
 
 
 def test_third_level_headers_are_sorted(headers):
@@ -269,8 +272,7 @@ def test_third_level_headers_are_sorted(headers):
         for third_level in itertools.takewhile(lambda h: h.level == 3, headers_iter):
             group.append(third_level)
 
-        print(f"Testing 3rd level headers under '{header.text}'")
-        assert_attr_sorted(group, "text")
+        assert_attr_sorted(group, "text", f"3rd level header not sorted: {header}")
 
 
 def test_external_links_are_sorted_in_lists(external_links):
@@ -291,5 +293,6 @@ def test_external_links_are_sorted_in_lists(external_links):
             first_links.append(link)
             seen_list_items.add(link.list_item)
 
-        print(f"Testing whether links are sorted under {header}")
-        assert_attr_sorted(first_links, "text")
+        assert_attr_sorted(
+            first_links, "text", f"Links not sorted in a list under {header}"
+        )
