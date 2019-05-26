@@ -7,6 +7,8 @@
 Links to programming related resources I found useful or interesting.
 A personal "awesome list".
 
+You can find out more about me at: [pawroman.dev](https://pawroman.dev)
+
 All the links are tested after every commit and weekly by
 [Travis](https://travis-ci.org/pawroman/links),
 but if you see anything that's not working, please let me know!
