@@ -142,6 +142,15 @@ def github_slugify(text: str):
 
 
 def assert_sorted(iterable: Iterable, message: str = ""):
+    """
+    Assert whether the iterable is sorted. Consumes the iterable.
+
+    >>> assert_sorted([1, 2, 3])
+    >>> assert_sorted([3, 7, 1], "not sorted")  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+        ...
+    AssertionError: not sorted
+    """
     assert list(iterable) == sorted(iterable), message
 
 
