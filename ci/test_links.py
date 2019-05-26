@@ -14,21 +14,21 @@ import pytest
 # ../README.md  (relative to current file)
 README_FILE_PATH = pathlib.Path(__file__).parents[1] / "README.md"
 
-SKIP_HEADER_LINK_CHECKS = frozenset((
-    "links", "Table of Contents"
-))
+SKIP_HEADER_LINK_CHECKS = frozenset(("links", "Table of Contents"))
 
 CHECK_HEADER_LINKS_UP_TO_LEVEL = 3
 
-SKIP_HEADER_SORT_CHECKS = frozenset((
-    "links", "Table of Contents", "Prelude", "Other Lists",
-))
+SKIP_HEADER_SORT_CHECKS = frozenset(
+    ("links", "Table of Contents", "Prelude", "Other Lists")
+)
 
-IGNORE_ERRORS_FOR_URLS = frozenset((
-    # Travis CI gets 403 Forbidden here :(
-    "https://vimeo.com/293912618/5ccecc85d4",
-    "https://webcache.googleusercontent.com/search?q=cache:dEddeFq1R_gJ:https://speice.io/2019/02/understanding-allocations-in-rust.html",
-))
+IGNORE_ERRORS_FOR_URLS = frozenset(
+    (
+        # Travis CI gets 403 Forbidden here :(
+        "https://vimeo.com/293912618/5ccecc85d4",
+        "https://webcache.googleusercontent.com/search?q=cache:dEddeFq1R_gJ:https://speice.io/2019/02/understanding-allocations-in-rust.html",
+    )
+)
 
 DEFAULT_TIMEOUT_SECONDS = 40
 DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
@@ -113,10 +113,14 @@ class StructuredRenderer(mistune.Renderer):
         # markdown escaping messes up underscores in links
         normalized_url = url.replace(r"\_", "_")
 
-        link = Link(normalized_url, title, text,
-                    header=self._headers[-1],
-                    list=self._current_list,
-                    list_item=self._current_list_item)
+        link = Link(
+            normalized_url,
+            title,
+            text,
+            header=self._headers[-1],
+            list=self._current_list,
+            list_item=self._current_list_item,
+        )
         self._links.append(link)
 
 
@@ -143,8 +147,7 @@ def assert_sorted(iterable: Iterable):
 
 def assert_attr_sorted(iterable: Iterable, attr: str, casefold=True):
     attrs = (getattr(obj, attr) for obj in iterable)
-    normalized_attrs = [attr.casefold() if casefold else attr
-                        for attr in attrs]
+    normalized_attrs = [attr.casefold() if casefold else attr for attr in attrs]
 
     assert_sorted(normalized_attrs)
 
@@ -165,18 +168,12 @@ def external_links(renderer: StructuredRenderer) -> List[Link]:
     # deduplicate as there might be repeats, but keep original order
     unique_links = dict.fromkeys(renderer.links)
 
-    return [
-        link for link in unique_links
-        if link.url.startswith(("http", "https"))
-    ]
+    return [link for link in unique_links if link.url.startswith(("http", "https"))]
 
 
 @pytest.fixture(scope="session")
 def internal_links(renderer: StructuredRenderer) -> List[Link]:
-    return [
-        link for link in renderer.links
-        if link.url.startswith("#")
-    ]
+    return [link for link in renderer.links if link.url.startswith("#")]
 
 
 @pytest.fixture(scope="session")
@@ -200,9 +197,7 @@ async def test_external_links_are_all_valid(external_links, event_loop):
 
 async def fetch_all_links(external_links, event_loop):
     async with aiohttp.ClientSession(loop=event_loop) as session:
-        fetch_coros = [
-            fetch_link(link, session) for link in external_links
-        ]
+        fetch_coros = [fetch_link(link, session) for link in external_links]
 
         for fetch_task in asyncio.as_completed(fetch_coros, loop=event_loop):
             result = await fetch_task
@@ -215,7 +210,9 @@ async def fetch_link(link: Link, session: aiohttp.ClientSession):
 
     try:
         async with method(link.url, timeout=DEFAULT_TIMEOUT) as response:
-            print(f"Opening ({method_name}): {link} -> {response.status} {response.reason}")
+            print(
+                f"Opening ({method_name}): {link} -> {response.status} {response.reason}"
+            )
 
             return link, response
     except (aiohttp.ClientError, asyncio.TimeoutError) as e:
@@ -243,18 +240,21 @@ def test_internal_links_are_all_valid(internal_links, headers):
 
 def test_all_headers_are_linked_to(internal_links, headers):
     link_slugs = {link.url.lstrip("#") for link in internal_links}
-    header_slugs = {header.slug for header in headers
-                    if header.text not in SKIP_HEADER_LINK_CHECKS
-                    and header.level <= CHECK_HEADER_LINKS_UP_TO_LEVEL}
+    header_slugs = {
+        header.slug
+        for header in headers
+        if header.text not in SKIP_HEADER_LINK_CHECKS
+        and header.level <= CHECK_HEADER_LINKS_UP_TO_LEVEL
+    }
 
     assert link_slugs == header_slugs
 
 
 def test_second_level_headers_are_sorted(headers):
     second_level_headers = [
-        header for header in headers
-        if header.level == 2
-           and header.text not in SKIP_HEADER_SORT_CHECKS
+        header
+        for header in headers
+        if header.level == 2 and header.text not in SKIP_HEADER_SORT_CHECKS
     ]
 
     assert_attr_sorted(second_level_headers, "text")
@@ -274,8 +274,9 @@ def test_third_level_headers_are_sorted(headers):
 
 
 def test_external_links_are_sorted_in_lists(external_links):
-    for (header, markdown_list), links in itertools.groupby(external_links,
-                                                            lambda link: (link.header, link.list)):
+    for (header, markdown_list), links in itertools.groupby(
+        external_links, lambda link: (link.header, link.list)
+    ):
         if header.level < CHECK_HEADER_LINKS_UP_TO_LEVEL:
             continue
 
