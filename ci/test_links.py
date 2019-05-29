@@ -101,12 +101,15 @@ class StructuredRenderer(mistune.Renderer):
         # AFTER a list ends, with HTML body as string.
         # We re-parse the HTML and create Link objects
         # corresponding to HTML tags.
+
+        # call super here to have well-formed HTML
         result = super().list(body, ordered=ordered)
 
         tree = etree.parse(StringIO(result))
 
         # we want top-level ul lists,
-        # and in each list element, the first link (a)
+        # and in each list element (li), only the first link (a)
+        # (list elements may contain more than one link)
         a_tags = tree.xpath("/ul/li/a[1]")
         current_header = self._headers[-1]
 
