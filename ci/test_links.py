@@ -99,7 +99,7 @@ class StructuredRenderer(mistune.Renderer):
     def list(self, body, ordered=True):
         # The way the mistune parser works is that this is called
         # AFTER a list ends, with HTML body as string.
-        # We re-parse the HTML and find the Link objects
+        # We re-parse the HTML and create Link objects
         # corresponding to HTML tags.
         result = super().list(body, ordered=ordered)
 
