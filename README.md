@@ -345,7 +345,7 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   \- A readable time zone overview. Useful for scheduling meetings.
 - [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
   \- Good advice on what not to focus on during an interview.
-- [How to be a manager](https://web.archive.org/web/20190510100649/https://getweeklyupdate.com/manager-guide)
+- [How to be a manager](https://getweeklyupdate.com/manager-guide)
 - [How to Deal with Difficult People on Software Projects](https://people.neilon.software/)
   \- We all know "that one guy"...
 - [How to Deliver Constructive Feedback in Difficult Situations](https://medium.dave-bailey.com/the-essential-guide-to-difficult-conversations-41f736e63ccf)
