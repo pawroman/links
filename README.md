@@ -90,13 +90,13 @@ Articles:
   - [The Simple Magic of Consistent Hashing](https://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
   - [The Ultimate Guide to Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
 - [Dijkstra's in Disguise](https://blog.evjang.com/2018/08/dijkstras.html)
+- [In Search of an Understandable Consensus Algorithm](https://raft.github.io/raft.pdf)
+  \- (PDF) paper describing the [Raft][raft] consensus algorithm.
 - [Introduction to the A* Algorithm](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
   \- Explained very clearly, with great interactive examples.
      Also explores BFS and Dijkstra's algorithm.
   - [Implementation of A*](https://www.redblobgames.com/pathfinding/a-star/implementation.html)
     \- A follow up on the article, with implementation tips.
-- [In Search of an Understandable Consensus Algorithm](https://raft.github.io/raft.pdf)
-  \- (PDF) paper describing the [Raft][raft] consensus algorithm.
 - [Rendezvous hashing](https://en.wikipedia.org/wiki/Rendezvous_hashing)
 - [The Wavefunction Collapse Algorithm explained very clearly](https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
 
@@ -153,9 +153,9 @@ Anti-patterns:
 
 The Clean trilogy from Robert C. Martin ("Uncle Bob"):
 
-- [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code)
-- [The Clean Coder](https://www.goodreads.com/book/show/10284614-the-clean-coder)
-- [Clean Architecture](https://www.goodreads.com/book/show/18043011-clean-architecture)
+1. [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code)
+2. [The Clean Coder](https://www.goodreads.com/book/show/10284614-the-clean-coder)
+3. [Clean Architecture](https://www.goodreads.com/book/show/18043011-clean-architecture)
 
 Programming overall:
 
@@ -213,9 +213,11 @@ Other:
 - [ArchiveBox](https://github.com/pirate/ArchiveBox)
   \- Your personal (self-hosted) webpage archive.
 - [bat](https://github.com/sharkdp/bat) - Syntax and git-aware `cat` clone, with automated paging.
+- [ctop](https://github.com/bcicen/ctop) - `top` for containers.
 - [DBCLI](https://www.dbcli.com/) - Collection of great CLI database clients,
     e.g. [pgcli](https://www.pgcli.com/), [mycli](https://www.mycli.net/) etc.
-- [ctop](https://github.com/bcicen/ctop) - `top` for containers.
+- [dive](https://github.com/wagoodman/dive)
+  \- Inspect Docker images, layer by layer. Useful to search for spurious/unneeded files.
 - [exa](https://github.com/ogham/exa) - Better than `ls`. Also has a `tree`-like switch (`-T`).
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
 - [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
@@ -226,6 +228,8 @@ Other:
 - [hyperfine](https://github.com/sharkdp/hyperfine) - CLI benchmarking tool.
 - [kubectx](https://github.com/ahmetb/kubectx)
   \- Switch between Kubernetes contexts (clusters) and namespaces easily.
+- [kubetail](https://github.com/johanhaleby/kubetail)
+  \- Aggregate logs from multiple Kubernetes pods.
 - [Midnight Commander (mc)](https://midnight-commander.org/) - The best file manager.
 - [mosh](https://mosh.org/) - Like `ssh`, but with local echo and roaming. Good for poor connections.
 - [mtr](https://github.com/traviscross/mtr) - Better than `ping`.
@@ -280,10 +284,10 @@ Programming fonts I found the most eye-pleasing and readable.
 
 ## git
 
-- [git-quick-stats](https://github.com/arzzen/git-quick-stats)
-  \- Get simple statistics for your repo.
 - [Git in a Nutshell](http://www.aosabook.org/en/git.html)
   \- Overview of how git is implemented.
+- [git-quick-stats](https://github.com/arzzen/git-quick-stats)
+  \- Get simple statistics for your repo.
 - [Little Things I Like to Do with Git](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/)
   \- A few useful tips.
 
@@ -305,10 +309,10 @@ Programming fonts I found the most eye-pleasing and readable.
 - [Modern Microprocessors - A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
   \- Exceptionally good article on how modern CPUs work. This explains why a lot of low-level
   optimizations work.
-- [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
-  \- (PDF) An in-depth paper on computer memory from (mainly) programming perspective.
 - [The microarchitecture of Intel, AMD and VIA CPUs. An optimization guide for assembly programmers and compiler makers](https://www.agner.org/optimize/microarchitecture.pdf)
   \- (PDF) Very in-depth description of inner workings, ins and outs of various CPUs.
+- [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
+  \- (PDF) An in-depth paper on computer memory from (mainly) programming perspective.
 
 Latency visualized:
 
@@ -332,11 +336,11 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 
 - [Commit messages guide](https://github.com/RomuloOliveira/commit-messages-guide)
   \- How to write commit messages well.
-- [Developer to Manager](https://devtomanager.com/)
-  \- Collection of interviews with developers who became managers.
 - [Deadlines Are Killing Us, And Almost Everything Else I Know About Leadership](https://medium.com/@duncanr/deadlines-are-killing-us-and-almost-everything-else-i-know-about-leadership-7032a5fb12ac)
   \- Good article on deadlines, employee motivation, narcissists and management
      overall.
+- [Developer to Manager](https://devtomanager.com/)
+  \- Collection of interviews with developers who became managers.
 - [Every Time Zone](https://everytimezone.com/)
   \- A readable time zone overview. Useful for scheduling meetings.
 - [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
