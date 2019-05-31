@@ -591,6 +591,9 @@ Less known, but very useful things in the standard library:
   \- "list of strings which have a high probability of causing issues when used as user-input data"
 - [TDD, Where Did It All Go Wrong (video)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
   \- A talk on how to do TDD right.
+- [Tests that sometimes fail](https://samsaffron.com/archive/2019/05/15/tests-that-sometimes-fail)
+  \- Good discussion regarding "flaky" tests, enumerating strategies for dealing
+     with them and common causes of flakiness.
 
 ## Visualization
 
