@@ -34,6 +34,7 @@ but if you see anything that's not working, please let me know!
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Kubernetes](#kubernetes)
 - [Management / dealing with people](#management--dealing-with-people)
+- [Networking](#networking)
 - [Privacy](#privacy)
 - [Productivity](#productivity)
 - [Programming Languages](#programming-languages)
@@ -45,11 +46,11 @@ but if you see anything that's not working, please let me know!
 - [Rust](#rust)
     - [Rust learning](#rust-learning)
     - [Rust libraries](#rust-libraries)
-    - [Rust posts and talks](#rust-posts-and-talks)
     - [Rust news and community](#rust-news-and-community)
+    - [Rust posts and talks](#rust-posts-and-talks)
     - [Rust tools](#rust-tools)
-- [Testing](#testing)
 - [Shell](#shell)
+- [Testing](#testing)
 - [Visualization](#visualization)
 
 ---
@@ -369,6 +370,26 @@ Estimating time:
   * m - most likely estimate
   * p - pessimistic estimate
   * te, sigma_te - expected time and its stdev
+  ```
+
+## Networking
+
+- [Reserved IP addresses](https://en.wikipedia.org/wiki/Reserved_IP_addresses)
+  \- List of reserved and special purpose addresses (Wikipedia).
+  
+  Private IPv4 network ranges:
+  
+  ```
+  10.0.0.0/8     : 10.0.0.0    - 10.255.255.255
+  172.16.0.0/12  : 172.16.0.0  - 172.31.255.255
+  192.168.0.0/16 : 192.168.0.0 - 192.168.255.255
+  ```
+  
+  Other commonly used network ranges:
+  
+  ```
+  Default Docker bridge network
+  172.17.0.0/16  : 172.17.0.1   - 172.17.255.255
   ```
 
 ## Privacy

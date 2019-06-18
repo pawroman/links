@@ -5,6 +5,7 @@ import re
 
 from dataclasses import dataclass, field
 from io import StringIO
+from types import MappingProxyType
 from typing import Iterable, List, Optional
 
 import aiohttp
@@ -22,7 +23,11 @@ SKIP_HEADER_LINK_CHECKS = frozenset(("links", "Table of Contents"))
 CHECK_HEADER_LINKS_UP_TO_LEVEL = 3
 
 SKIP_HEADER_SORT_CHECKS = frozenset(
-    ("links", "Table of Contents", "Prelude", "Other Lists")
+    ("links", "Prelude", "Other Lists", "Table of Contents")
+)
+
+SKIP_LINK_SORT_CHECKS = MappingProxyType(
+    {"Table of Contents": frozenset(("Prelude", "Other Lists"))}
 )
 
 IGNORE_ERRORS_FOR_URLS = frozenset(
@@ -282,7 +287,7 @@ def test_all_headers_are_linked_to(internal_links, headers):
         and header.level <= CHECK_HEADER_LINKS_UP_TO_LEVEL
     }
 
-    assert link_slugs == header_slugs
+    assert link_slugs == header_slugs, "Missing or spurious header link"
 
 
 def test_second_level_headers_are_sorted(headers):
@@ -307,16 +312,19 @@ def test_third_level_headers_are_sorted(headers):
         assert_attr_sorted(group, "text", f"3rd level header not sorted: {header}")
 
 
-def test_external_links_are_sorted_in_lists(link_lists):
+def test_links_are_sorted_in_lists(link_lists):
     for link_list in link_lists:
         header = link_list.header
 
-        if (
-            header.level > CHECK_HEADER_LINKS_UP_TO_LEVEL
-            or header.text in SKIP_HEADER_SORT_CHECKS
-        ):
+        if header.level > CHECK_HEADER_LINKS_UP_TO_LEVEL:
             continue
 
+        filtered_links = [
+            link
+            for link in link_list.links
+            if link.text not in SKIP_LINK_SORT_CHECKS.get(header.text, {})
+        ]
+
         assert_attr_sorted(
-            link_list.links, "text", f"Links not sorted in a list under {header}"
+            filtered_links, "text", f"Links not sorted in a list under {header}"
         )
