@@ -231,6 +231,8 @@ Other:
   \- Switch between Kubernetes contexts (clusters) and namespaces easily.
 - [kubetail](https://github.com/johanhaleby/kubetail)
   \- Aggregate logs from multiple Kubernetes pods.
+- [lazydocker](https://github.com/jesseduffield/lazydocker)
+  \- CLI dashboard for Docker and Docker Compose.
 - [Midnight Commander (mc)](https://midnight-commander.org/) - The best file manager.
 - [mosh](https://mosh.org/) - Like `ssh`, but with local echo and roaming. Good for poor connections.
 - [mtr](https://github.com/traviscross/mtr) - Better than `ping`.
@@ -301,6 +303,8 @@ Programming fonts I found the most eye-pleasing and readable.
 
 ## Hardware and CPUs
 
+- [Branch prediction](https://danluu.com/branch-prediction/)
+  \- Quick intro to CPU branch prediction.
 - [Floating Point Visually Explained](http://fabiensanglard.net/floating_point_visually_explained/)
   \- The best explanation I've ever seen.
 - [Gallery of Processor Cache Effects](https://igoro.com/archive/gallery-of-processor-cache-effects/)
@@ -601,6 +605,8 @@ Less known, but very useful things in the standard library:
 
 ## Shell
 
+- [Defensive BASH Programming](https://web.archive.org/web/20171211125201/http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/)
+  \- Good practices for Bash scripting. (Archived from a defunct blog).
 - [gitstatus](https://github.com/romkatv/gitstatus)
   \- Faster `git status` alternative for shells.
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
