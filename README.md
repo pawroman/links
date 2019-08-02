@@ -26,6 +26,7 @@ but if you see anything that's not working, please let me know!
 - [Data](#data)
     - [Databases](#databases)
 - [Design and Web](#design-and-web)
+- [Docker](#docker)
 - [Eye Candy](#eye-candy)
     - [Fonts](#fonts)
     - [Themes](#themes)
@@ -241,6 +242,8 @@ Other:
 - [rmlint](https://github.com/sahib/rmlint)
   \- Free up disk space (e.g. duplicate files).
 - [speedtest-cli](https://github.com/sivel/speedtest-cli) - Speedtest from a command line.
+- [stern](https://github.com/wercker/stern)
+  \- Tail multiple k8s logs (like `kubetail`) but more quickly (and optionally in JSON format).
 - [storm](https://github.com/emre/storm)
   \- Manage SSH connections (`.ssh/config`).
 - [tealdeer](https://github.com/dbrgn/tealdeer) - A very fast [tldr](https://github.com/tldr-pages/tldr) client.
@@ -270,6 +273,15 @@ I'm not a big fan of GUI, but there are a few good ones I use:
   \- You can do without JavaScript.
 - [Brutalist Web Design](https://www.brutalist-web.design/)
   \- A set of very reasonable guidelines for designing websites.
+- [HTTP headers for the responsible developer](https://www.twilio.com/blog/a-http-headers-for-the-responsible-developer)
+  \- Good practices for HTTP headers.
+
+## Docker
+
+- [Broken by default: why you should avoid most Dockerfile examples](https://pythonspeed.com/articles/dockerizing-python-is-hard/)
+  \- Why most `Dockerfile` examples are broken.
+- [Intro Guide to Dockerfile Best Practices](https://blog.docker.com/2019/07/intro-guide-to-dockerfile-best-practices/)
+  \- Good recommendations for `Dockerfiles`.
 
 ## Eye Candy
 
@@ -355,8 +367,11 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   \- We all know "that one guy"...
 - [How to Deliver Constructive Feedback in Difficult Situations](https://medium.dave-bailey.com/the-essential-guide-to-difficult-conversations-41f736e63ccf)
   \- In praise of Nonviolent Communication (NVC) principles.
+- [The XY problem](http://xyproblem.info/)
+  \- When asking people for help, tell them about the problem, before mentioning
+     the attempted solution.
 - [Top 12 Things That Destroy Developer Productivity](https://hackernoon.com/top-12-things-that-destroy-developer-productivity-2ddf0abc190)
-- [Unlearning toxic behaviors in a code review culture](https://medium.freecodecamp.org/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
+- [Unlearning toxic behaviors in a code review culture](https://medium.com/@sandya.sankarram/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
 - [Your Company Culture is Who You Hire, Fire, and Promote](https://www.linkedin.com/pulse/your-companys-culture-who-you-hire-fire-promote-part-1-sepah)
   - Part 2: [Anatomy of an Asshole](https://www.linkedin.com/pulse/your-company-culture-who-you-hire-fire-promote-part-2-sepah)
   - Part 3: [Breaking Bad: Why Good People Become Evil Bosses](https://www.linkedin.com/pulse/breaking-bad-why-good-people-become-evilbosses-dr-cameron-sepah)
@@ -509,6 +524,8 @@ Python internals and advanced topics:
   \- Work with JSON Web Tokens (JWT).
 - [PyPDF2](https://github.com/mstamy2/PyPDF2)
   \- Read and manipulate (e.g. merge) PDF files.
+- [PySnooper](https://github.com/cool-RR/pysnooper)
+  \- Poor man's debugger for Python.
 - [pytest](https://docs.pytest.org/en/latest/) - The only Python test runner worth using these days.
   - Also see [my blog post on basic pytest setup](https://pawroman.gitlab.io/pytest-basic-setup/)
 - [quamash](https://github.com/harvimt/quamash)
@@ -533,6 +550,10 @@ Less known, but very useful things in the standard library:
 
 ### Python tools
 
+- [austin](https://github.com/P403n1x87/austin)
+  \- Profiler / stack frame sampler, with TUI and optional Web UI.
+  - [Deterministic and Statistical Python Profiling](https://p403n1x87.github.io/python/profiling/2019/05/05/python-profiling.html)
+    \- Introduces the project and describes Python profiling approaches.
 - [IPython](https://ipython.org/) - An enhanced Python shell.
     - [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled debugger.
 - [line\_profiler](https://github.com/rkern/line\_profiler) - Profile Python line-by-line.
@@ -540,6 +561,8 @@ Less known, but very useful things in the standard library:
   \- Profile Python memory usage line-by-line.
 - [py-spy](https://github.com/benfred/py-spy)
   \- A low-overhead sampling Python profiler.
+- [pyflame](https://github.com/uber/pyflame)
+  \- Flame graph profiler based on ptrace (Linux only).
 
 ## Rust
 
@@ -580,6 +603,8 @@ Advanced:
   
 Less known, but very useful things in the standard library:
 
+- [std::clone::Clone::clone_from](https://doc.rust-lang.org/std/clone/trait.Clone.html#method.clone_from)
+  \- Perform a (possibly optimized) copy-assignment.
 - [std::mem::discriminant](https://doc.rust-lang.org/std/mem/fn.discriminant.html)
   \- Compare enum types statically.
 
