@@ -227,8 +227,8 @@ Other:
   \- Your personal (self-hosted) webpage archive.
 - [bat](https://github.com/sharkdp/bat) - Syntax and git-aware `cat` clone, with automated paging.
 - [ctop](https://github.com/bcicen/ctop) - `top` for containers.
-- [DBCLI](https://www.dbcli.com/) - Collection of great CLI database clients,
-    e.g. [pgcli](https://www.pgcli.com/), [mycli](https://www.mycli.net/) etc.
+- [DBCLI](https://www.dbcli.com) - Collection of great CLI database clients,
+    e.g. [pgcli](https://www.pgcli.com), [mycli](https://www.mycli.net) etc.
 - [dive](https://github.com/wagoodman/dive)
   \- Inspect Docker images, layer by layer. Useful to search for spurious/unneeded files.
 - [exa](https://github.com/ogham/exa) - Better than `ls`. Also has a `tree`-like switch (`-T`).
