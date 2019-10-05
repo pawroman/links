@@ -553,7 +553,7 @@ Python internals and advanced topics:
   - Also see [my blog post on basic pytest setup](https://pawroman.gitlab.io/pytest-basic-setup/)
 - [quamash](https://github.com/harvimt/quamash)
   \- Use `asyncio` with Qt event loop.
-- [requests](http://docs.python-requests.org/en/master/) - The HTTP library for Python.
+- [requests](https://github.com/psf/requests) - The HTTP library for Python.
 - [tqdm](https://github.com/tqdm/tqdm) - Nice progress bar library and command line tool.
 - [WebSockets](https://websockets.readthedocs.io/en/stable/) - `asyncio` compatible, no-frills WebSocket client/server.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Extract data from XML just like JSON.
