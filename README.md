@@ -26,6 +26,7 @@ but if you see anything that's not working, please let me know!
 - [Data](#data)
     - [Databases](#databases)
 - [Design and Web](#design-and-web)
+- [Distributed Systems and Cloud Computing](#distributed-systems-and-cloud-computing)
 - [Docker](#docker)
 - [Eye Candy](#eye-candy)
     - [Fonts](#fonts)
@@ -144,6 +145,11 @@ Anti-patterns:
 - [Database-as-IPC](https://en.wikipedia.org/wiki/Database-as-IPC)
 - [Global Variables Are Bad](http://wiki.c2.com/?GlobalVariablesAreBad)
 
+Visualizing Architecture:
+
+- [The C4 model for visualizing software architecture](https://c4model.com/)
+  \- A promising model, however there's no good tools around it.
+
 ## Career Development
 
 - [Apprenticeship Patterns](https://www.oreilly.com/library/view/apprenticeship-patterns/9780596806842/)
@@ -161,6 +167,9 @@ The Clean trilogy from Robert C. Martin ("Uncle Bob"):
 
 Programming overall:
 
+- [The Future of Programming (video)](https://www.youtube.com/watch?v=ecIWPzGEbFc)
+  \- A talk from Uncle Bob about the past and the future of programming.
+     Touches on a plethora of subjects, well worth a watch.
 - [The Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer)
   \- An absolute classic of a book.
   - [Take-home reference](https://blog.codinghorror.com/a-pragmatic-quick-reference/)
@@ -168,6 +177,8 @@ Programming overall:
 
 Principles:
 
+- [AHA Programming](https://kentcdodds.com/blog/aha-programming)
+  \- Avoid Hasty Abstractions.
 - [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
   - [DRY (Don't Repeat Yourself) is a Fallacy](https://adamcod.es/2017/07/14/dry-is-a-fallacy.html)
     \- Argues that DRY is mostly about **knowledge**, not just code.
@@ -269,12 +280,19 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 ## Design and Web
 
+- [4 Rules for Intuitive UX](https://learnui.design/blog/4-rules-intuitive-ux.html)
+  \- Good advice for designing UI, with examples and anti-examples.
 - [A JavaScript-Free Frontend](https://dev.to/winduptoy/a-javascript-free-frontend-2d3e)
   \- You can do without JavaScript.
 - [Brutalist Web Design](https://www.brutalist-web.design/)
   \- A set of very reasonable guidelines for designing websites.
 - [HTTP headers for the responsible developer](https://www.twilio.com/blog/a-http-headers-for-the-responsible-developer)
   \- Good practices for HTTP headers.
+  
+## Distributed Systems and Cloud Computing
+
+- [Nines are not enough: meaningful metrics for clouds](https://blog.acolyer.org/2019/06/19/nines-are-not-enough/)
+  \- Explains the relationships between SLA, SLI and SLO and how to approach defining them.
 
 ## Docker
 
@@ -372,6 +390,11 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
      the attempted solution.
 - [Top 12 Things That Destroy Developer Productivity](https://hackernoon.com/top-12-things-that-destroy-developer-productivity-2ddf0abc190)
 - [Unlearning toxic behaviors in a code review culture](https://medium.com/@sandya.sankarram/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
+- [Users hate change](https://gist.github.com/sleepyfox/a4d311ffcdc4fd908ec97d1c245e57dc)
+  \- Arguments for not changing your product if it works and giving users a choice.
+- [Why software developers (quite honestly) hate Agile](https://www.objectstyle.com/agile/why-developers-hate-agile)
+  \- What went wrong with the agile movement and why
+     [Software Craftsmanship approach](https://en.wikipedia.org/wiki/Software_craftsmanship) might be better.
 - [Your Company Culture is Who You Hire, Fire, and Promote](https://www.linkedin.com/pulse/your-companys-culture-who-you-hire-fire-promote-part-1-sepah)
   - Part 2: [Anatomy of an Asshole](https://www.linkedin.com/pulse/your-company-culture-who-you-hire-fire-promote-part-2-sepah)
   - Part 3: [Breaking Bad: Why Good People Become Evil Bosses](https://www.linkedin.com/pulse/breaking-bad-why-good-people-become-evilbosses-dr-cameron-sepah)
@@ -570,6 +593,8 @@ Less known, but very useful things in the standard library:
 
 - [A Quick Look at Trait Objects in Rust](https://tratt.net/laurie/blog/entries/a_quick_look_at_trait_objects_in_rust.html)
   \- Explains static vs dynamic dispatch (trait objects).
+- [Accurate mental model for Rust's reference types](https://docs.rs/dtolnay/0.0.6/dtolnay/macro._02__reference_types.html)
+  \- Explains what `&T` and `&mut T` really are.
 - [Allocations in Rust](https://speice.io/2019/02/understanding-allocations-in-rust.html)
   \- Good, in depth intro to how different memory allocation mechanisms
      work in Rust.
@@ -577,11 +602,15 @@ Less known, but very useful things in the standard library:
   \- Practical guide to handling errors the Rust way.
 - [Generic returns in Rust](https://blog.jcoglan.com/2019/04/22/generic-returns-in-rust/)
   \- On handling `From/Into` traits and how `Iterator::collect()` works.
+- [Join Your Threads](https://matklad.github.io/2019/08/23/join-your-threads.html)
+  \- Why ensuring thread join handles are called is important.
 - [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
   \- How to accomplish common tasks using idiomatic Rust and libraries.
 - [Rust Language Cheat Sheet](https://cheats.rs/)
+- [rust-book-summary](https://github.com/psibi/rust-book-summary)
+  \- TLDR summary of [The Rust Programming Language Book](https://doc.rust-lang.org/stable/book/).
 - [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
   \- An interesting take on mutability, ownership and borrowing in Rust,
      using alternative terminology.
