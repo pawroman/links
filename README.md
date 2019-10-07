@@ -277,6 +277,9 @@ I'm not a big fan of GUI, but there are a few good ones I use:
   \- What not to do in Postgres.
 - [Lessons learned scaling PostgreSQL database to 1.2bn records/month](https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067)
   \- Very insightful article.
+- [Nested Set Model](https://en.wikipedia.org/wiki/Nested_set_model)
+  \- Reasonably efficient solution for storing tree structures in relational databases.
+     Aka. MPTT (also see example implementation in Django: https://github.com/django-mptt/django-mptt)
 
 ## Design and Web
 
