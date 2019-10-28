@@ -433,6 +433,18 @@ Estimating time:
   * te, sigma_te - expected time and its stdev
   ```
 
+Talking about technical debt with business people
+
+(From Kent Beck's twitter: https://twitter.com/KentBeck/status/1187766114706542593 )
+
+- "Investing in improving structure" over "Paying off technical debt"
+- "Resilience & Scaling" over "Technical debt work"
+- "Upgrade" over "Refactoring"
+- Playing Business cards:
+    - Reduce cost (including time cost to market and shipping new features)
+    - Protect revenue (including preventing disasters)
+    - Increase revenue (selling more, adding new features)
+
 ## Networking
 
 - [Reserved IP addresses](https://en.wikipedia.org/wiki/Reserved_IP_addresses)
@@ -509,7 +521,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- (PDF). Free book collecting Python antipatterns and common mistakes.
 - [Python 3 Module of the Week](https://pymotw.com/3/)
   \- Tutorials for standard library modules.
-- [Python API Checklist](https://devchecklists.com/python-api-checklist/)
+- [Python API Checklist](https://devchecklists.com/python-api-checklist/en/)
   \- Quite a few boxes to tick for good Python APIs.
 - [Python Cheatsheet](https://github.com/gto76/python-cheatsheet)
   \- A pretty comprehensive cheatsheet.
