@@ -101,6 +101,8 @@ Articles:
   - [Implementation of A*](https://www.redblobgames.com/pathfinding/a-star/implementation.html)
     \- A follow up on the article, with implementation tips.
 - [Rendezvous hashing](https://en.wikipedia.org/wiki/Rendezvous_hashing)
+- [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling)
+  \- Sample items from very large or infinite collections.
 - [The Wavefunction Collapse Algorithm explained very clearly](https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
 
 Books:
@@ -336,8 +338,14 @@ Programming fonts I found the most eye-pleasing and readable.
 
 ## Hardware and CPUs
 
+- [A fast alternative to the modulo reduction](https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction/)
+  \- A clever alternative to modulo for spreading out values across a fixed-sized array, like in a hashmap.
 - [Branch prediction](https://danluu.com/branch-prediction/)
   \- Quick intro to CPU branch prediction.
+- [Common Systems Programming Optimizations & Tricks](https://paulcavallaro.com/blog/common-systems-programming-optimizations-tricks/)
+  \- A few low-level tricks.
+- [Computer Latency at a Human Scale](https://www.prowesscorp.com/computer-latency-at-a-human-scale/)
+  \- Latency with human-relatable scales.
 - [Floating Point Visually Explained](http://fabiensanglard.net/floating_point_visually_explained/)
   \- The best explanation I've ever seen.
 - [Gallery of Processor Cache Effects](https://igoro.com/archive/gallery-of-processor-cache-effects/)
@@ -347,10 +355,14 @@ Programming fonts I found the most eye-pleasing and readable.
 - [Modern Microprocessors - A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
   \- Exceptionally good article on how modern CPUs work. This explains why a lot of low-level
   optimizations work.
+- [Performance speed limits](https://travisdowns.github.io/blog/2019/06/11/speed-limits.html)
+  \- Super-low-level details of how fast can a CPU execute code.
 - [The microarchitecture of Intel, AMD and VIA CPUs. An optimization guide for assembly programmers and compiler makers](https://www.agner.org/optimize/microarchitecture.pdf)
   \- (PDF) Very in-depth description of inner workings, ins and outs of various CPUs.
 - [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
   \- (PDF) An in-depth paper on computer memory from (mainly) programming perspective.
+- ["What The Hardware Does" is not What Your Program Does: Uninitialized Memory](https://www.ralfj.de/blog/2019/07/14/uninit.html)
+  \- Words of warning not to forget the "abstract machine" that programming languages model.
 
 Latency visualized:
 
@@ -379,6 +391,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
      overall.
 - [Developer to Manager](https://devtomanager.com/)
   \- Collection of interviews with developers who became managers.
+- [Eliminating the Product Owner Role](https://medium.com/@JoshuaKerievsky/eliminating-the-product-owner-role-be01cabc1f5b)
+  \- Argues that the "product owner" role might be spread across a team.
 - [Every Time Zone](https://everytimezone.com/)
   \- A readable time zone overview. Useful for scheduling meetings.
 - [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
@@ -395,6 +409,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 - [Unlearning toxic behaviors in a code review culture](https://medium.com/@sandya.sankarram/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
 - [Users hate change](https://gist.github.com/sleepyfox/a4d311ffcdc4fd908ec97d1c245e57dc)
   \- Arguments for not changing your product if it works and giving users a choice.
+- [What Got You Here Won't Get You There](https://medium.com/agileconnexions/what-got-you-here-wont-get-you-there-f294e0e061d)
+  \- Generic tips for leaders.
 - [Why software developers (quite honestly) hate Agile](https://www.objectstyle.com/agile/why-developers-hate-agile)
   \- What went wrong with the agile movement and why
      [Software Craftsmanship approach](https://en.wikipedia.org/wiki/Software_craftsmanship) might be better.

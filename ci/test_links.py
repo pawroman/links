@@ -178,10 +178,20 @@ def assert_sorted(iterable: Iterable, message: str = ""):
 
 
 def assert_attr_sorted(
-    iterable: Iterable, attr: str, message: str = "", casefold: bool = True
+    iterable: Iterable,
+    attr: str,
+    message: str = "",
+    casefold: bool = True,
+    alnum_first: bool = True,
 ):
     attrs = (getattr(obj, attr) for obj in iterable)
     normalized_attrs = [attr.casefold() if casefold else attr for attr in attrs]
+
+    if alnum_first:
+        normalized_attrs = [
+            attr[1:] if (alnum_first and not attr[0].isalnum()) else attr
+            for attr in normalized_attrs
+        ]
 
     assert_sorted(normalized_attrs, message=message)
 
