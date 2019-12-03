@@ -203,6 +203,8 @@ Code quality measures:
 
 Other:
 
+- [5 Things I’ve Learned in 20 Years of Programming](https://daedtech.com/5-things-ive-learned-in-20-years-of-programming/)
+  \- Some good advice.
 - [API Evolution the Right Way](https://emptysqua.re/blog/api-evolution-the-right-way/)
 - [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
 - [Empathy is Code Deep](https://vimeo.com/293912618/5ccecc85d4)
@@ -269,6 +271,8 @@ Other:
 
 I'm not a big fan of GUI, but there are a few good ones I use:
 
+- [PosteRazor](https://posterazor.sourceforge.io/index.php?page=about&lang=english)
+  \- Print posters (e.g. large images spanning multiple paper pages)
 - [QDirStat](https://github.com/shundhammer/qdirstat) - Analyze disk usage by directory / file type.
 
 ## Data
@@ -678,6 +682,9 @@ Less known, but very useful things in the standard library:
 
 ### Rust posts and talks
 
+- [Error Handling Survey](https://blog.yoshuawuyts.com/error-handling-survey/)
+  \- In depth overview and discussion of error handling libraries and approaches.
+     2019-11-13.
 - [How I Wrote a Modern C++ Library in Rust](https://hsivonen.fi/modern-cpp-in-rust/)
 - [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
