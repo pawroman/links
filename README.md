@@ -291,8 +291,8 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 - [4 Rules for Intuitive UX](https://learnui.design/blog/4-rules-intuitive-ux.html)
   \- Good advice for designing UI, with examples and anti-examples.
-- [A JavaScript-Free Frontend](https://dev.to/winduptoy/a-javascript-free-frontend-2d3e)
-  \- You can do without JavaScript.
+- [A JavaScript-Free Frontend](https://web.archive.org/web/20190826003421/https://dev.to/winduptoy/a-javascript-free-frontend-2d3e)
+  \- You can do without JavaScript (Archived version).
 - [Brutalist Web Design](https://www.brutalist-web.design/)
   \- A set of very reasonable guidelines for designing websites.
 - [HTTP headers for the responsible developer](https://www.twilio.com/blog/a-http-headers-for-the-responsible-developer)
@@ -544,7 +544,7 @@ Python internals and advanced topics:
   \- Video lectures on Python 2.7 source code. Dated, but still mostly relevant.
 - [How Python does Unicode](https://www.b-list.org/weblog/2017/sep/05/how-python-does-unicode/)
   \- Learn how `str` works under the hood and what does `len(str)` actually return.
-- [Inside Python dict](https://just-taking-a-ride.com/inside_python_dict/chapter1.html)
+- [Inside Python dict](https://github.com/eleweek/inside_python_dict)
 - [Inside the New GIL](https://speakerdeck.com/dabeaz/inside-the-new-gil)
   \- Slides from David Beazley on "new" GIL implementation (introduced in 3.2).
 - [Modern Dictionaries (video)](https://www.youtube.com/watch?v=p33CVV29OG8)
@@ -649,7 +649,7 @@ Less known, but very useful things in the standard library:
 - [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
   \- An interesting take on mutability, ownership and borrowing in Rust,
      using alternative terminology.
-- [The Edition Guide](https://rust-lang-nursery.github.io/edition-guide/introduction.html)
+- [The Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/introduction.html)
   \- Learn about Rust 2018 features.
 - [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
 
@@ -688,7 +688,7 @@ Less known, but very useful things in the standard library:
 - [How I Wrote a Modern C++ Library in Rust](https://hsivonen.fi/modern-cpp-in-rust/)
 - [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
-- [The Evolution of a Rust Programmer](http://antoyo.ml/evolution-rust-programmer)
+- [The Evolution of a Rust Programmer](https://blog.antoyo.xyz/evolution-rust-programmer)
   \- Tongue-in-cheek post on different Rust programming styles.
 
 ### Rust tools

@@ -242,7 +242,10 @@ async def test_external_links_are_all_valid(external_links, event_loop):
             print(f"Ignored response: {response.status} {response.reason} for: {link}")
             continue
 
-        assert is_ok, f"Couldn't open: {link}"
+        if not is_ok:
+            pytest.fail(
+                f"Couldn't open (status code {response.status}): {link}", pytrace=False
+            )
 
 
 async def fetch_all_links(external_links, event_loop):
