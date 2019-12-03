@@ -274,10 +274,6 @@ async def fetch_link(link: Link, session: aiohttp.ClientSession):
 
 
 def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
-    if "youtube.com/" in link.url:
-        # youtube's getting limited on travis
-        return session.head
-
     if link.url.endswith((".png", ".pdf")):
         # assume that large static files are OK if HEAD request succeeds
         return session.head
