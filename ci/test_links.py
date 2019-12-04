@@ -46,7 +46,7 @@ DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
 
 # looks like youtube.com is throttling requests,
 # randomly wait this many seconds between retries
-YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (1, 5)
+YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (3, 10)
 YOUTUBE_THROTTLE_MAX_RETRIES = 3
 
 
