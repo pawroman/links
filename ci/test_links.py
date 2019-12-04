@@ -12,6 +12,7 @@ import aiohttp
 import mistune
 import pytest
 
+from aiohttp import ClientResponse
 from lxml import etree
 
 
@@ -65,6 +66,31 @@ class Link:
 class LinkList:
     header: Header
     links: List[Link]
+
+
+@dataclass(frozen=True)
+class FetchResult:
+    link: Link
+    response: Optional[ClientResponse]
+    exception: Optional[Exception]
+
+    @property
+    def is_ok(self) -> bool:
+        return self.response and self.response.status == 200 and not self.exception
+
+    @property
+    def error_description(self) -> Optional[str]:
+        if self.is_ok:
+            return None
+        elif self.response:
+            return f"Status code: {self.response.status}"
+        elif self.exception:
+            if isinstance(self.exception, TimeoutError):
+                return "Timed out"
+            else:
+                return f"Exception: {self.exception}"
+        else:
+            raise RuntimeError("Unreachable!")
 
 
 class StructuredRenderer(mistune.Renderer):
@@ -234,18 +260,32 @@ def link_lists(renderer: StructuredRenderer) -> List[LinkList]:
 @pytest.mark.external
 async def test_external_links_are_all_valid(external_links, event_loop):
     # fetch all responses fully asynchronously, iterate as completed
+    failures = []
+    ignored = []
+    successes = []
 
-    async for link, response in fetch_all_links(external_links, event_loop):
-        is_ok = response.status == 200
-
-        if not is_ok and link.url in IGNORE_ERRORS_FOR_URLS:
-            print(f"Ignored response: {response.status} {response.reason} for: {link}")
+    async for fetch_result in fetch_all_links(external_links, event_loop):
+        if not fetch_result.is_ok and fetch_result.link.url in IGNORE_ERRORS_FOR_URLS:
+            ignored.append(fetch_result)
             continue
 
-        if not is_ok:
-            pytest.fail(
-                f"Couldn't open (status code {response.status}): {link}", pytrace=False
-            )
+        if fetch_result.is_ok:
+            successes.append(fetch_result)
+        else:
+            failures.append(fetch_result)
+
+    print(f">>> Ignored: {len(ignored)} responses")
+    print(f">>> OK: {len(successes)} responses")
+
+    if failures:
+        pytest.fail(
+            f">>> Failures: {len(failures)}\n"
+            + "\n".join(
+                f"FAIL ({fetch_result.error_description}): {fetch_result.link}"
+                for fetch_result in failures
+            ),
+            pytrace=False,
+        )
 
 
 async def fetch_all_links(external_links, event_loop):
@@ -267,10 +307,10 @@ async def fetch_link(link: Link, session: aiohttp.ClientSession):
                 f"Opening ({method_name}): {link} -> {response.status} {response.reason}"
             )
 
-            return link, response
+            return FetchResult(link, response, None)
     except (aiohttp.ClientError, asyncio.TimeoutError) as e:
         print(f"Error opening {link}: {e}")
-        raise
+        return FetchResult(link, None, e)
 
 
 def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
