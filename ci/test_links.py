@@ -3,8 +3,8 @@ import itertools
 import pathlib
 import random
 import re
-from contextlib import contextmanager
 
+from contextlib import asynccontextmanager
 from dataclasses import dataclass, field
 from io import StringIO
 from types import MappingProxyType
@@ -46,7 +46,7 @@ DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
 
 # looks like youtube.com is throttling requests,
 # randomly wait this many seconds between retries
-YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (5, 30)
+YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (1, 5)
 YOUTUBE_THROTTLE_MAX_RETRIES = 10
 
 
@@ -327,7 +327,7 @@ def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
         # assume that large static files are OK if HEAD request succeeds
         return session.head
 
-    if "://youtube.com/" in link.url:
+    if "youtube.com/" in link.url:
         return get_retrying_on_throttling(
             session,
             YOUTUBE_THROTTLE_MAX_RETRIES,
@@ -337,12 +337,12 @@ def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
     return session.get
 
 
-async def get_retrying_on_throttling(
+def get_retrying_on_throttling(
     session: aiohttp.ClientSession,
     max_retries: int = 1,
     random_sleep=Optional[Tuple[int, int]],
 ):
-    @contextmanager
+    @asynccontextmanager
     async def wrapper(*args, **kwargs):
         for _ in range(max_retries + 1):
             async with session.get(*args, **kwargs) as response:
@@ -352,6 +352,7 @@ async def get_retrying_on_throttling(
                     await asyncio.sleep(sleep_for)
                 else:
                     yield response
+                    break
 
     return wrapper
 
