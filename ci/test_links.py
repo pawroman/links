@@ -1,12 +1,14 @@
 import asyncio
 import itertools
 import pathlib
+import random
 import re
+from contextlib import contextmanager
 
 from dataclasses import dataclass, field
 from io import StringIO
 from types import MappingProxyType
-from typing import Iterable, List, Optional
+from typing import Iterable, List, Optional, Tuple
 
 import aiohttp
 import mistune
@@ -42,6 +44,11 @@ IGNORE_ERRORS_FOR_URLS = frozenset(
 DEFAULT_TIMEOUT_SECONDS = 45
 DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
 
+# looks like youtube.com is throttling requests,
+# randomly wait this many seconds between retries
+YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (1, 5)
+YOUTUBE_THROTTLE_MAX_RETRIES = 3
+
 
 @dataclass(frozen=True)
 class Header:
@@ -76,7 +83,9 @@ class FetchResult:
 
     @property
     def is_ok(self) -> bool:
-        return self.response and self.response.status == 200 and not self.exception
+        return bool(
+            self.response and self.response.status == 200 and not self.exception
+        )
 
     @property
     def error_description(self) -> Optional[str]:
@@ -318,7 +327,33 @@ def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
         # assume that large static files are OK if HEAD request succeeds
         return session.head
 
+    if "://youtube.com/" in link.url:
+        return get_retrying_on_throttling(
+            session,
+            YOUTUBE_THROTTLE_MAX_RETRIES,
+            random_sleep=YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE,
+        )
+
     return session.get
+
+
+async def get_retrying_on_throttling(
+    session: aiohttp.ClientSession,
+    max_retries: int = 1,
+    random_sleep=Optional[Tuple[int, int]],
+):
+    @contextmanager
+    async def wrapper(*args, **kwargs):
+        for _ in range(max_retries + 1):
+            async with session.get(*args, **kwargs) as response:
+                if response.status == 429:
+                    # 429 too many requests
+                    sleep_for = random.uniform(*random_sleep)
+                    await asyncio.sleep(sleep_for)
+                else:
+                    yield response
+
+    return wrapper
 
 
 def test_internal_links_are_all_valid(internal_links, headers):

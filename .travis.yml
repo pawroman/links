@@ -9,6 +9,6 @@ python:
   - "3.7"
 
 script:
-  - black --check ci
-  - mypy ci
+  - black --check ci/
+  - mypy ci/
   - pytest -v
