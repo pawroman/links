@@ -1,7 +1,7 @@
 # links
 
 [![Build Status](https://travis-ci.org/pawroman/links.svg?branch=master)](https://travis-ci.org/pawroman/links)
-![Python version used for testing](https://img.shields.io/badge/python-3.7-blue.svg)
+![Python version used for testing](https://img.shields.io/badge/python-3.8-blue.svg)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 
 Links to programming related resources I found useful or interesting.
