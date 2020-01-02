@@ -118,7 +118,7 @@ Other:
   \- [Raft][raft] Visualized in a very easy to follow way.
 - [xoshiro / xoroshiro generators and the PRNG shootout](http://xoshiro.di.unimi.it/)
   \- Small and fast Pseudo-Random Number Generators.
-  
+
 [raft]: https://raft.github.io/
 
 ## Architecture and Programming Patterns
@@ -182,7 +182,7 @@ Principles:
 - [AHA Programming](https://kentcdodds.com/blog/aha-programming)
   \- Avoid Hasty Abstractions.
 - [Don't Repeat Yourself](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
-  - [DRY (Don't Repeat Yourself) is a Fallacy](https://adamcod.es/2017/07/14/dry-is-a-fallacy.html)
+  - [DRY (Don't Repeat Yourself) is a Fallacy](https://web.archive.org/web/20190416201841/https://adamcod.es/2017/07/14/dry-is-a-fallacy.html)
     \- Argues that DRY is mostly about **knowledge**, not just code.
 - [Make It Work, Make It Right, Make It Fast](http://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
 - [Principle of least astonishment](https://en.wikipedia.org/wiki/Least_astonishment)
@@ -297,7 +297,7 @@ I'm not a big fan of GUI, but there are a few good ones I use:
   \- A set of very reasonable guidelines for designing websites.
 - [HTTP headers for the responsible developer](https://www.twilio.com/blog/a-http-headers-for-the-responsible-developer)
   \- Good practices for HTTP headers.
-  
+
 ## Distributed Systems and Cloud Computing
 
 - [Nines are not enough: meaningful metrics for clouds](https://blog.acolyer.org/2019/06/19/nines-are-not-enough/)
@@ -425,11 +425,11 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 Estimating time:
 
 - [PERT (Program evaluation and review technique)](https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique#Time)
-    - Also see: [Three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation) 
+    - Also see: [Three-point estimation](https://en.wikipedia.org/wiki/Three-point_estimation)
   ```
   te = (o + 4m + p) / 6
   sigma_te = (p - o) / 6
-  
+
   Where:
   * o - optimistic estimate (time)
   * m - most likely estimate
@@ -453,17 +453,17 @@ Talking about technical debt with business people
 
 - [Reserved IP addresses](https://en.wikipedia.org/wiki/Reserved_IP_addresses)
   \- List of reserved and special purpose addresses (Wikipedia).
-  
+
   Private IPv4 network ranges:
-  
+
   ```
   10.0.0.0/8     : 10.0.0.0    - 10.255.255.255
   172.16.0.0/12  : 172.16.0.0  - 172.31.255.255
   192.168.0.0/16 : 192.168.0.0 - 192.168.255.255
   ```
-  
+
   Other commonly used network ranges:
-  
+
   ```
   Default Docker bridge network
   172.17.0.0/16  : 172.17.0.1   - 172.17.255.255
@@ -477,7 +477,7 @@ Articles
   \- A Wikipedia article discussing the "I have nothing to hide"
      privacy argument.
 - [Three Reasons Why the "Nothing to Hide" Argument is Flawed](https://spreadprivacy.com/three-reasons-why-the-nothing-to-hide-argument-is-flawed/)
-   
+
 Resources
 
 - [Pi-hole](https://pi-hole.net/)
@@ -666,7 +666,7 @@ Advanced:
   \- Expose Rust libraries to Python. Targets stable Rust.
 - [static_assertions](https://github.com/nvzqz/static-assertions-rs)
   \- Static (compile time) assertions, for API stability and `const` expressions.
-  
+
 Less known, but very useful things in the standard library:
 
 - [std::clone::Clone::clone_from](https://doc.rust-lang.org/std/clone/trait.Clone.html#method.clone_from)

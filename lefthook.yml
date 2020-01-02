@@ -1,0 +1,7 @@
+pre-commit:
+    parallel: true
+    commands:
+        black:
+            run: black .
+        mypy:
+            run: mypy ci/
