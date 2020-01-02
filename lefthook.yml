@@ -5,3 +5,5 @@ pre-commit:
             run: black --check ci/
         mypy:
             run: mypy ci/
+        quick-links-test:
+            run: pytest -m 'not external' -q --disable-warnings
