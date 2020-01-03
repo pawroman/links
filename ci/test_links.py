@@ -6,7 +6,7 @@ import re
 
 from contextlib import asynccontextmanager
 from dataclasses import dataclass, field
-from functools import wraps
+from functools import wraps, partial
 from io import StringIO
 from types import MappingProxyType
 from typing import Iterable, List, Optional, Tuple
@@ -344,6 +344,15 @@ def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
             max_retries=YOUTUBE_THROTTLE_MAX_RETRIES,
             random_sleep=YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE,
         )
+
+    if "vimeo.com/" in link.url:
+        # ignore fake user agent for vimeo
+        @asynccontextmanager
+        async def get_no_headers(*args, **kwargs):
+            async with session.get(*args, **kwargs, headers=None) as resp:
+                yield resp
+
+        return get_no_headers
 
     return get_retrying(
         session,
