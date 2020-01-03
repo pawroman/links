@@ -6,6 +6,7 @@ import re
 
 from contextlib import asynccontextmanager
 from dataclasses import dataclass, field
+from functools import wraps
 from io import StringIO
 from types import MappingProxyType
 from typing import Iterable, List, Optional, Tuple
@@ -48,6 +49,14 @@ DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
 # randomly wait this many seconds between retries
 YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (1, 5)
 YOUTUBE_THROTTLE_MAX_RETRIES = 10
+
+# generic retrying
+GENERIC_WAIT_SECONDS_RANGE = (1, 5)
+GENERIC_MAX_RETRIES = 5
+GENERIC_RETRY_CODES = frozenset((403, 503))
+
+# Use a fake user agent to pretend we're a browser
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0"
 
 
 @dataclass(frozen=True)
@@ -298,7 +307,9 @@ async def test_external_links_are_all_valid(external_links, event_loop):
 
 
 async def fetch_all_links(external_links, event_loop):
-    async with aiohttp.ClientSession(loop=event_loop) as session:
+    async with aiohttp.ClientSession(
+        loop=event_loop, headers={"User-Agent": USER_AGENT},
+    ) as session:
         fetch_coros = [fetch_link(link, session) for link in external_links]
 
         for fetch_task in asyncio.as_completed(fetch_coros, loop=event_loop):
@@ -330,11 +341,43 @@ def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
     if "youtube.com/" in link.url:
         return get_retrying_on_throttling(
             session,
-            YOUTUBE_THROTTLE_MAX_RETRIES,
+            max_retries=YOUTUBE_THROTTLE_MAX_RETRIES,
             random_sleep=YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE,
         )
 
-    return session.get
+    return get_retrying(
+        session,
+        codes=GENERIC_RETRY_CODES,
+        max_retries=GENERIC_MAX_RETRIES,
+        random_sleep=GENERIC_WAIT_SECONDS_RANGE,
+    )
+
+
+def get_retrying(
+    session: aiohttp.ClientSession,
+    codes: Iterable[int],
+    max_retries: int = 1,
+    random_sleep=Optional[Tuple[int, int]],
+):
+    code_set = set(codes)
+
+    @asynccontextmanager
+    @wraps(session.get)
+    async def wrapper(*args, **kwargs):
+        for _ in range(max_retries + 1):
+            async with session.get(*args, **kwargs) as response:
+                if response.status in code_set:
+                    sleep_for = random.uniform(*random_sleep)
+                    await asyncio.sleep(sleep_for)
+                else:
+                    yield response
+                    return
+
+        raise TimeoutError(
+            f"Failed to fetch {args[0]} after {max_retries} retries, response code: {response.status}"
+        )
+
+    return wrapper
 
 
 def get_retrying_on_throttling(
@@ -342,19 +385,13 @@ def get_retrying_on_throttling(
     max_retries: int = 1,
     random_sleep=Optional[Tuple[int, int]],
 ):
-    @asynccontextmanager
-    async def wrapper(*args, **kwargs):
-        for _ in range(max_retries + 1):
-            async with session.get(*args, **kwargs) as response:
-                if response.status == 429:
-                    # 429 too many requests
-                    sleep_for = random.uniform(*random_sleep)
-                    await asyncio.sleep(sleep_for)
-                else:
-                    yield response
-                    break
-
-    return wrapper
+    return get_retrying(
+        # 429 too many requests
+        session,
+        codes=(429,),
+        max_retries=max_retries,
+        random_sleep=random_sleep,
+    )
 
 
 def test_internal_links_are_all_valid(internal_links, headers):
