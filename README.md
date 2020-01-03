@@ -212,6 +212,9 @@ Other:
      Code matters and people do too.
 - [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
   \- Learn what not to do :)
+- [Preventing the Collapse of Civilization](https://www.youtube.com/watch?v=ZSRHeXYDLko)
+  \- A good talk touching on software simplicity and knowledge transfer
+     in software development.
 - [Storing UTC is not a silver bullet](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
   \- Why "just store all times in UTC" is sometimes not the best approach.
 - [Superior Testing: Stop Stopping](https://arturdryomov.online/posts/superior-testing-stop-stopping/)
@@ -229,6 +232,8 @@ Other:
 
 - [ArchiveBox](https://github.com/pirate/ArchiveBox)
   \- Your personal (self-hosted) webpage archive.
+- [bandwhich](https://github.com/imsnif/bandwhich)
+  \- Display current network utilization by process, connection and remote IP/hostname.
 - [bat](https://github.com/sharkdp/bat) - Syntax and git-aware `cat` clone, with automated paging.
 - [ctop](https://github.com/bcicen/ctop) - `top` for containers.
 - [DBCLI](https://www.dbcli.com) - Collection of great CLI database clients,
@@ -361,6 +366,9 @@ Programming fonts I found the most eye-pleasing and readable.
   optimizations work.
 - [Performance speed limits](https://travisdowns.github.io/blog/2019/06/11/speed-limits.html)
   \- Super-low-level details of how fast can a CPU execute code.
+- [The Fallacy of Premature Optimization](https://ubiquity.acm.org/article.cfm?id=1513451)
+  \- Avoiding "premature optimization" doesn't mean we shouldn't optimize at all.
+     Thinking about performance early on is important.
 - [The microarchitecture of Intel, AMD and VIA CPUs. An optimization guide for assembly programmers and compiler makers](https://www.agner.org/optimize/microarchitecture.pdf)
   \- (PDF) Very in-depth description of inner workings, ins and outs of various CPUs.
 - [What Every Programmer Should Know About Memory](https://akkadia.org/drepper/cpumemory.pdf)
