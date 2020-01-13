@@ -3,7 +3,6 @@ import itertools
 import pathlib
 import random
 import re
-
 from contextlib import asynccontextmanager
 from dataclasses import dataclass, field
 from functools import wraps
@@ -14,10 +13,8 @@ from typing import Iterable, List, Optional, Tuple
 import aiohttp
 import mistune
 import pytest
-
 from aiohttp import ClientResponse
 from lxml import etree
-
 
 # ../README.md  (relative to current file)
 README_FILE_PATH = pathlib.Path(__file__).parents[1] / "README.md"
@@ -47,7 +44,7 @@ DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
 
 # looks like youtube.com is throttling requests,
 # randomly wait this many seconds between retries
-YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (1, 5)
+YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (3, 10)
 YOUTUBE_THROTTLE_MAX_RETRIES = 10
 
 # generic retrying
