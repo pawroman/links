@@ -11,6 +11,6 @@ python:
 script:
   - black --check ci/
   - mypy ci/
-  - pytest -v ci/
   - flake8 ci/
   - isort --check-only -rc ci/  # -rc -> recursive
+  - pytest -v ci/

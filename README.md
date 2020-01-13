@@ -217,8 +217,8 @@ Other:
      in software development.
 - [Storing UTC is not a silver bullet](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
   \- Why "just store all times in UTC" is sometimes not the best approach.
-- [Superior Testing: Stop Stopping](https://arturdryomov.online/posts/superior-testing-stop-stopping/)
-  \- Great post on why testing matters.
+- [Superior Testing: Stop Stopping](https://web.archive.org/web/20190515233744/https://arturdryomov.online/posts/superior-testing-stop-stopping/)
+  \- Great post on why testing matters (Archived version).
 - [The AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007)
   \- Looking to do AI? Better sort out the basics and foundations first.
   Contains the "AI pyramid of needs". I would add "Solid engineering" at the
