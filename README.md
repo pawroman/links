@@ -531,6 +531,9 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
   \- (PDF). Free book collecting Python antipatterns and common mistakes.
+- [I'm not feeling the async pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/)
+  \- Introduction to the concept of backpressure, as well as advice on how
+     to deal with it in Python's `asyncio`.
 - [Python 3 Module of the Week](https://pymotw.com/3/)
   \- Tutorials for standard library modules.
 - [Python API Checklist](https://devchecklists.com/python-api-checklist/en/)

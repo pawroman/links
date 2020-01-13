@@ -6,7 +6,7 @@ import re
 
 from contextlib import asynccontextmanager
 from dataclasses import dataclass, field
-from functools import wraps, partial
+from functools import wraps
 from io import StringIO
 from types import MappingProxyType
 from typing import Iterable, List, Optional, Tuple

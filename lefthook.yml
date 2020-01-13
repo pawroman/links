@@ -6,4 +6,6 @@ pre-commit:
         mypy:
             run: mypy ci/
         quick-links-test:
-            run: pytest -m 'not external' -q --disable-warnings
+            run: pytest -m 'not external' -q --disable-warnings ci/
+        flake8:
+            run: flake8 ci/
