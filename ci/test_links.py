@@ -309,7 +309,7 @@ async def fetch_all_links(external_links, event_loop):
     ) as session:
         fetch_coros = [fetch_link(link, session) for link in external_links]
 
-        for fetch_task in asyncio.as_completed(fetch_coros, loop=event_loop):
+        for fetch_task in asyncio.as_completed(fetch_coros):
             result = await fetch_task
             yield result
 
