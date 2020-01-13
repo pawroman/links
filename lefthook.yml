@@ -9,3 +9,5 @@ pre-commit:
             run: pytest -m 'not external' -q --disable-warnings ci/
         flake8:
             run: flake8 ci/
+        isort:
+            run: isort --check-only -rc ci/

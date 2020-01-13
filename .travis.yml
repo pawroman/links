@@ -13,3 +13,4 @@ script:
   - mypy ci/
   - pytest -v ci/
   - flake8 ci/
+  - isort --check-only -rc ci/  # -rc -> recursive
