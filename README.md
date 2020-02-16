@@ -669,6 +669,8 @@ Less known, but very useful things in the standard library:
 - [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
   \- An interesting take on mutability, ownership and borrowing in Rust,
      using alternative terminology.
+- [rustbattle.net](https://rustbattle.net/)
+  \- Rust language quiz.
 - [The Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/introduction.html)
   \- Learn about Rust 2018 features.
 - [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
