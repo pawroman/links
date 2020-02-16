@@ -349,6 +349,8 @@ Programming fonts I found the most eye-pleasing and readable.
 
 - [A fast alternative to the modulo reduction](https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction/)
   \- A clever alternative to modulo for spreading out values across a fixed-sized array, like in a hashmap.
+- [Amdahl's law](https://en.wikipedia.org/wiki/Amdahl%27s_law)
+  \- Useful thing to know regarding threading and parallelization.
 - [Branch prediction](https://danluu.com/branch-prediction/)
   \- Quick intro to CPU branch prediction.
 - [Common Systems Programming Optimizations & Tricks](https://paulcavallaro.com/blog/common-systems-programming-optimizations-tricks/)
@@ -528,7 +530,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 - [Advanced asyncio: Solving Real-world Production Problems - PyCon 2019 (video)](https://www.youtube.com/watch?v=bckD_GK80oY)
   - [Slides](https://speakerdeck.com/roguelynn/advanced-asyncio-solving-real-world-production-problems)
 - [Fluent Python](http://shop.oreilly.com/product/0636920032519.do)
-  \- Good book if you know Python basics.
+  \- (Book) Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
   \- (PDF). Free book collecting Python antipatterns and common mistakes.
 - [I'm not feeling the async pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/)
@@ -545,7 +547,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 - [Type hinting (and mypy) - PyCon 2019 (video)](https://www.youtube.com/watch?v=hTrjTAPnA_k)
   - [Blog post](https://www.bernat.tech/the-state-of-type-hints-in-python/)
-- [Using Asyncio in Python 3](https://www.oreilly.com/library/view/using-asyncio-in/9781491999691/) - Worth a read before doing any asyncio.
+- [Using Asyncio in Python](https://www.oreilly.com/library/view/using-asyncio-in/9781492075325/)
+  \- (Book) Worth a read before doing any asyncio.
 - [wtfpython](https://github.com/satwikkansal/wtfpython)
   \- A collection of common Python pitfalls and unexpected behaviours.
 
@@ -632,6 +635,8 @@ Less known, but very useful things in the standard library:
   \- A low-overhead sampling Python profiler.
 - [pyflame](https://github.com/uber/pyflame)
   \- Flame graph profiler based on ptrace (Linux only).
+- [scalene](https://github.com/emeryberger/scalene)
+  \- A high-performance CPU and memory profiler for Python.
 
 ## Rust
 
@@ -669,6 +674,18 @@ Advanced:
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [Writing an OS in Rust (Second Edition)](https://os.phil-opp.com/)
 
+Evangelism:
+
+- [Rust Companies](https://github.com/omarabid/rust-companies)
+  \- List of companies using Rust in production.
+- [Why is Rust the Most Loved Programming Language?](https://matklad.github.io/2020/02/14/why-rust-is-loved.html)
+  \- Author's personal
+- [Why Rust](https://christine.website/blog/why-rust-2020-02-15)
+  \- Compares Rust to Go in a few aspects.
+- [Why Rust for safe systems programming](https://msrc-blog.microsoft.com/2019/07/22/why-rust-for-safe-systems-programming/)
+  \- Reasons for Rust from Microsoft.
+  - Follow up to [We need a safer systems programming language](https://msrc-blog.microsoft.com/2019/07/18/we-need-a-safer-systems-programming-language/)
+
 ### Rust libraries
 
 - [parking_lot](https://github.com/Amanieu/parking\_lot)
@@ -690,6 +707,8 @@ Less known, but very useful things in the standard library:
 - [Rust Forge](https://forge.rust-lang.org/)
   \- Rust release dates and many useful links related to the project.
 - [Rust Reddit](https://www.reddit.com/r/rust)
+- [This Week in Rust](https://this-week-in-rust.org/)
+  \- Weekly Rust newsletter, archive available online.
 
 ### Rust posts and talks
 
