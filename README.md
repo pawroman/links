@@ -353,6 +353,8 @@ Programming fonts I found the most eye-pleasing and readable.
   \- Useful thing to know regarding threading and parallelization.
 - [Branch prediction](https://danluu.com/branch-prediction/)
   \- Quick intro to CPU branch prediction.
+- [Branch Prediction - Fundamentals Every Programmer Need Not Know](http://www.mycpu.org/branch-prediction-basics/)
+  \- Basics and rationale for CPU branch prediction.
 - [Common Systems Programming Optimizations & Tricks](https://paulcavallaro.com/blog/common-systems-programming-optimizations-tricks/)
   \- A few low-level tricks.
 - [Computer Latency at a Human Scale](https://www.prowesscorp.com/computer-latency-at-a-human-scale/)
@@ -416,6 +418,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   \- We all know "that one guy"...
 - [How to Deliver Constructive Feedback in Difficult Situations](https://medium.dave-bailey.com/the-essential-guide-to-difficult-conversations-41f736e63ccf)
   \- In praise of Nonviolent Communication (NVC) principles.
+- [Prioritizing Technical Debt as if Time and Money Matters](https://www.youtube.com/watch?v=fl4aZ2KXBsQ)
+  \- (Video) Talk about dealing with tech debt in a data-driven way.
 - [The XY problem](http://xyproblem.info/)
   \- When asking people for help, tell them about the problem, before mentioning
      the attempted solution.
