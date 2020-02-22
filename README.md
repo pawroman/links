@@ -245,9 +245,13 @@ Other:
 - [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
   \- Get simple statistics for your repo.
+- [grex](https://github.com/pemistahl/grex)
+  \- Generate regular expressions matching provided inputs.
 - [htop](https://hisham.hm/htop/) - Excellent process viewer.
 - [HTTPie](https://httpie.org/) - cURL for humans. Uses Python + requests.
 - [hyperfine](https://github.com/sharkdp/hyperfine) - CLI benchmarking tool.
+- [iredis](https://github.com/laixintao/iredis)
+  \- Featureful Redis CLI client with syntax highlight and completions.
 - [kubectx](https://github.com/ahmetb/kubectx)
   \- Switch between Kubernetes contexts (clusters) and namespaces easily.
 - [kubetail](https://github.com/johanhaleby/kubetail)
@@ -465,6 +469,8 @@ Talking about technical debt with business people
 
 ## Networking
 
+- [Endlessh](https://github.com/skeeto/endlessh)
+  \- SSH tarpit server.
 - [Reserved IP addresses](https://en.wikipedia.org/wiki/Reserved_IP_addresses)
   \- List of reserved and special purpose addresses (Wikipedia).
 
@@ -653,10 +659,14 @@ Less known, but very useful things in the standard library:
 - [Allocations in Rust](https://speice.io/2019/02/understanding-allocations-in-rust.html)
   \- Good, in depth intro to how different memory allocation mechanisms
      work in Rust.
+- [Creating a Rust function that returns a &str or String](https://hermanradtke.com/2015/05/29/creating-a-rust-function-that-returns-string-or-str.html)
+  \- Learn to leverage `Cow` to handle string operations.
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
   \- Practical guide to handling errors the Rust way.
 - [Generic returns in Rust](https://blog.jcoglan.com/2019/04/22/generic-returns-in-rust/)
   \- On handling `From/Into` traits and how `Iterator::collect()` works.
+- [How To Write Fast Rust Code](http://likebike.com/posts/How_To_Write_Fast_Rust_Code.html)
+  \- An insightful story of optimization, including tooling recommendations.
 - [Join Your Threads](https://matklad.github.io/2019/08/23/join-your-threads.html)
   \- Why ensuring thread join handles are called is important.
 - [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
@@ -674,6 +684,10 @@ Less known, but very useful things in the standard library:
 - [The Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/introduction.html)
   \- Learn about Rust 2018 features.
 - [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
+- [Working with strings in Rust](https://fasterthanli.me/blog/2020/working-with-strings-in-rust/)
+  \- In-depth article on Rust strings, and their ins and outs, with comparison to C.
+- [Wrapper Types in Rust: Choosing Your Guarantees](https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/)
+  \- Overview of pointer, reference, cell and synchronous wrapper types.
 
 Advanced:
 
@@ -684,6 +698,8 @@ Evangelism:
 
 - [Rust Companies](https://github.com/omarabid/rust-companies)
   \- List of companies using Rust in production.
+- [Why Discord is switching from Go to Rust](https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
+  \- A success story from Discord.
 - [Why is Rust the Most Loved Programming Language?](https://matklad.github.io/2020/02/14/why-rust-is-loved.html)
   \- Author's personal
 - [Why Rust](https://christine.website/blog/why-rust-2020-02-15)
@@ -748,6 +764,8 @@ Less known, but very useful things in the standard library:
 
 - [Big List of Naughty Strings](https://github.com/minimaxir/big-list-of-naughty-strings)
   \- "list of strings which have a high probability of causing issues when used as user-input data"
+- [Building Good Tests](https://salmonmode.github.io/2019/03/29/building-good-tests.html)
+  \- Walk through good testing practices. Focused on `pytest`, but also applicable to testing in general.
 - [TDD, Where Did It All Go Wrong (video)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
   \- A talk on how to do TDD right.
 - [Tests that sometimes fail](https://samsaffron.com/archive/2019/05/15/tests-that-sometimes-fail)
