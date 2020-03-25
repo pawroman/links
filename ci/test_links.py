@@ -3,7 +3,7 @@ import itertools
 import pathlib
 import random
 import re
-from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager, suppress
 from dataclasses import dataclass, field
 from functools import wraps
 from io import StringIO
@@ -103,7 +103,7 @@ class FetchResult:
             if isinstance(self.exception, TimeoutError):
                 return "Timed out"
             else:
-                return f"Exception: {self.exception}"
+                return f"Exception: {self.exception!r}"
         else:
             raise RuntimeError("Unreachable!")
 
@@ -383,13 +383,14 @@ def get_retrying(
     @wraps(session.get)
     async def wrapper(*args, **kwargs):
         for _ in range(max_retries + 1):
-            async with session.get(*args, **kwargs) as response:
-                if response.status in code_set:
-                    sleep_for = random.uniform(*random_sleep)
-                    await asyncio.sleep(sleep_for)
-                else:
-                    yield response
-                    return
+            with suppress(TimeoutError, asyncio.TimeoutError):
+                async with session.get(*args, **kwargs) as response:
+                    if response.status in code_set:
+                        sleep_for = random.uniform(*random_sleep)
+                        await asyncio.sleep(sleep_for)
+                    else:
+                        yield response
+                        return
 
         raise TimeoutError(
             f"Failed to fetch {args[0]} after {max_retries} retries, response code: {response.status}"
