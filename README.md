@@ -9,8 +9,8 @@ A personal "awesome list".
 
 You can find out more about me at: [pawroman.dev](https://pawroman.dev)
 
-All the links are tested after every commit and weekly by
-[Travis](https://travis-ci.org/pawroman/links),
+All the links are tested after every commit and weekly using
+[GitHub Actions](https://github.com/pawroman/links/actions),
 but if you see anything that's not working, please let me know!
 
 ## Table of Contents
