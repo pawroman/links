@@ -318,8 +318,10 @@ async def fetch_link(link: Link, session: aiohttp.ClientSession):
     method = choose_fetch_method_for_link(link, session)
     method_name = method.__name__.upper()
 
+    url_to_test = extract_url_to_test_for_link(link)
+
     try:
-        async with method(link.url, timeout=DEFAULT_TIMEOUT) as response:
+        async with method(url_to_test, timeout=DEFAULT_TIMEOUT) as response:
             print(
                 f"Opening ({method_name}): {link} -> {response.status} {response.reason}"
             )
@@ -328,6 +330,16 @@ async def fetch_link(link: Link, session: aiohttp.ClientSession):
     except (aiohttp.ClientError, asyncio.TimeoutError) as e:
         print(f"Error opening {link}: {e}")
         return FetchResult(link, None, e)
+
+
+def extract_url_to_test_for_link(link: Link) -> str:
+    if "youtube.com/" in link.url:
+        # get metadata for youtube video only, the normal links always return
+        # 200 OK even if the video doesn't exist -- this metadata API returns
+        # 404 for missing videos
+        return f"https://www.youtube.com/oembed?url={link.url}"
+
+    return link.url
 
 
 def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
