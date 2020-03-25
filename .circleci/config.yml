@@ -1,0 +1,12 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: python:3.8-slim
+    steps:
+      - checkout
+      - pip install -r requirements.txt
+      - run:
+          command: pytest -v ci/
+          name: Test
