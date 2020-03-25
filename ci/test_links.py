@@ -53,7 +53,7 @@ GENERIC_MAX_RETRIES = 5
 GENERIC_RETRY_CODES = frozenset((403, 503))
 
 # Use a fake user agent to pretend we're a browser
-USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0"
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0"
 
 
 @dataclass(frozen=True)
