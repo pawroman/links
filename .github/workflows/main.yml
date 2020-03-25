@@ -33,6 +33,22 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Black check
+      run: |
+        black --check ci/
+
+    - name: Mypy check
+      run: |
+        mypy ci/
+
+    - name: Flake8 check
+      run: |
+        flake8 ci/
+
+    - name: isort check
+      run: |
+        isort --check-only -rc ci/
+
     - name: Test
       run: |
         pytest -v ci/
