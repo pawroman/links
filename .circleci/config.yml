@@ -12,7 +12,9 @@ jobs:
       - image: python:3.8-slim
     steps:
       - checkout
-      - pip install -r requirements.txt
+      - run:
+          command: pip install -r requirements.txt
+          name: Install dependencies
       - run:
           command: black --check ci/
           name: Black check
