@@ -103,7 +103,7 @@ class FetchResult:
             if isinstance(self.exception, TimeoutError):
                 return "Timed out"
             else:
-                return f"Exception: {self.exception}"
+                return f"Exception: {self.exception!r}"
         else:
             raise RuntimeError("Unreachable!")
 
