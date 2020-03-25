@@ -430,7 +430,7 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
 - [How to Deal with Difficult People on Software Projects](https://people.neilon.software/)
   \- We all know "that one guy"...
-- [How to Deliver Constructive Feedback in Difficult Situations](https://medium.dave-bailey.com/the-essential-guide-to-difficult-conversations-41f736e63ccf)
+- [How to Deliver Constructive Feedback in Difficult Situations](https://medium.com/s/please-advise/the-essential-guide-to-difficult-conversations-41f736e63ccf)
   \- In praise of Nonviolent Communication (NVC) principles.
 - [Prioritizing Technical Debt as if Time and Money Matters](https://www.youtube.com/watch?v=fl4aZ2KXBsQ)
   \- (Video) Talk about dealing with tech debt in a data-driven way.
