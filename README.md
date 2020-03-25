@@ -123,7 +123,7 @@ Other:
 
 ## Architecture and Programming Patterns
 
-- [Clean Architecture](https://www.goodreads.com/book/show/18043011-clean-architecture)
+- [Clean Architecture (book)](https://www.goodreads.com/book/show/18043011-clean-architecture)
 - [Design Patterns](https://sourcemaking.com/design_patterns) - Describes the classic OO patterns.
 - [Game Programming Patterns](http://gameprogrammingpatterns.com/contents.html)
   \- An excellent book on OO patterns found in games. When performance matters.
@@ -150,7 +150,12 @@ Anti-patterns:
 Visualizing Architecture:
 
 - [The C4 model for visualizing software architecture](https://c4model.com/)
-  \- A promising model, however there's no good tools around it.
+  \- A promising model for visualizing software.
+  - [C4-PlantUML](https://github.com/RicardoNiepel/C4-PlantUML)
+    \- A reasonably decent tool, however the diagrams need to contain few elements
+       to be readable.
+  - [Visualising software architecture with the C4 model (video)](https://www.youtube.com/watch?v=x2-rSnhpw0g)
+    \- An introductory talk about this model.
 
 ## Career Development
 
@@ -201,6 +206,20 @@ Code quality measures:
 
 - [Cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity)
 
+Legacy / Refactoring / Maintenance:
+
+- [Avoid rewriting a legacy system from scratch, by strangling it](https://understandlegacycode.com/blog/avoid-rewriting-a-legacy-system-from-scratch-by-strangling-it/)
+  \- A very reasonable approach to rolling out new systems, without full rewrites.
+- [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
+  \- Learn what not to do :)
+- [Preventing the Collapse of Civilization](https://www.youtube.com/watch?v=ZSRHeXYDLko)
+  \- A good talk touching on software simplicity and knowledge transfer
+     in software development.
+- [Write code that is easy to delete, not easy to extend.](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to)
+  \- Iterating on code design should be easy.
+   > Good code isn't about getting it right the first time.
+     Good code is just legacy code that doesn't get in the way.
+
 Other:
 
 - [5 Things I’ve Learned in 20 Years of Programming](https://daedtech.com/5-things-ive-learned-in-20-years-of-programming/)
@@ -210,11 +229,6 @@ Other:
 - [Empathy is Code Deep](https://vimeo.com/293912618/5ccecc85d4)
   \- A talk on applying empathy and thinking about others in coding.
      Code matters and people do too.
-- [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
-  \- Learn what not to do :)
-- [Preventing the Collapse of Civilization](https://www.youtube.com/watch?v=ZSRHeXYDLko)
-  \- A good talk touching on software simplicity and knowledge transfer
-     in software development.
 - [Storing UTC is not a silver bullet](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
   \- Why "just store all times in UTC" is sometimes not the best approach.
 - [Superior Testing: Stop Stopping](https://web.archive.org/web/20190515233744/https://arturdryomov.online/posts/superior-testing-stop-stopping/)
@@ -223,10 +237,6 @@ Other:
   \- Looking to do AI? Better sort out the basics and foundations first.
   Contains the "AI pyramid of needs". I would add "Solid engineering" at the
   very bottom of the pyramid though!
-- [Write code that is easy to delete, not easy to extend.](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to)
-  \- Iterating on code design should be easy.
-   > Good code isn't about getting it right the first time.
-     Good code is just legacy code that doesn't get in the way.
 
 ## Command Line Tools
 
@@ -610,6 +620,10 @@ Python internals and advanced topics:
   \- Poor man's debugger for Python.
 - [pytest](https://docs.pytest.org/en/latest/) - The only Python test runner worth using these days.
   - Also see [my blog post on basic pytest setup](https://pawroman.gitlab.io/pytest-basic-setup/)
+  - [pytest-asyncio](https://github.com/pytest-dev/pytest-asyncio)
+    \- Plugin to run asyncio tests easily.
+  - [pytest-env](https://github.com/MobileDynasty/pytest-env)
+    \- Plugin to set environment variables before any code is imported.
 - [quamash](https://github.com/harvimt/quamash)
   \- Use `asyncio` with Qt event loop.
 - [requests](https://github.com/psf/requests) - The HTTP library for Python.
@@ -659,6 +673,8 @@ Less known, but very useful things in the standard library:
 - [Allocations in Rust](https://speice.io/2019/02/understanding-allocations-in-rust.html)
   \- Good, in depth intro to how different memory allocation mechanisms
      work in Rust.
+- [Cheap tricks for high-performance Rust](https://deterministic.space/high-performance-rust.html)
+  \- A few easy tricks around compilation parameters to achieve greater performance.
 - [Creating a Rust function that returns a &str or String](https://hermanradtke.com/2015/05/29/creating-a-rust-function-that-returns-string-or-str.html)
   \- Learn to leverage `Cow` to handle string operations.
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
@@ -681,6 +697,8 @@ Less known, but very useful things in the standard library:
      using alternative terminology.
 - [rustbattle.net](https://rustbattle.net/)
   \- Rust language quiz.
+- [Secure Rust Guidelines](https://anssi-fr.github.io/rust-guide/)
+  \- Guide for applications with strong security requirements.
 - [The Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/introduction.html)
   \- Learn about Rust 2018 features.
 - [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
@@ -696,6 +714,8 @@ Advanced:
 
 Evangelism:
 
+- [ Rewriting the heart of our sync engine ](https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine)
+  \- A success story from Dropbox.  Very insightful for rewrites overall, not just about Rust.
 - [Rust Companies](https://github.com/omarabid/rust-companies)
   \- List of companies using Rust in production.
 - [Why Discord is switching from Go to Rust](https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
@@ -739,6 +759,8 @@ Less known, but very useful things in the standard library:
      2019-11-13.
 - [How I Wrote a Modern C++ Library in Rust](https://hsivonen.fi/modern-cpp-in-rust/)
 - [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
+- [Optimizations That Aren't, Or Are They?](https://oribenshir.github.io/afternoon_rusting/blog/copy-on-write)
+  \- Copy on Write in Rust and C++.
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
 - [The Evolution of a Rust Programmer](https://blog.antoyo.xyz/evolution-rust-programmer)
   \- Tongue-in-cheek post on different Rust programming styles.
@@ -759,6 +781,8 @@ Less known, but very useful things in the standard library:
   \- Faster `git status` alternative for shells.
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
   \- ZSH configuration framework.
+- [starship](https://starship.rs/)
+  \- Fast, featureful shell prompt. Compatible with many shells. Modest configuration options.
 
 ## Testing
 
