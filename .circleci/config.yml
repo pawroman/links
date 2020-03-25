@@ -8,5 +8,17 @@ jobs:
       - checkout
       - pip install -r requirements.txt
       - run:
+          command: black --check ci/
+          name: Black check
+      - run:
+          command: mypy ci/
+          name: Mypy check
+      - run:
+          command: flake8 ci/
+          name: Flake8 check
+      - run:
+          command: isort --check-only -rc ci/
+          name: isort check
+      - run:
           command: pytest -v ci/
           name: Test
