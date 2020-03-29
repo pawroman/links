@@ -168,16 +168,16 @@ Visualizing Architecture:
 
 The Clean trilogy from Robert C. Martin ("Uncle Bob"):
 
-1. [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code)
-2. [The Clean Coder](https://www.goodreads.com/book/show/10284614-the-clean-coder)
-3. [Clean Architecture](https://www.goodreads.com/book/show/18043011-clean-architecture)
+1. [Clean Code (book)](https://www.goodreads.com/book/show/3735293-clean-code)
+2. [The Clean Coder (book)](https://www.goodreads.com/book/show/10284614-the-clean-coder)
+3. [Clean Architecture (book)](https://www.goodreads.com/book/show/18043011-clean-architecture)
 
 Programming overall:
 
 - [The Future of Programming (video)](https://www.youtube.com/watch?v=ecIWPzGEbFc)
   \- A talk from Uncle Bob about the past and the future of programming.
      Touches on a plethora of subjects, well worth a watch.
-- [The Pragmatic Programmer](https://pragprog.com/book/tpp/the-pragmatic-programmer)
+- [The Pragmatic Programmer (book)](https://pragprog.com/book/tpp/the-pragmatic-programmer)
   \- An absolute classic of a book.
   - [Take-home reference](https://blog.codinghorror.com/a-pragmatic-quick-reference/)
     \- Sums up the book.
@@ -420,6 +420,16 @@ Quick reference:
 
 ## Management / dealing with people
 
+Books:
+
+- [Turn the Ship Around!](https://www.goodreads.com/book/show/16158601-turn-the-ship-around)
+  \- Great book on management from a US Navy captain.  Straight to the point,
+     down-to-earth and genuinely interesting (it's a true story and there's a nuclear submarine involved).
+
+     Focuses on leader-leader approach to management and patterns to introduce it in an organization.
+
+Articles:
+
 - [Commit messages guide](https://github.com/RomuloOliveira/commit-messages-guide)
   \- How to write commit messages well.
 - [Deadlines Are Killing Us, And Almost Everything Else I Know About Leadership](https://medium.com/@duncanr/deadlines-are-killing-us-and-almost-everything-else-i-know-about-leadership-7032a5fb12ac)
@@ -429,8 +439,6 @@ Quick reference:
   \- Collection of interviews with developers who became managers.
 - [Eliminating the Product Owner Role](https://medium.com/@JoshuaKerievsky/eliminating-the-product-owner-role-be01cabc1f5b)
   \- Argues that the "product owner" role might be spread across a team.
-- [Every Time Zone](https://everytimezone.com/)
-  \- A readable time zone overview. Useful for scheduling meetings.
 - [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
   \- Good advice on what not to focus on during an interview.
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
@@ -438,8 +446,6 @@ Quick reference:
   \- We all know "that one guy"...
 - [How to Deliver Constructive Feedback in Difficult Situations](https://medium.com/s/please-advise/the-essential-guide-to-difficult-conversations-41f736e63ccf)
   \- In praise of Nonviolent Communication (NVC) principles.
-- [Prioritizing Technical Debt as if Time and Money Matters](https://www.youtube.com/watch?v=fl4aZ2KXBsQ)
-  \- (Video) Talk about dealing with tech debt in a data-driven way.
 - [The XY problem](http://xyproblem.info/)
   \- When asking people for help, tell them about the problem, before mentioning
      the attempted solution.
@@ -455,6 +461,16 @@ Quick reference:
 - [Your Company Culture is Who You Hire, Fire, and Promote](https://www.linkedin.com/pulse/your-companys-culture-who-you-hire-fire-promote-part-1-sepah)
   - Part 2: [Anatomy of an Asshole](https://www.linkedin.com/pulse/your-company-culture-who-you-hire-fire-promote-part-2-sepah)
   - Part 3: [Breaking Bad: Why Good People Become Evil Bosses](https://www.linkedin.com/pulse/breaking-bad-why-good-people-become-evilbosses-dr-cameron-sepah)
+
+Talks:
+
+- [Prioritizing Technical Debt as if Time and Money Matters (video)](https://www.youtube.com/watch?v=fl4aZ2KXBsQ)
+  \- Talk about dealing with tech debt in a data-driven way.
+
+Timezone tools:
+
+- [Every Time Zone](https://everytimezone.com/)
+  \- A readable time zone overview. Useful for scheduling meetings.
 
 Estimating time:
 
@@ -555,8 +571,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 
 - [Advanced asyncio: Solving Real-world Production Problems - PyCon 2019 (video)](https://www.youtube.com/watch?v=bckD_GK80oY)
   - [Slides](https://speakerdeck.com/roguelynn/advanced-asyncio-solving-real-world-production-problems)
-- [Fluent Python](http://shop.oreilly.com/product/0636920032519.do)
-  \- (Book) Good book if you know Python basics.
+- [Fluent Python (book)](http://shop.oreilly.com/product/0636920032519.do)
+  \- Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
   \- (PDF). Free book collecting Python antipatterns and common mistakes.
 - [I'm not feeling the async pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/)
@@ -573,8 +589,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 - [Type hinting (and mypy) - PyCon 2019 (video)](https://www.youtube.com/watch?v=hTrjTAPnA_k)
   - [Blog post](https://www.bernat.tech/the-state-of-type-hints-in-python/)
-- [Using Asyncio in Python](https://www.oreilly.com/library/view/using-asyncio-in/9781492075325/)
-  \- (Book) Worth a read before doing any asyncio.
+- [Using Asyncio in Python (book)](https://www.oreilly.com/library/view/using-asyncio-in/9781492075325/)
+  \- Worth a read before doing any asyncio.
 - [wtfpython](https://github.com/satwikkansal/wtfpython)
   \- A collection of common Python pitfalls and unexpected behaviours.
 
