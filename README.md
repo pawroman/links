@@ -412,6 +412,12 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 - [Kubernetes Failure Stories](https://k8s.af/)
   \- Learn from other people's mistakes.
 
+Quick reference:
+
+- [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+  \- Handy `kubectl` cheat sheet
+  - Also very useful: `kubectl explain` -- see: [kubectl explain — #HeptioProTip](https://blog.heptio.com/kubectl-explain-heptioprotip-ee883992a243)
+
 ## Management / dealing with people
 
 - [Commit messages guide](https://github.com/RomuloOliveira/commit-messages-guide)
