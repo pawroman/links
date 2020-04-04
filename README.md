@@ -192,6 +192,9 @@ Principles:
 - [Make It Work, Make It Right, Make It Fast](http://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
 - [Principle of least astonishment](https://en.wikipedia.org/wiki/Least_astonishment)
 - [Rule of three][rule-of-three]
+    \- Rule stating that a generalization should only be attempted on third repetition/duplication.
+    - [The Rule of Three](https://andrewbrookins.com/technology/the-rule-of-three/)
+      \- Explains the rationale and benefits of this principle.
 
 [rule-of-three]: https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)
 
@@ -305,6 +308,10 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 - [Nested Set Model](https://en.wikipedia.org/wiki/Nested_set_model)
   \- Reasonably efficient solution for storing tree structures in relational databases.
      Aka. MPTT (also see example implementation in Django: https://github.com/django-mptt/django-mptt)
+- [PostgreSQL is the worlds' best database](https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database/)
+  \- Arguments for PostgreSQL.
+  - [10 Things I Hate About PostgreSQL](https://medium.com/@rbranson/10-things-i-hate-about-postgresql-20dbab8c2791)
+    \- A rebuttal to the above, listing shortcomings of Postgres.
 
 ## Design and Web
 
@@ -417,6 +424,8 @@ Quick reference:
 - [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
   \- Handy `kubectl` cheat sheet
   - Also very useful: `kubectl explain` -- see: [kubectl explain — #HeptioProTip](https://blog.heptio.com/kubectl-explain-heptioprotip-ee883992a243)
+- Authorization:
+    - `kubectl auth can-i` -- see: [Authorization Overview (k8s docs)](https://kubernetes.io/docs/reference/access-authn-authz/authorization/)
 
 ## Management / dealing with people
 
