@@ -229,6 +229,9 @@ Other:
   \- Some good advice.
 - [API Evolution the Right Way](https://emptysqua.re/blog/api-evolution-the-right-way/)
 - [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
+- [Do Not Log](https://sobolevn.me/2020/03/do-not-log)
+  \- Argues that in certain cases logging should be avoided over more structured
+     solutions (monitoring, error tracking).  Recommends Rust patterns in Python :)
 - [Empathy is Code Deep](https://vimeo.com/293912618/5ccecc85d4)
   \- A talk on applying empathy and thinking about others in coding.
      Code matters and people do too.
@@ -643,6 +646,8 @@ Python internals and advanced topics:
 - [Pendulum](https://pendulum.eustace.io/) - A date/time library with nice API.
 - [psutil](https://github.com/giampaolo/psutil)
   \- Swiss army knife for process management and system monitoring.
+- [pydeps](https://github.com/thebjorn/pydeps)
+  \- Visualize Python module dependencies.
 - [pyjwt](https://github.com/jpadilla/pyjwt)
   \- Work with JSON Web Tokens (JWT).
 - [PyPDF2](https://github.com/mstamy2/PyPDF2)
