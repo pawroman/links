@@ -35,6 +35,7 @@ but if you see anything that's not working, please let me know!
     - [git help](#git-help)
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Kubernetes](#kubernetes)
+- [Linux](#linux)
 - [Management / dealing with people](#management--dealing-with-people)
 - [Networking](#networking)
 - [Privacy](#privacy)
@@ -414,6 +415,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
 
 ## Kubernetes
 
+- [An Illustrated Guide To Kubernetes Networking](https://speakerdeck.com/thockin/illustrated-guide-to-kubernetes-networking)
+  \- Slides explaining inner workings of K8S networking.
 - [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/)
   \- A map grouping all the current and emerging "cloud native" technologies
      (mostly related to Kubernetes).
@@ -421,14 +424,32 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
     \- The migration path to "cloud native".
 - [Kubernetes Failure Stories](https://k8s.af/)
   \- Learn from other people's mistakes.
+- [The Distributed System ToolKit: Patterns for Composite Containers](https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns/)
+  \- Explains Sidecar, Ambassador and Adapter container patterns.
 
-Quick reference:
+`kubectl` quick reference:
 
 - [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
   \- Handy `kubectl` cheat sheet
   - Also very useful: `kubectl explain` -- see: [kubectl explain — #HeptioProTip](https://blog.heptio.com/kubectl-explain-heptioprotip-ee883992a243)
+  - `kubectl api-resources` -- show all object kinds, their short names and API groups
+    (empty API group means `v1`).
 - Authorization:
-    - `kubectl auth can-i` -- see: [Authorization Overview (k8s docs)](https://kubernetes.io/docs/reference/access-authn-authz/authorization/)
+  - `kubectl auth can-i` -- see: [Authorization Overview (k8s docs)](https://kubernetes.io/docs/reference/access-authn-authz/authorization/)
+- Generating YAMLs quickly:
+  - `kubectl create --dry-run -o yaml` -- see: [kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/#generators)
+
+Recipes / how-tos:
+
+- [Kubernetes Network Policy Recipes](https://github.com/ahmetb/kubernetes-network-policy-recipes)
+  \- Copy-paste examples of Network Policies with diagrams illustrating their
+     effects.
+
+## Linux
+
+- [The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/)
+  \- Comprehensive documentation for the Linux kernel.
+  - [The kernel’s command-line parameters](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html)
 
 ## Management / dealing with people
 
@@ -510,6 +531,11 @@ Talking about technical debt with business people
     - Reduce cost (including time cost to market and shipping new features)
     - Protect revenue (including preventing disasters)
     - Increase revenue (selling more, adding new features)
+
+Open Source Programs:
+
+- [Open Source Guides For The Enterprise](https://www.linuxfoundation.org/resources/open-source-guides/)
+  \- Resources and guidelines for running an open source program.
 
 ## Networking
 
