@@ -422,6 +422,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
      (mostly related to Kubernetes).
   - [Cloud Native Trail Map](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)
     \- The migration path to "cloud native".
+- [k3s](https://k3s.io/)
+  \- Lightweight Kubernetes distribution.
 - [Kubernetes Failure Stories](https://k8s.af/)
   \- Learn from other people's mistakes.
 - [The Distributed System ToolKit: Patterns for Composite Containers](https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns/)
@@ -438,6 +440,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   - `kubectl auth can-i` -- see: [Authorization Overview (k8s docs)](https://kubernetes.io/docs/reference/access-authn-authz/authorization/)
 - Generating YAMLs quickly:
   - `kubectl create --dry-run -o yaml` -- see: [kubectl Usage Conventions](https://kubernetes.io/docs/reference/kubectl/conventions/#generators)
+- Getting all objects:
+  - `kubectl get all [-n NAMESPACE] [-l LABEL=VALUE,LABEL2!=VALUE]`
 
 Recipes / how-tos:
 
@@ -453,13 +457,15 @@ Recipes / how-tos:
 
 ## Management / dealing with people
 
-Books:
+Books and Resources:
 
 - [Turn the Ship Around!](https://www.goodreads.com/book/show/16158601-turn-the-ship-around)
   \- Great book on management from a US Navy captain.  Straight to the point,
      down-to-earth and genuinely interesting (it's a true story and there's a nuclear submarine involved).
 
      Focuses on leader-leader approach to management and patterns to introduce it in an organization.
+- [Manager's Playbook](https://github.com/ksindi/managers-playbook)
+  \- Heuristics for effective management.
 
 Articles:
 
@@ -656,6 +662,8 @@ Python internals and advanced topics:
 - [bleach](https://github.com/mozilla/bleach)
   \- Sanitize untrusted strings so that they are HTML safe.
 - [click](https://click.palletsprojects.com/en/7.x/) - Command line argument parser and then some.
+- [httpx](https://github.com/encode/httpx)
+  \- Requests-inspired HTTP client with both sync and async APIs.
 - [irc3](https://github.com/gawel/irc3/) - IRC client based on `asyncio`.
 - [janus](https://github.com/aio-libs/janus/) - Queue class that bridges the worlds of `threading` and `asyncio`.
 - [Jinja2](http://jinja.pocoo.org/) - The only Python template engine worth your time.
@@ -691,6 +699,9 @@ Python internals and advanced topics:
 - [requests](https://github.com/psf/requests) - The HTTP library for Python.
 - [tqdm](https://github.com/tqdm/tqdm) - Nice progress bar library and command line tool.
 - [WebSockets](https://websockets.readthedocs.io/en/stable/) - `asyncio` compatible, no-frills WebSocket client/server.
+- [xdoctest](https://github.com/Erotemic/xdoctest)
+  \- Better `doctest`, with pytest integration.
+  - [Intro video: Developing With Doctests - Using Xdoctest As A Backend](https://www.youtube.com/watch?v=CUjCqOw_oFk)
 - [xmltodict](https://github.com/martinblech/xmltodict) - Extract data from XML just like JSON.
 
 [graph]: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
@@ -826,6 +837,12 @@ Less known, but very useful things in the standard library:
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
 - [The Evolution of a Rust Programmer](https://blog.antoyo.xyz/evolution-rust-programmer)
   \- Tongue-in-cheek post on different Rust programming styles.
+
+Breaking things:
+
+- [Rust in an instant](https://fnordig.de/2020/05/02/rust-in-an-instant/)
+  \- A cautionary post about monotonic time and linker symbol shadowing
+     (`no_mangle`).
 
 ### Rust tools
 
