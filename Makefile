@@ -26,9 +26,15 @@ check_isort:
 	poetry run isort --check-only -rc $(TARGET)
 
 # CI
-ci_setup:
-	# CI caches the ~/.cache dir
-	python -m pip install --upgrade pip poetry
-	poetry config cache-dir ~/.cache/poetry
-	poetry config virtualenvs.create false
-	poetry env use system
+# Note: CI caches the ~/.cache dir
+
+ci_venv:
+	python -m venv ~/.cache/virtualenv
+
+ci_setup: ci_venv
+	# ; \ -- run command in a single shell (so that it runs in virtualenv)
+	. ~/.cache/virtualenv/bin/activate; \
+	python -m pip install --upgrade pip poetry wheel; \
+	poetry config cache-dir ~/.cache/poetry; \
+	poetry config virtualenvs.create false; \
+	poetry env use system; \

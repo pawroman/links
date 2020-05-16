@@ -19,7 +19,7 @@ jobs:
       uses: actions/cache@v1
       id: cache
       env:
-        cache-name: cache-venv-pip-poetry
+        cache-name: cache-venv-poetry
       with:
         path: ~/.cache
         key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/poetry.lock') }}
@@ -30,6 +30,11 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: "3.8"
+
+    - name: Make virtualenv
+      run: |
+        make ci_venv
+        . ~/.cache/virtualenv/bin/activate
 
     - name: Install dependencies
       run: |
