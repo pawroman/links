@@ -6,8 +6,6 @@ authors = ["Paweł Romanowski <pawroman@pawroman.dev>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-aiodns = "^2.0.0"
-aiohttp = "^3.6.2"
 black = "^19.10b0"
 flake8 = "^3.8.1"
 isort = "^4.3.21"
@@ -17,6 +15,8 @@ mypy = "^0.770"
 pytest = "^5.4.2"
 pytest-asyncio = "^0.12.0"
 xdoctest = "^0.12.0"
+httpx = "^0.12.1"
+brotlipy = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
 
