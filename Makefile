@@ -27,6 +27,9 @@ check_isort:
 
 # CI
 ci_setup:
+	# CI caches the ~/.cache dir
+	python -m venv ~/.cache/virtualenv
+	. ~/.cache/virtualenv/bin/activate
 	python -m pip install --upgrade pip poetry
 	poetry config cache-dir ~/.cache/poetry
 	poetry env use system
