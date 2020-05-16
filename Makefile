@@ -28,5 +28,7 @@ check_isort:
 # CI
 ci_setup:
 	python -m pip install --upgrade pip poetry
+	poetry config cache-dir ~/.cache/poetry
+	poetry env use system
 	poetry config virtualenvs.in-project false
-	poetry config virtualenvs.path ~/.poetry
+	poetry config virtualenvs.path ~/.cache/poetry/virtualenvs
