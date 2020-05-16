@@ -380,9 +380,7 @@ def get_retrying(
                 else:
                     return response
 
-        raise TimeoutError(
-            f"Failed to fetch {args[0]} after {max_retries} retries, response code: {response.status_code}"
-        )
+        raise TimeoutError(f"Failed to fetch {args[0]} after {max_retries} retries")
 
     return wrapper
 
