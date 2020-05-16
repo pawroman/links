@@ -18,7 +18,7 @@ jobs:
     - name: Cache dependencies
       uses: actions/cache@v1
       env:
-        cache-name: cache-poetry-requirements
+        cache-name: cache-pip-and-poetry
       with:
         path: ~/.cache
         key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/poetry.lock') }}
