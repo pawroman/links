@@ -17,6 +17,7 @@ jobs:
 
     - name: Cache dependencies
       uses: actions/cache@v1
+      id: cache
       env:
         cache-name: cache-venv-pip-poetry
       with:
@@ -34,6 +35,7 @@ jobs:
       run: |
         make ci_setup
         make install
+      if: steps.cache.outputs.cache-hit != 'true'
 
     - name: Black (code formatting) check
       run: |
