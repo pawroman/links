@@ -320,7 +320,9 @@ async def fetch_link(link: Link, client: httpx.AsyncClient):
 
     try:
         response = await method(url_to_test, timeout=DEFAULT_TIMEOUT_SECONDS)
-        print(f"Opening ({method_name}): {link} -> {response.status} {response.reason}")
+        print(
+            f"Opening ({method_name}): {link} -> {response.status_code} {response.reason_phrase}"
+        )
 
         return FetchResult(link, response, None)
     except httpx.HTTPError as e:
