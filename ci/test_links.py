@@ -319,12 +319,10 @@ async def fetch_link(link: Link, client: httpx.AsyncClient):
     url_to_test = extract_url_to_test_for_link(link)
 
     try:
-        async with method(url_to_test, timeout=DEFAULT_TIMEOUT_SECONDS) as response:
-            print(
-                f"Opening ({method_name}): {link} -> {response.status} {response.reason}"
-            )
+        response = await method(url_to_test, timeout=DEFAULT_TIMEOUT_SECONDS)
+        print(f"Opening ({method_name}): {link} -> {response.status} {response.reason}")
 
-            return FetchResult(link, response, None)
+        return FetchResult(link, response, None)
     except httpx.HTTPError as e:
         print(f"Error opening {link}: {e}")
         return FetchResult(link, None, e)
@@ -382,16 +380,16 @@ def get_retrying(
     async def wrapper(*args, **kwargs):
         for _ in range(max_retries + 1):
             with suppress(httpx.TimeoutException):
-                async with client.get(*args, **kwargs) as response:
-                    if response.status in code_set:
-                        sleep_for = random.uniform(*random_sleep)
-                        await asyncio.sleep(sleep_for)
-                    else:
-                        yield response
-                        return
+                response = await client.get(*args, **kwargs)
+                if response.status_code in code_set:
+                    sleep_for = random.uniform(*random_sleep)
+                    await asyncio.sleep(sleep_for)
+                else:
+                    yield response
+                    return
 
         raise TimeoutError(
-            f"Failed to fetch {args[0]} after {max_retries} retries, response code: {response.status}"
+            f"Failed to fetch {args[0]} after {max_retries} retries, response code: {response.status_code}"
         )
 
     return wrapper
