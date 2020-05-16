@@ -3,7 +3,7 @@ import itertools
 import pathlib
 import random
 import re
-from contextlib import asynccontextmanager, suppress
+from contextlib import suppress
 from dataclasses import dataclass, field
 from functools import wraps
 from io import StringIO
@@ -352,10 +352,8 @@ def choose_fetch_method_for_link(link: Link, client: httpx.AsyncClient):
 
     if "vimeo.com/" in link.url:
         # ignore fake user agent for vimeo
-        @asynccontextmanager
         async def get_no_headers(*args, **kwargs):
-            resp = await client.get(*args, **kwargs, headers=None)
-            yield resp
+            return await client.get(*args, **kwargs, headers=None)
 
         return get_no_headers
 
@@ -375,7 +373,6 @@ def get_retrying(
 ):
     code_set = set(codes)
 
-    @asynccontextmanager
     @wraps(client.get)
     async def wrapper(*args, **kwargs):
         for _ in range(max_retries + 1):
@@ -385,8 +382,7 @@ def get_retrying(
                     sleep_for = random.uniform(*random_sleep)
                     await asyncio.sleep(sleep_for)
                 else:
-                    yield response
-                    return
+                    return response
 
         raise TimeoutError(
             f"Failed to fetch {args[0]} after {max_retries} retries, response code: {response.status_code}"
