@@ -236,6 +236,9 @@ Other:
 - [Empathy is Code Deep](https://vimeo.com/293912618/5ccecc85d4)
   \- A talk on applying empathy and thinking about others in coding.
      Code matters and people do too.
+- [Some Useful Probability Facts for Systems Programming](https://theartofmachinery.com/2020/01/27/systems_programming_probability.html)
+  \- Probability applies to systems and probabilistic models explain some
+     seemingly weird behaviors rather well.
 - [Storing UTC is not a silver bullet](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
   \- Why "just store all times in UTC" is sometimes not the best approach.
 - [Superior Testing: Stop Stopping](https://web.archive.org/web/20190515233744/https://arturdryomov.online/posts/superior-testing-stop-stopping/)
@@ -436,6 +439,9 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   - Also very useful: `kubectl explain` -- see: [kubectl explain — #HeptioProTip](https://blog.heptio.com/kubectl-explain-heptioprotip-ee883992a243)
   - `kubectl api-resources` -- show all object kinds, their short names and API groups
     (empty API group means `v1`).
+- API exploration:
+  - `kubectl explain pod`
+  - `kubectl explain pod.spec.volumes.persistentVolumeClaim` -- explain nested specs/objects
 - Authorization:
   - `kubectl auth can-i` -- see: [Authorization Overview (k8s docs)](https://kubernetes.io/docs/reference/access-authn-authz/authorization/)
 - Generating YAMLs quickly:
@@ -485,6 +491,16 @@ Articles:
   \- We all know "that one guy"...
 - [How to Deliver Constructive Feedback in Difficult Situations](https://medium.com/s/please-advise/the-essential-guide-to-difficult-conversations-41f736e63ccf)
   \- In praise of Nonviolent Communication (NVC) principles.
+- [Spotify's Failed #SquadGoals](https://www.jeremiahlee.com/posts/failed-squad-goals/)
+  \- Why the "Spotify agile model" doesn't work, and recommendations for not
+     repeating the same mistakes.
+     > (...) the Spotify model is revealed as a collection of cross-functional
+       teams with too much autonomy and a poor management structure.
+       Don’t fall for it.
+- [The Framing of the Developer](https://www.svese.de/impact-vs-backlog-frame-in-software-development)
+  \- Discusses the "Impact oriented" framing vs "Backlog oriented".
+     Advocates that we should ditch the backlog frame; instead focus on impact and
+     the delivered value.
 - [The XY problem](http://xyproblem.info/)
   \- When asking people for help, tell them about the problem, before mentioning
      the attempted solution.
@@ -497,6 +513,9 @@ Articles:
 - [Why software developers (quite honestly) hate Agile](https://www.objectstyle.com/agile/why-developers-hate-agile)
   \- What went wrong with the agile movement and why
      [Software Craftsmanship approach](https://en.wikipedia.org/wiki/Software_craftsmanship) might be better.
+- [Work is Work](https://codahale.com/work-is-work/)
+  \- Getting effective in management and getting work done in an organization
+     is hard work.  There are some universal principles to follow though.
 - [Your Company Culture is Who You Hire, Fire, and Promote](https://www.linkedin.com/pulse/your-companys-culture-who-you-hire-fire-promote-part-1-sepah)
   - Part 2: [Anatomy of an Asshole](https://www.linkedin.com/pulse/your-company-culture-who-you-hire-fire-promote-part-2-sepah)
   - Part 3: [Breaking Bad: Why Good People Become Evil Bosses](https://www.linkedin.com/pulse/breaking-bad-why-good-people-become-evilbosses-dr-cameron-sepah)
@@ -768,6 +787,8 @@ Less known, but very useful things in the standard library:
 - [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
   \- An interesting take on mutability, ownership and borrowing in Rust,
      using alternative terminology.
+- [Rust: Structuring and handling errors in 2020](https://nick.groenen.me/posts/rust-error-handling/)
+  \- Describes good error handling practices using `anyhow` and `thiserror`.
 - [rustbattle.net](https://rustbattle.net/)
   \- Rust language quiz.
 - [Secure Rust Guidelines](https://anssi-fr.github.io/rust-guide/)
@@ -775,6 +796,8 @@ Less known, but very useful things in the standard library:
 - [The Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/introduction.html)
   \- Learn about Rust 2018 features.
 - [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
+- [The Rust Reference](https://doc.rust-lang.org/stable/reference/)
+  \- Reference for all language constructs, syntax, types, attributes etc.
 - [Working with strings in Rust](https://fasterthanli.me/blog/2020/working-with-strings-in-rust/)
   \- In-depth article on Rust strings, and their ins and outs, with comparison to C.
 - [Wrapper Types in Rust: Choosing Your Guarantees](https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/)
@@ -787,7 +810,7 @@ Advanced:
 
 Evangelism:
 
-- [ Rewriting the heart of our sync engine ](https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine)
+- [Rewriting the heart of our sync engine](https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine)
   \- A success story from Dropbox.  Very insightful for rewrites overall, not just about Rust.
 - [Rust Companies](https://github.com/omarabid/rust-companies)
   \- List of companies using Rust in production.
@@ -835,6 +858,9 @@ Less known, but very useful things in the standard library:
 - [Optimizations That Aren't, Or Are They?](https://oribenshir.github.io/afternoon_rusting/blog/copy-on-write)
   \- Copy on Write in Rust and C++.
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
+- [Taking Advantage of Auto-Vectorization in Rust](https://nickwilcox.github.io/blog/autovec/)
+  \- How to use the type system so the compiler generates SIMD code without
+     using any intrinsics manually.
 - [The Evolution of a Rust Programmer](https://blog.antoyo.xyz/evolution-rust-programmer)
   \- Tongue-in-cheek post on different Rust programming styles.
 
@@ -869,6 +895,10 @@ Breaking things:
   \- "list of strings which have a high probability of causing issues when used as user-input data"
 - [Building Good Tests](https://salmonmode.github.io/2019/03/29/building-good-tests.html)
   \- Walk through good testing practices. Focused on `pytest`, but also applicable to testing in general.
+- [Simple Testing Can Prevent Most Critical Failures (paper + video)](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan)
+  \- An Analysis of Production Failures in Distributed Data-Intensive Systems.
+     Turns out correct error handling and simple testing is enough to prevent
+     most production failures, even in complex distributed systems.
 - [TDD, Where Did It All Go Wrong (video)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
   \- A talk on how to do TDD right.
 - [Tests that sometimes fail](https://samsaffron.com/archive/2019/05/15/tests-that-sometimes-fail)
@@ -882,3 +912,5 @@ Links related to data visualization.
 - [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
   \- A book that is meant "as a guide to making visualizations that accurately
   reflect the data, tell a story, and look professional."
+- [matplotlib colormaps](https://bids.github.io/colormap/)
+  \- Perceptually uniform colormaps (long merged into Matplotlib).
