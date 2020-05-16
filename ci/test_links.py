@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 from functools import wraps
 from io import StringIO
 from types import MappingProxyType
-from typing import Iterable, List, Optional, Tuple
+from typing import FrozenSet, Iterable, List, Optional, Tuple
 
 import httpx
 import mistune
@@ -30,13 +30,7 @@ SKIP_LINK_SORT_CHECKS = MappingProxyType(
     {"Table of Contents": frozenset(("Prelude", "Other Lists"))}
 )
 
-IGNORE_ERRORS_FOR_URLS = frozenset(
-    (
-        # Travis CI gets 403 Forbidden here :(
-        "https://vimeo.com/293912618/5ccecc85d4",
-        "https://webcache.googleusercontent.com/search?q=cache:dEddeFq1R_gJ:https://speice.io/2019/02/understanding-allocations-in-rust.html",
-    )
-)
+IGNORE_ERRORS_FOR_URLS: FrozenSet = frozenset()
 
 DEFAULT_TIMEOUT_SECONDS = 45
 
@@ -51,7 +45,7 @@ GENERIC_MAX_RETRIES = 5
 GENERIC_RETRY_CODES = frozenset((403, 503))
 
 # Use a fake user agent to pretend we're a browser
-USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0"
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
 
 
 @dataclass(frozen=True)
