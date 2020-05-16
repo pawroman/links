@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "links"
+version = "0.1.0"
+description = ""
+authors = ["Paweł Romanowski <pawroman@pawroman.dev>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiodns = "^2.0.0"
+aiohttp = "^3.6.2"
+black = "^19.10b0"
+flake8 = "^3.8.1"
+isort = "^4.3.21"
+lxml = "^4.5.0"
+mistune = "^0.8.4"
+mypy = "^0.770"
+pytest = "^5.4.2"
+pytest-asyncio = "^0.12.0"
+xdoctest = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

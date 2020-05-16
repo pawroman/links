@@ -2,12 +2,12 @@ pre-commit:
   parallel: true
   commands:
     black:
-      run: black --check ci/
+      run: make -s check_black
     mypy:
-      run: mypy ci/
-    quick-links-test:
-      run: pytest -m 'not external' -q --disable-warnings ci/
+      run: make -s check_mypy
+    quick_test:
+      run: make -s quick_test
     flake8:
-      run: flake8 ci/
+      run: make -s lint
     isort:
-      run: isort --check-only -rc ci/
+      run: make -s check_isort
