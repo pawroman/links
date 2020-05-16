@@ -10,10 +10,9 @@ from io import StringIO
 from types import MappingProxyType
 from typing import Iterable, List, Optional, Tuple
 
-import aiohttp
+import httpx
 import mistune
 import pytest
-from aiohttp import ClientResponse
 from lxml import etree
 
 # ../README.md  (relative to current file)
@@ -40,7 +39,6 @@ IGNORE_ERRORS_FOR_URLS = frozenset(
 )
 
 DEFAULT_TIMEOUT_SECONDS = 45
-DEFAULT_TIMEOUT = aiohttp.ClientTimeout(total=DEFAULT_TIMEOUT_SECONDS)
 
 # looks like youtube.com is throttling requests,
 # randomly wait this many seconds between retries
@@ -84,13 +82,15 @@ class LinkList:
 @dataclass(frozen=True)
 class FetchResult:
     link: Link
-    response: Optional[ClientResponse]
+    response: Optional[httpx.Response]
     exception: Optional[Exception]
 
     @property
     def is_ok(self) -> bool:
         return bool(
-            self.response and self.response.status == 200 and not self.exception
+            self.response
+            and self.response.status_code == httpx.codes.OK.value
+            and not self.exception
         )
 
     @property
@@ -98,7 +98,7 @@ class FetchResult:
         if self.is_ok:
             return None
         elif self.response:
-            return f"Status code: {self.response.status}"
+            return f"Status code: {self.response.status_code}"
         elif self.exception:
             if isinstance(self.exception, TimeoutError):
                 return "Timed out"
@@ -273,13 +273,13 @@ def link_lists(renderer: StructuredRenderer) -> List[LinkList]:
 
 @pytest.mark.asyncio
 @pytest.mark.external
-async def test_external_links_are_all_valid(external_links, event_loop):
+async def test_external_links_are_all_valid(external_links):
     # fetch all responses fully asynchronously, iterate as completed
     failures = []
     ignored = []
     successes = []
 
-    async for fetch_result in fetch_all_links(external_links, event_loop):
+    async for fetch_result in fetch_all_links(external_links):
         if not fetch_result.is_ok and fetch_result.link.url in IGNORE_ERRORS_FOR_URLS:
             ignored.append(fetch_result)
             continue
@@ -303,31 +303,29 @@ async def test_external_links_are_all_valid(external_links, event_loop):
         )
 
 
-async def fetch_all_links(external_links, event_loop):
-    async with aiohttp.ClientSession(
-        loop=event_loop, headers={"User-Agent": USER_AGENT},
-    ) as session:
-        fetch_coros = [fetch_link(link, session) for link in external_links]
+async def fetch_all_links(external_links):
+    async with httpx.AsyncClient(headers={"User-Agent": USER_AGENT}) as client:
+        fetch_coros = [fetch_link(link, client) for link in external_links]
 
         for fetch_task in asyncio.as_completed(fetch_coros):
             result = await fetch_task
             yield result
 
 
-async def fetch_link(link: Link, session: aiohttp.ClientSession):
-    method = choose_fetch_method_for_link(link, session)
+async def fetch_link(link: Link, client: httpx.AsyncClient):
+    method = choose_fetch_method_for_link(link, client)
     method_name = method.__name__.upper()
 
     url_to_test = extract_url_to_test_for_link(link)
 
     try:
-        async with method(url_to_test, timeout=DEFAULT_TIMEOUT) as response:
+        async with method(url_to_test, timeout=DEFAULT_TIMEOUT_SECONDS) as response:
             print(
                 f"Opening ({method_name}): {link} -> {response.status} {response.reason}"
             )
 
             return FetchResult(link, response, None)
-    except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+    except httpx.HTTPError as e:
         print(f"Error opening {link}: {e}")
         return FetchResult(link, None, e)
 
@@ -342,14 +340,14 @@ def extract_url_to_test_for_link(link: Link) -> str:
     return link.url
 
 
-def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
+def choose_fetch_method_for_link(link: Link, client: httpx.AsyncClient):
     if link.url.endswith((".png", ".pdf")):
         # assume that large static files are OK if HEAD request succeeds
-        return session.head
+        return client.head
 
     if "youtube.com/" in link.url:
         return get_retrying_on_throttling(
-            session,
+            client,
             max_retries=YOUTUBE_THROTTLE_MAX_RETRIES,
             random_sleep=YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE,
         )
@@ -358,13 +356,13 @@ def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
         # ignore fake user agent for vimeo
         @asynccontextmanager
         async def get_no_headers(*args, **kwargs):
-            async with session.get(*args, **kwargs, headers=None) as resp:
-                yield resp
+            resp = await client.get(*args, **kwargs, headers=None)
+            yield resp
 
         return get_no_headers
 
     return get_retrying(
-        session,
+        client,
         codes=GENERIC_RETRY_CODES,
         max_retries=GENERIC_MAX_RETRIES,
         random_sleep=GENERIC_WAIT_SECONDS_RANGE,
@@ -372,7 +370,7 @@ def choose_fetch_method_for_link(link: Link, session: aiohttp.ClientSession):
 
 
 def get_retrying(
-    session: aiohttp.ClientSession,
+    client: httpx.AsyncClient,
     codes: Iterable[int],
     max_retries: int = 1,
     random_sleep=Optional[Tuple[int, int]],
@@ -380,11 +378,11 @@ def get_retrying(
     code_set = set(codes)
 
     @asynccontextmanager
-    @wraps(session.get)
+    @wraps(client.get)
     async def wrapper(*args, **kwargs):
         for _ in range(max_retries + 1):
-            with suppress(TimeoutError, asyncio.TimeoutError):
-                async with session.get(*args, **kwargs) as response:
+            with suppress(httpx.TimeoutException):
+                async with client.get(*args, **kwargs) as response:
                     if response.status in code_set:
                         sleep_for = random.uniform(*random_sleep)
                         await asyncio.sleep(sleep_for)
@@ -400,13 +398,13 @@ def get_retrying(
 
 
 def get_retrying_on_throttling(
-    session: aiohttp.ClientSession,
+    client: httpx.AsyncClient,
     max_retries: int = 1,
     random_sleep=Optional[Tuple[int, int]],
 ):
     return get_retrying(
         # 429 too many requests
-        session,
+        client,
         codes=(429,),
         max_retries=max_retries,
         random_sleep=random_sleep,
