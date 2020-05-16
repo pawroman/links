@@ -18,10 +18,12 @@ jobs:
     - name: Cache dependencies
       uses: actions/cache@v1
       env:
-        cache-name: cache-pip-requirements
+        cache-name: cache-poetry-requirements
       with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ env.cache-name }}-${{ hashFiles('**/requirements.txt') }}
+        path: ~/.poetry
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ env.cache-name }}-
 
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
@@ -30,25 +32,25 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        make ci_setup
+        make install
 
-    - name: Black check
+    - name: Black (code formatting) check
       run: |
-        black --check ci/
+        make check_black
 
-    - name: Mypy check
+    - name: Mypy (typecheck) check
       run: |
-        mypy ci/
+        make check_mypy
 
-    - name: Flake8 check
+    - name: Flake8 (lint) check
       run: |
-        flake8 ci/
+        make lint
 
-    - name: isort check
+    - name: isort (imports) check
       run: |
-        isort --check-only -rc ci/
+        make check_isort
 
     - name: Test
       run: |
-        pytest -v ci/
+        make test
