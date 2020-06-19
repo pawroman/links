@@ -391,6 +391,8 @@ Programming fonts I found the most eye-pleasing and readable.
   \- The best explanation I've ever seen.
 - [Gallery of Processor Cache Effects](https://igoro.com/archive/gallery-of-processor-cache-effects/)
   \- Concise examples showing how cache affects code run time, with good explanations.
+- [How to Quantify Scalability](http://www.perfdynamics.com/Manifesto/USLscalability.html)
+  \- Some theory, tips and useful models for quantifying systems scalability.
 - [Latency Numbers Every Programmer Should Know](https://gist.github.com/GLMeece/b00c9c97a06a957af7426b1be5bc8be6)
   \- Know your latencies.
 - [Modern Microprocessors - A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
@@ -641,6 +643,9 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 - [I'm not feeling the async pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/)
   \- Introduction to the concept of backpressure, as well as advice on how
      to deal with it in Python's `asyncio`.
+- [Practical Python (course)](https://github.com/dabeaz-course/practical-python)
+  \- Practical Python course, from one of the legendary Python developers,
+     David Beazley (`dabeaz`).
 - [Python 3 Module of the Week](https://pymotw.com/3/)
   \- Tutorials for standard library modules.
 - [Python API Checklist](https://devchecklists.com/python-api-checklist/en/)
@@ -699,6 +704,9 @@ Python internals and advanced topics:
 - [Pendulum](https://pendulum.eustace.io/) - A date/time library with nice API.
 - [psutil](https://github.com/giampaolo/psutil)
   \- Swiss army knife for process management and system monitoring.
+- [pydantic](https://github.com/samuelcolvin/pydantic/)
+  \- Pythonic data validation.  Supports `dataclasses` and has a `mypy` plugin.
+     Perfect for settings/configs and wherever data validation is required.
 - [pydeps](https://github.com/thebjorn/pydeps)
   \- Visualize Python module dependencies.
 - [pyjwt](https://github.com/jpadilla/pyjwt)
