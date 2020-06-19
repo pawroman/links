@@ -178,8 +178,8 @@ Programming overall:
 - [The Future of Programming (video)](https://www.youtube.com/watch?v=ecIWPzGEbFc)
   \- A talk from Uncle Bob about the past and the future of programming.
      Touches on a plethora of subjects, well worth a watch.
-- [The Pragmatic Programmer (book)](https://pragprog.com/book/tpp/the-pragmatic-programmer)
-  \- An absolute classic of a book.
+- [The Pragmatic Programmer (book)](https://pragprog.com/titles/tpp20/)
+  \- An absolute classic of a book, there's a new 20th Anniversary Edition.
   - [Take-home reference](https://blog.codinghorror.com/a-pragmatic-quick-reference/)
     \- Sums up the book.
 
@@ -239,7 +239,7 @@ Other:
 - [Some Useful Probability Facts for Systems Programming](https://theartofmachinery.com/2020/01/27/systems_programming_probability.html)
   \- Probability applies to systems and probabilistic models explain some
      seemingly weird behaviors rather well.
-- [Storing UTC is not a silver bullet](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
+- [Storing UTC is not a silver bullet (archived)](https://web.archive.org/web/20200615073320/https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
   \- Why "just store all times in UTC" is sometimes not the best approach.
 - [Superior Testing: Stop Stopping](https://web.archive.org/web/20190515233744/https://arturdryomov.online/posts/superior-testing-stop-stopping/)
   \- Great post on why testing matters (Archived version).
