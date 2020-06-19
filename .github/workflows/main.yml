@@ -31,9 +31,12 @@ jobs:
       with:
         python-version: "3.8"
 
-    - name: Install dependencies
+    - name: CI setup
       run: |
         make ci_setup
+
+    - name: Install dependencies
+      run: |
         make install
       if: steps.cache.outputs.cache-hit != 'true'
 
