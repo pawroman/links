@@ -319,6 +319,8 @@ I'm not a big fan of GUI, but there are a few good ones I use:
   \- Arguments for PostgreSQL.
   - [10 Things I Hate About PostgreSQL](https://medium.com/@rbranson/10-things-i-hate-about-postgresql-20dbab8c2791)
     \- A rebuttal to the above, listing shortcomings of Postgres.
+- [Readings in Database Systems (commonly known as the "Red Book")](http://www.redbook.io/)
+  \- A short book about databases, with lots of references ("readings").
 
 ## Design and Web
 
@@ -330,6 +332,8 @@ I'm not a big fan of GUI, but there are a few good ones I use:
   \- A set of very reasonable guidelines for designing websites.
 - [HTTP headers for the responsible developer](https://www.twilio.com/blog/a-http-headers-for-the-responsible-developer)
   \- Good practices for HTTP headers.
+- [Laws of UX](https://lawsofux.com/)
+  \- Collection of principles to consider while designing user interfaces.
 
 ## Distributed Systems and Cloud Computing
 
@@ -385,7 +389,7 @@ Programming fonts I found the most eye-pleasing and readable.
   \- Basics and rationale for CPU branch prediction.
 - [Common Systems Programming Optimizations & Tricks](https://paulcavallaro.com/blog/common-systems-programming-optimizations-tricks/)
   \- A few low-level tricks.
-- [Computer Latency at a Human Scale](https://www.prowesscorp.com/computer-latency-at-a-human-scale/)
+- [Computer Latency at a Human Scale](https://web.archive.org/web/20200225202909/https://www.prowesscorp.com/computer-latency-at-a-human-scale/)
   \- Latency with human-relatable scales.
 - [Floating Point Visually Explained](http://fabiensanglard.net/floating_point_visually_explained/)
   \- The best explanation I've ever seen.
@@ -393,6 +397,8 @@ Programming fonts I found the most eye-pleasing and readable.
   \- Concise examples showing how cache affects code run time, with good explanations.
 - [How to Quantify Scalability](http://www.perfdynamics.com/Manifesto/USLscalability.html)
   \- Some theory, tips and useful models for quantifying systems scalability.
+- [How x86_64 addresses memory](https://blog.yossarian.net/2020/06/13/How-x86_64-addresses-memory)
+  \- Memory addressing on this platform is quite complicated.
 - [Latency Numbers Every Programmer Should Know](https://gist.github.com/GLMeece/b00c9c97a06a957af7426b1be5bc8be6)
   \- Know your latencies.
 - [Modern Microprocessors - A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
@@ -475,8 +481,10 @@ Books and Resources:
 - [Manager's Playbook](https://github.com/ksindi/managers-playbook)
   \- Heuristics for effective management.
 
-Articles:
+Articles / blog posts:
 
+- [22 Principles for Great Product Managers](https://reeve.blog/blog/principles/)
+  \- Do product management right.
 - [Commit messages guide](https://github.com/RomuloOliveira/commit-messages-guide)
   \- How to write commit messages well.
 - [Deadlines Are Killing Us, And Almost Everything Else I Know About Leadership](https://medium.com/@duncanr/deadlines-are-killing-us-and-almost-everything-else-i-know-about-leadership-7032a5fb12ac)
@@ -484,8 +492,13 @@ Articles:
      overall.
 - [Developer to Manager](https://devtomanager.com/)
   \- Collection of interviews with developers who became managers.
+- [Do the Real Thing](https://www.scotthyoung.com/blog/2020/05/04/do-the-real-thing/)
+  \- Postulates that in order to achieve success, one should focus on real
+     things, not distractions and fake alternatives.
 - [Eliminating the Product Owner Role](https://medium.com/@JoshuaKerievsky/eliminating-the-product-owner-role-be01cabc1f5b)
   \- Argues that the "product owner" role might be spread across a team.
+- [Habits of High-Functioning Teams](https://deniseyu.io/2020/05/23/habits-of-high-performing-teams.html)
+  \- A few principles and rules for high-performing teams.
 - [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
   \- Good advice on what not to focus on during an interview.
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
@@ -563,6 +576,8 @@ Open Source Programs:
 
 - [Open Source Guides For The Enterprise](https://www.linuxfoundation.org/resources/open-source-guides/)
   \- Resources and guidelines for running an open source program.
+- [Producing Open Source Software](https://producingoss.com/)
+  \- A book on running open source projects.
 
 ## Networking
 
@@ -766,6 +781,26 @@ Less known, but very useful things in the standard library:
 
 ### Rust learning
 
+Get started with Rust:
+
+- [A half-hour to learn Rust](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
+  \- A very quick intro to Rust.
+- [Clear explanation of Rust's module system](http://www.sheshbabu.com/posts/rust-module-system/)
+  \- Very good explanation of how modules work.
+- [easy_rust](https://github.com/Dhghomon/easy_rust)
+  \- Rust explained using easy English.
+- [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/)
+  \- Rust language showcase, demonstrates the features of the language by example.
+- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
+  \- How to accomplish common tasks using idiomatic Rust and libraries.
+- [Rust Language Cheat Sheet](https://cheats.rs/)
+- [rust-book-summary](https://github.com/psibi/rust-book-summary)
+  \- TLDR summary of [The Rust Programming Language Book](https://doc.rust-lang.org/stable/book/).
+- [Tour of Rust](https://tourofrust.com/)
+  \- Similar to "Rust by Example", but more approachable and with more narrative.
+
+Intermediate:
+
 - [A Quick Look at Trait Objects in Rust](https://tratt.net/laurie/blog/entries/a_quick_look_at_trait_objects_in_rust.html)
   \- Explains static vs dynamic dispatch (trait objects).
 - [Accurate mental model for Rust's reference types](https://docs.rs/dtolnay/0.0.6/dtolnay/macro._02__reference_types.html)
@@ -787,11 +822,6 @@ Less known, but very useful things in the standard library:
   \- Why ensuring thread join handles are called is important.
 - [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
-- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
-  \- How to accomplish common tasks using idiomatic Rust and libraries.
-- [Rust Language Cheat Sheet](https://cheats.rs/)
-- [rust-book-summary](https://github.com/psibi/rust-book-summary)
-  \- TLDR summary of [The Rust Programming Language Book](https://doc.rust-lang.org/stable/book/).
 - [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
   \- An interesting take on mutability, ownership and borrowing in Rust,
      using alternative terminology.
