@@ -23,7 +23,7 @@ lint:
 
 check_isort:
 	# -rc -> recursive
-	poetry run isort --check-only -rc $(TARGET)
+	poetry run isort --check-only $(TARGET)
 
 # CI
 # Note: CI caches the ~/.cache dir

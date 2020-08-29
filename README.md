@@ -971,7 +971,7 @@ Breaking things:
 
 Links related to data visualization.
 
-- [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/)
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
   \- A book that is meant "as a guide to making visualizations that accurately
   reflect the data, tell a story, and look professional."
 - [matplotlib colormaps](https://bids.github.io/colormap/)

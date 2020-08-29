@@ -6,17 +6,17 @@ authors = ["Paweł Romanowski <pawroman@pawroman.dev>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-black = "^19.10b0"
-flake8 = "^3.8.1"
-isort = "^4.3.21"
-lxml = "^4.5.0"
+black = "^20.08b1"
+flake8 = "^3.8"
+isort = "^5.4"
+lxml = "^4.5"
 mistune = "^0.8.4"
-mypy = "^0.770"
-pytest = "^5.4.2"
-pytest-asyncio = "^0.12.0"
-xdoctest = "^0.12.0"
-httpx = "^0.12.1"
-brotlipy = "^0.7.0"
+mypy = "^0.782"
+pytest = "^6.0"
+pytest-asyncio = "^0.14"
+xdoctest = "^0.14"
+httpx = "^0.14"
+brotlipy = "^0.7"
 
 [tool.poetry.dev-dependencies]
 
