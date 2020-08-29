@@ -682,7 +682,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- A huge collection of Python related videos: conference / meetup talks etc.
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 - [Type hinting (and mypy) - PyCon 2019 (video)](https://www.youtube.com/watch?v=hTrjTAPnA_k)
-  - [Blog post](https://www.bernat.tech/the-state-of-type-hints-in-python/)
+  - [Blog post (archived)](https://web.archive.org/web/20200605172639/https://www.bernat.tech/the-state-of-type-hints-in-python/)
 - [Using Asyncio in Python (book)](https://www.oreilly.com/library/view/using-asyncio-in/9781492075325/)
   \- Worth a read before doing any asyncio.
 - [wtfpython](https://github.com/satwikkansal/wtfpython)
