@@ -33,6 +33,7 @@ but if you see anything that's not working, please let me know!
     - [Themes](#themes)
 - [git](#git)
     - [git help](#git-help)
+- [Go](#go)
 - [Hardware and CPUs](#hardware-and-cpus)
 - [Kubernetes](#kubernetes)
 - [Linux](#linux)
@@ -259,15 +260,17 @@ Other:
 - [DBCLI](https://www.dbcli.com) - Collection of great CLI database clients,
     e.g. [pgcli](https://www.pgcli.com), [mycli](https://www.mycli.net) etc.
 - [dive](https://github.com/wagoodman/dive)
-  \- Inspect Docker images, layer by layer. Useful to search for spurious/unneeded files.
-- [exa](https://github.com/ogham/exa) - Better than `ls`. Also has a `tree`-like switch (`-T`).
+  \- Inspect Docker images, layer by layer.  Useful to search for spurious/unneeded files.
+- [dua](https://github.com/Byron/dua-cli)
+  \- Aka. `dua-cli`.  A (fast!) disk usage analyzer and cleaner.  Also has a nice interactive mode.
+- [exa](https://github.com/ogham/exa) - Better than `ls`.  Also has a `tree`-like switch (`-T`).
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
 - [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
   \- Get simple statistics for your repo.
 - [grex](https://github.com/pemistahl/grex)
   \- Generate regular expressions matching provided inputs.
-- [htop](https://hisham.hm/htop/) - Excellent process viewer.
+- [htop](https://github.com/hishamhm/htop) - Excellent process viewer.
 - [HTTPie](https://httpie.org/) - cURL for humans. Uses Python + requests.
 - [hyperfine](https://github.com/sharkdp/hyperfine) - CLI benchmarking tool.
 - [iredis](https://github.com/laixintao/iredis)
@@ -376,6 +379,11 @@ Programming fonts I found the most eye-pleasing and readable.
   \- "Lessons learned" guide to git.
 - [Oh shit, git!](http://ohshitgit.com/)
   \- How to revert common git mess-ups.
+
+## Go
+
+- [The Zen of Go](https://dave.cheney.net/2020/02/23/the-zen-of-go)
+  \- Go is Go.  A few pointers for idiomatic Go code.
 
 ## Hardware and CPUs
 
@@ -539,6 +547,9 @@ Talks:
 
 - [Prioritizing Technical Debt as if Time and Money Matters (video)](https://www.youtube.com/watch?v=fl4aZ2KXBsQ)
   \- Talk about dealing with tech debt in a data-driven way.
+- [Pushing through Friction (video)](https://www.youtube.com/watch?v=8bxZuzDKoI0)
+  \- A few tips on pushing through "organizational friction", and getting your ideas across
+     in a large organization.
 
 Timezone tools:
 
@@ -864,12 +875,23 @@ Evangelism:
 
 ### Rust libraries
 
+- [humantime](https://github.com/tailhook/humantime)
+  \- Parse and format human-readable date/times and durations.
 - [parking_lot](https://github.com/Amanieu/parking\_lot)
   \- Synchronization primitives faster than standard library.
+- [reqwest](https://github.com/seanmonstar/reqwest)
+  \- Async HTTP client library, with a blocking mode.  Featureful and well documented.
 - [rust-cpython](https://github.com/dgrunwald/rust-cpython)
   \- Expose Rust libraries to Python. Targets stable Rust.
+- [serde](https://github.com/serde-rs/serde)
+  \- The (de)serialization framework for Rust.  Extremely well done.
 - [static_assertions](https://github.com/nvzqz/static-assertions-rs)
   \- Static (compile time) assertions, for API stability and `const` expressions.
+- [structopt](https://github.com/TeXitoi/structopt)
+  \- Parse CLI args easily, by defining a struct.  Reduces CLI args parsing logic
+     to virually zero.
+- [wiremock](https://github.com/LukeMathWalker/wiremock-rs)
+  \- Excellent HTTP mocking library, e.g. for testing HTTP clients.  Async compatible.
 
 Less known, but very useful things in the standard library:
 
@@ -880,6 +902,8 @@ Less known, but very useful things in the standard library:
 
 ### Rust news and community
 
+- [caniuse.rs](https://caniuse.rs/)
+  \- List and search features introduced in each version of Rust (including future ones!).
 - [Rust Forge](https://forge.rust-lang.org/)
   \- Rust release dates and many useful links related to the project.
 - [Rust Reddit](https://www.reddit.com/r/rust)
