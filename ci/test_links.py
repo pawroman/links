@@ -83,7 +83,9 @@ class FetchResult:
     def is_ok(self) -> bool:
         return bool(
             self.response
-            and self.response.status_code == httpx.codes.OK.value
+            and self.response.status_code
+            # allow 200 and 206 (partial content) responses
+            in (httpx.codes.OK.value, httpx.codes.PARTIAL_CONTENT.value)
             and not self.exception
         )
 
