@@ -20,6 +20,13 @@ brotlipy = "^0.7"
 
 [tool.poetry.dev-dependencies]
 
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--xdoctest -p pytest_asyncio"
+markers = [
+    "external: marks tests as connecting to external services (deselect with '-m \"not external\"')"
+]
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
