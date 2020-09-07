@@ -288,6 +288,8 @@ Other:
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - Fast file content searcher.
 - [rmlint](https://github.com/sahib/rmlint)
   \- Free up disk space (e.g. duplicate files).
+- [sd](https://github.com/chmln/sd)
+  \- A simpler, more intuitive `sed` replacement.
 - [speedtest-cli](https://github.com/sivel/speedtest-cli) - Speedtest from a command line.
 - [stern](https://github.com/wercker/stern)
   \- Tail multiple k8s logs (like `kubetail`) but more quickly (and optionally in JSON format).
@@ -313,6 +315,8 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 - [Don't Do This (PostgreSQL wiki)](https://wiki.postgresql.org/wiki/Don't_Do_This)
   \- What not to do in Postgres.
+- [Jepsen Analyses](http://jepsen.io/analyses)
+  \- In-depth analyses of multiple database systems.
 - [Lessons learned scaling PostgreSQL database to 1.2bn records/month](https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067)
   \- Very insightful article.
 - [Nested Set Model](https://en.wikipedia.org/wiki/Nested_set_model)
@@ -503,6 +507,8 @@ Articles / blog posts:
 - [Do the Real Thing](https://www.scotthyoung.com/blog/2020/05/04/do-the-real-thing/)
   \- Postulates that in order to achieve success, one should focus on real
      things, not distractions and fake alternatives.
+- [Early Evangelists of Agile Engineering Wouldn't Mind Watching It Die](https://builtin.com/software-engineering-perspectives/lean-agile-methodology-software-engineering)
+  \- Some well-grounded criticisms of modern "agile".
 - [Eliminating the Product Owner Role](https://medium.com/@JoshuaKerievsky/eliminating-the-product-owner-role-be01cabc1f5b)
   \- Argues that the "product owner" role might be spread across a team.
 - [Habits of High-Functioning Teams](https://deniseyu.io/2020/05/23/habits-of-high-performing-teams.html)
@@ -520,6 +526,11 @@ Articles / blog posts:
      > (...) the Spotify model is revealed as a collection of cross-functional
        teams with too much autonomy and a poor management structure.
        Don’t fall for it.
+- ['Strong Opinions, Weakly Held' Doesn't Work That Well](https://commoncog.com/blog/strong-opinions-weakly-held-is-bad/)
+  \- Make sure to present your opinions with probability and be willing to accept other opinions; allow
+     the possibility you might be wrong.
+     > The next time you find yourself making a judgment, don't invoke 'strong opinions, weakly held'.
+       Instead, ask: "how much are you willing to bet on that?" Doing so will jolt people into the types of thinking you want to encourage.
 - [The Framing of the Developer](https://www.svese.de/impact-vs-backlog-frame-in-software-development)
   \- Discusses the "Impact oriented" framing vs "Backlog oriented".
      Advocates that we should ditch the backlog frame; instead focus on impact and
@@ -920,6 +931,8 @@ Less known, but very useful things in the standard library:
 - [Optimizations That Aren't, Or Are They?](https://oribenshir.github.io/afternoon_rusting/blog/copy-on-write)
   \- Copy on Write in Rust and C++.
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
+- [Rust serialization: What's ready for production today?](https://blog.logrocket.com/rust-serialization-whats-ready-for-production-today/)
+  \- A quick overview and benchmark of Rust serialization crates.  Published 2020-08-28.
 - [Taking Advantage of Auto-Vectorization in Rust](https://nickwilcox.github.io/blog/autovec/)
   \- How to use the type system so the compiler generates SIMD code without
      using any intrinsics manually.
