@@ -311,6 +311,13 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 ## Data
 
+Books
+
+- [Designing Data-Intensive Applications](https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications)
+  \- Excellent book that acts as a guide to modern data engineering (and distributed systems).
+     Explains the basic concepts, as well as theory and practical concerns.  Doesn't get too specific
+     regarding the software vendors.  Highly recommended.
+
 ### Databases
 
 - [Don't Do This (PostgreSQL wiki)](https://wiki.postgresql.org/wiki/Don't_Do_This)
@@ -346,6 +353,8 @@ I'm not a big fan of GUI, but there are a few good ones I use:
 
 - [Nines are not enough: meaningful metrics for clouds](https://blog.acolyer.org/2019/06/19/nines-are-not-enough/)
   \- Explains the relationships between SLA, SLI and SLO and how to approach defining them.
+
+Also see the [Data](#data) section.
 
 ## Docker
 
@@ -767,6 +776,8 @@ Python internals and advanced topics:
   \- Better `doctest`, with pytest integration.
   - [Intro video: Developing With Doctests - Using Xdoctest As A Backend](https://www.youtube.com/watch?v=CUjCqOw_oFk)
 - [xmltodict](https://github.com/martinblech/xmltodict) - Extract data from XML just like JSON.
+- [yarl](https://github.com/aio-libs/yarl)
+  \- URL parsing and manipulation library.  Better API (immutable) compared to `furl`.
 
 [graph]: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
 
@@ -962,7 +973,9 @@ Breaking things:
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
   \- ZSH configuration framework.
 - [starship](https://starship.rs/)
-  \- Fast, featureful shell prompt. Compatible with many shells. Modest configuration options.
+  \- Fast, featureful shell prompt. Compatible with many shells.
+     The new version (0.45.0+) provides a lot more configuration options compared
+     to previous versions.
 
 ## Testing
 
