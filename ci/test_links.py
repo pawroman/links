@@ -365,6 +365,8 @@ def get_retrying(
             with suppress(httpx.TimeoutException):
                 response = await client.get(*args, **kwargs)
                 if response.status_code in code_set:
+                    # clear all cookies on retry
+                    client.cookies.clear()
                     sleep_for = random.uniform(*random_sleep)
                     await asyncio.sleep(sleep_for)
                 else:
