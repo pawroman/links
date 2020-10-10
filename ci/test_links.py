@@ -34,15 +34,10 @@ IGNORE_ERRORS_FOR_URLS: FrozenSet = frozenset()
 
 DEFAULT_TIMEOUT_SECONDS = 45
 
-# looks like youtube.com is throttling requests,
-# randomly wait this many seconds between retries
-YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE = (3, 10)
-YOUTUBE_THROTTLE_MAX_RETRIES = 10
-
 # generic retrying
-GENERIC_WAIT_SECONDS_RANGE = (1, 5)
+GENERIC_WAIT_SECONDS_RANGE = (3, 10)
 GENERIC_MAX_RETRIES = 5
-GENERIC_RETRY_CODES = frozenset((403, 503))
+GENERIC_RETRY_CODES = frozenset((403, 429, 503))
 
 # Use a fake user agent to pretend we're a browser
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
@@ -340,13 +335,6 @@ def choose_fetch_method_for_link(link: Link, client: httpx.AsyncClient):
     if link.url.endswith((".png", ".pdf")):
         # assume that large static files are OK if HEAD request succeeds
         return client.head
-
-    if "youtube.com/" in link.url:
-        return get_retrying_on_throttling(
-            client,
-            max_retries=YOUTUBE_THROTTLE_MAX_RETRIES,
-            random_sleep=YOUTUBE_THROTTLE_WAIT_SECONDS_RANGE,
-        )
 
     if "vimeo.com/" in link.url:
         # ignore fake user agent for vimeo
