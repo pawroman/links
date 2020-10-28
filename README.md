@@ -379,6 +379,8 @@ Programming fonts I found the most eye-pleasing and readable.
 
 ## git
 
+- [--force considered harmful; understanding git's --force-with-lease](https://blog.developer.atlassian.com/force-with-lease/)
+  \- Why `git push --force-with-lease` is better than `git push --force`
 - [Git in a Nutshell](http://www.aosabook.org/en/git.html)
   \- Overview of how git is implemented.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
@@ -553,6 +555,8 @@ Articles / blog posts:
   \- Arguments for not changing your product if it works and giving users a choice.
 - [What Got You Here Won't Get You There](https://medium.com/agileconnexions/what-got-you-here-wont-get-you-there-f294e0e061d)
   \- Generic tips for leaders.
+- [When your coworker does great work, tell their manager](https://jvns.ca/blog/2020/07/14/when-your-coworker-does-great-work-tell-their-manager/)
+  \- There's a lot of work being done that's not being recognized.  This is one way to help your coworkers.
 - [Why software developers (quite honestly) hate Agile](https://www.objectstyle.com/agile/why-developers-hate-agile)
   \- What went wrong with the agile movement and why
      [Software Craftsmanship approach](https://en.wikipedia.org/wiki/Software_craftsmanship) might be better.
@@ -897,6 +901,10 @@ Evangelism:
 
 ### Rust libraries
 
+- [assert_cmd](https://github.com/assert-rs/assert_cmd)
+  \- Easily test CLI applications.
+- [cmd_lib](https://github.com/rust-shell-script/rust_cmd_lib)
+  \- Makes running shell commands from Rust very succinct.
 - [humantime](https://github.com/tailhook/humantime)
   \- Parse and format human-readable date/times and durations.
 - [parking_lot](https://github.com/Amanieu/parking\_lot)
@@ -910,8 +918,8 @@ Evangelism:
 - [static_assertions](https://github.com/nvzqz/static-assertions-rs)
   \- Static (compile time) assertions, for API stability and `const` expressions.
 - [structopt](https://github.com/TeXitoi/structopt)
-  \- Parse CLI args easily, by defining a struct.  Reduces CLI args parsing logic
-     to virually zero.
+  \- Parse CLI args (with env var fallbacks) easily, by defining a struct.
+     Reduces CLI args parsing logic to virually zero.
 - [wiremock](https://github.com/LukeMathWalker/wiremock-rs)
   \- Excellent HTTP mocking library, e.g. for testing HTTP clients.  Async compatible.
 
