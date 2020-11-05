@@ -55,6 +55,7 @@ but if you see anything that's not working, please let me know!
     - [Rust tools](#rust-tools)
 - [Shell](#shell)
 - [Testing](#testing)
+    - [Static analysis](#static-analysis)
 - [Visualization](#visualization)
 
 ---
@@ -826,6 +827,8 @@ Get started with Rust:
   \- Very good explanation of how modules work.
 - [easy_rust](https://github.com/Dhghomon/easy_rust)
   \- Rust explained using easy English.
+- [idiomatic-rust](https://github.com/mre/idiomatic-rust)
+  \- Aggregates articles, talks and repos which deal with concise, idiomatic Rust.
 - [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/)
   \- Rust language showcase, demonstrates the features of the language by example.
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
@@ -1000,6 +1003,12 @@ Breaking things:
 - [Tests that sometimes fail](https://samsaffron.com/archive/2019/05/15/tests-that-sometimes-fail)
   \- Good discussion regarding "flaky" tests, enumerating strategies for dealing
      with them and common causes of flakiness.
+
+### Static Analysis
+
+- [static-analysis](https://github.com/analysis-tools-dev/static-analysis)
+  \- "A curated list of static analysis tools for all programming languages,
+     config files, build tools, and more."
 
 ## Visualization
 
