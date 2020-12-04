@@ -282,6 +282,8 @@ Other:
   \- Aggregate logs from multiple Kubernetes pods.
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
   \- CLI dashboard for Docker and Docker Compose.
+- [lychee](https://github.com/lycheeverse/lychee)
+  \- A fast and featureful link checker.
 - [Midnight Commander (mc)](https://midnight-commander.org/) - The best file manager.
 - [mosh](https://mosh.org/) - Like `ssh`, but with local echo and roaming. Good for poor connections.
 - [mtr](https://github.com/traviscross/mtr) - Better than `ping`.
@@ -300,6 +302,8 @@ Other:
 - [thefuck](https://github.com/nvbn/thefuck) - Correct the previous command.
 - [tmux](https://github.com/tmux/tmux) - A terminal multiplexer, more user-friendly than screen.
 - [tokei](https://github.com/Aaronepower/tokei) - Count the number of source lines, quickly.
+- [topgrade](https://github.com/r-darwish/topgrade)
+  \- Upgrade just about everything using one single command.
 - [watchexec](https://github.com/watchexec/watchexec) - Execute a command when a path is modified.
 
 ### GUI tools
