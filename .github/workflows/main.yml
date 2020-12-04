@@ -32,7 +32,7 @@ jobs:
     steps:
     - name: Check external links using lychee
       run: |
-        lychee --progress --verbose /repo/README.md
+        ./lychee --progress --verbose /repo/README.md
 
   test-links-sorted:
     runs-on: ubuntu-latest
