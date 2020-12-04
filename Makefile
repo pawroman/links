@@ -18,6 +18,9 @@ quick_test:
 test:
 	poetry run pytest -v $(TARGET)
 
+test_not_external:
+	poetry run pytest -v -m 'not external' $(TARGET)
+
 lint:
 	poetry run flake8 $(TARGET)
 

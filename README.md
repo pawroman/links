@@ -10,7 +10,8 @@ A personal "awesome list".
 You can find out more about me at: [pawroman.dev](https://pawroman.dev)
 
 All the links are tested after every commit and daily using
-[GitHub Actions](https://github.com/pawroman/links/actions),
+[lychee](ttps://github.com/lycheeverse/lychee)
+via [GitHub Actions](https://github.com/pawroman/links/actions),
 but if you see anything that's not working, please let me know!
 
 ## Table of Contents
