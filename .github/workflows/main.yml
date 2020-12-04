@@ -9,7 +9,21 @@ on:
     - cron:  '0 20 * * *'    # every day at 20:00 UTC
 
 jobs:
-  test:
+  test-links-valid:
+    runs-on: ubuntu-latest
+    container:
+      image: lycheeverse/lychee:latest
+      env:
+        GITHUB_TOKEN: $LYCHEE_GITHUB_TOKEN
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Check external links using lychee
+      run: |
+        lychee --progress --verbose README.md
+
+  test-links-sorted:
     runs-on: ubuntu-latest
 
     steps:
@@ -56,6 +70,6 @@ jobs:
       run: |
         make check_isort
 
-    - name: Test
+    - name: Test if links are sorted in README.md
       run: |
-        make test
+        make test_not_external
