@@ -8,6 +8,9 @@ on:
   schedule:
     - cron:  '0 20 * * *'    # every day at 20:00 UTC
 
+env:
+  USER_AGENT: "Mozilla/5.0 (X11; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0"
+
 jobs:
   test-links-valid:
     runs-on: ubuntu-latest
@@ -22,7 +25,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Check external links using lychee
       run: |
-        /usr/src/lychee/lychee --verbose --timeout 45 README.md
+        lychee --verbose --timeout 45 --user-agent="$USER_AGENT" README.md
 
   test-links-sorted:
     runs-on: ubuntu-latest
