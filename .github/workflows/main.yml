@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: lycheeverse/lychee:latest
-      options: --user 0
       env:
         GITHUB_TOKEN: $LYCHEE_GITHUB_TOKEN
 
