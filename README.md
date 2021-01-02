@@ -117,7 +117,7 @@ Books:
 
 Other:
 
-- [Big-O Complexity Cheat Sheet](http://bigocheatsheet.com/)
+- [Big-O Complexity Cheat Sheet](https://bigocheatsheet.com/)
 - [Raft Consensus Algorithm Visualization](http://thesecretlivesofdata.com/raft/)
   \- [Raft][raft] Visualized in a very easy to follow way.
 - [xoshiro / xoroshiro generators and the PRNG shootout](http://xoshiro.di.unimi.it/)
