@@ -219,6 +219,9 @@ Legacy / Refactoring / Maintenance:
   \- A very reasonable approach to rolling out new systems, without full rewrites.
 - [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
   \- Learn what not to do :)
+- [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+  \- A set of guidelines for maintaining changelogs (aka. change logs) in projects.
+     This is a very good practice for versioned software.
 - [Preventing the Collapse of Civilization](https://www.youtube.com/watch?v=ZSRHeXYDLko)
   \- A good talk touching on software simplicity and knowledge transfer
      in software development.
