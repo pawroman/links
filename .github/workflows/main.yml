@@ -25,7 +25,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Check external links using lychee
       run: |
-        lychee --verbose --timeout 45 README.md --user-agent $USER_AGENT
+        lychee --verbose --timeout 45 --user-agent='$USER_AGENT' README.md
 
   test-links-sorted:
     runs-on: ubuntu-latest
