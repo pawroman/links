@@ -870,6 +870,8 @@ Intermediate:
   \- Why ensuring thread join handles are called is important.
 - [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
 - [Programming Rust](http://shop.oreilly.com/product/0636920040385.do) - An excellent intermediate-level book on Rust.
+- [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
+  \- An interesting collection of Rust patterns, idioms and anti-patterns.
 - [Rust: A unique perspective](https://limpet.net/mbrubeck/2019/02/07/rust-a-unique-perspective.html)
   \- An interesting take on mutability, ownership and borrowing in Rust,
      using alternative terminology.
