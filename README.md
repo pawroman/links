@@ -225,6 +225,9 @@ Legacy / Refactoring / Maintenance:
 - [Preventing the Collapse of Civilization](https://www.youtube.com/watch?v=ZSRHeXYDLko)
   \- A good talk touching on software simplicity and knowledge transfer
      in software development.
+- [When costs are nonlinear, keep it small.](https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/)
+  \- Talks about the importance of regular maintenance:
+   > Do the easy boring job regularly, instead of the hard scary job in a panic.
 - [Write code that is easy to delete, not easy to extend.](https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to)
   \- Iterating on code design should be easy.
    > Good code isn't about getting it right the first time.
@@ -236,6 +239,8 @@ Other:
   \- Some good advice.
 - [API Evolution the Right Way](https://emptysqua.re/blog/api-evolution-the-right-way/)
 - [API Security Checklist](https://github.com/shieldfy/API-Security-Checklist)
+- [ARCHITECTURE.md](https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html)
+  \- Advises to document project's architecture in the repo.
 - [Do Not Log](https://sobolevn.me/2020/03/do-not-log)
   \- Argues that in certain cases logging should be avoided over more structured
      solutions (monitoring, error tracking).  Recommends Rust patterns in Python :)
@@ -245,8 +250,6 @@ Other:
 - [Some Useful Probability Facts for Systems Programming](https://theartofmachinery.com/2020/01/27/systems_programming_probability.html)
   \- Probability applies to systems and probabilistic models explain some
      seemingly weird behaviors rather well.
-- [Storing UTC is not a silver bullet (archived)](https://web.archive.org/web/20200615073320/https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
-  \- Why "just store all times in UTC" is sometimes not the best approach.
 - [Superior Testing: Stop Stopping](https://web.archive.org/web/20190515233744/https://arturdryomov.online/posts/superior-testing-stop-stopping/)
   \- Great post on why testing matters (Archived version).
 - [The AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007)
@@ -276,7 +279,8 @@ Other:
 - [grex](https://github.com/pemistahl/grex)
   \- Generate regular expressions matching provided inputs.
 - [htop](https://github.com/hishamhm/htop) - Excellent process viewer.
-- [HTTPie](https://httpie.org/) - cURL for humans. Uses Python + requests.
+- [HTTPie](https://httpie.org/)
+  \- cURL for humans. An easy to use CLI HTTP client. Uses Python + requests. Also see `xh`.
 - [hyperfine](https://github.com/sharkdp/hyperfine) - CLI benchmarking tool.
 - [iredis](https://github.com/laixintao/iredis)
   \- Featureful Redis CLI client with syntax highlight and completions.
@@ -309,6 +313,8 @@ Other:
 - [topgrade](https://github.com/r-darwish/topgrade)
   \- Upgrade just about everything using one single command.
 - [watchexec](https://github.com/watchexec/watchexec) - Execute a command when a path is modified.
+- [xh](https://github.com/ducaale/xh)
+  \- A HTTPie clone in Rust. Much faster startup time compared to the original.
 
 ### GUI tools
 
@@ -326,6 +332,13 @@ Books
   \- Excellent book that acts as a guide to modern data engineering (and distributed systems).
      Explains the basic concepts, as well as theory and practical concerns.  Doesn't get too specific
      regarding the software vendors.  Highly recommended.
+
+Date and time
+
+- [Storing UTC is not a silver bullet (archived)](https://web.archive.org/web/20200615073320/https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/)
+  \- Why "just store all times in UTC" is sometimes not the best approach.
+- [Your Calendrical Fallacy Is...](https://yourcalendricalfallacyis.com/)
+  \- A collection of common timekeeping fallacies.
 
 ### Databases
 
@@ -360,6 +373,8 @@ Books
 
 ## Distributed Systems and Cloud Computing
 
+- [Complexity Explained](https://complexityexplained.github.io/)
+  \- Complexity science fundamentals, good to keep in mind when dealing with complex systems.
 - [Nines are not enough: meaningful metrics for clouds](https://blog.acolyer.org/2019/06/19/nines-are-not-enough/)
   \- Explains the relationships between SLA, SLI and SLO and how to approach defining them.
 
@@ -427,6 +442,8 @@ Programming fonts I found the most eye-pleasing and readable.
   \- The best explanation I've ever seen.
 - [Gallery of Processor Cache Effects](https://igoro.com/archive/gallery-of-processor-cache-effects/)
   \- Concise examples showing how cache affects code run time, with good explanations.
+- [How does your programming language handle “minus zero” (-0.0)?](https://lemire.me/blog/2021/03/04/how-does-your-programming-language-handle-minus-zero-0-0/)
+  \- For numerical programming, it's good to be aware of `-0.0` handling.
 - [How to Quantify Scalability](http://www.perfdynamics.com/Manifesto/USLscalability.html)
   \- Some theory, tips and useful models for quantifying systems scalability.
 - [How x86_64 addresses memory](https://blog.yossarian.net/2020/06/13/How-x86_64-addresses-memory)
@@ -533,6 +550,8 @@ Articles / blog posts:
   \- Argues that the "product owner" role might be spread across a team.
 - [Habits of High-Functioning Teams](https://deniseyu.io/2020/05/23/habits-of-high-performing-teams.html)
   \- A few principles and rules for high-performing teams.
+- [Hanlon's razor](https://en.wikipedia.org/wiki/Hanlon%27s_razor)
+  > never attribute to malice that which is adequately explained by stupidity.
 - [How NOT to hire a software engineer](https://tonsky.me/blog/hiring/)
   \- Good advice on what not to focus on during an interview.
 - [How to be a manager](https://getweeklyupdate.com/manager-guide)
@@ -540,6 +559,8 @@ Articles / blog posts:
   \- We all know "that one guy"...
 - [How to Deliver Constructive Feedback in Difficult Situations](https://medium.com/s/please-advise/the-essential-guide-to-difficult-conversations-41f736e63ccf)
   \- In praise of Nonviolent Communication (NVC) principles.
+- [How to Stop Endless Discussions](https://candost.blog/how-to-stop-endless-discussions/)
+  \- Glorifies the RFC ("Request For Comments") process.
 - [Spotify's Failed #SquadGoals](https://www.jeremiahlee.com/posts/failed-squad-goals/)
   \- Why the "Spotify agile model" doesn't work, and recommendations for not
      repeating the same mistakes.
@@ -566,6 +587,8 @@ Articles / blog posts:
   \- Generic tips for leaders.
 - [When your coworker does great work, tell their manager](https://jvns.ca/blog/2020/07/14/when-your-coworker-does-great-work-tell-their-manager/)
   \- There's a lot of work being done that's not being recognized.  This is one way to help your coworkers.
+- [Why does it take so long to build software?](https://www.simplethread.com/why-does-it-take-so-long-to-build-software/)
+  \- Talks about accidental complexity and rapid growth in volume of software.
 - [Why software developers (quite honestly) hate Agile](https://www.objectstyle.com/agile/why-developers-hate-agile)
   \- What went wrong with the agile movement and why
      [Software Craftsmanship approach](https://en.wikipedia.org/wiki/Software_craftsmanship) might be better.
@@ -827,6 +850,11 @@ Less known, but very useful things in the standard library:
 
 ### Rust learning
 
+Meta: book of Rust books:
+
+- [The Little Book of Rust Books](https://lborb.github.io/book/)
+  \- Aggregates all the Rust related books available freely online.
+
 Get started with Rust:
 
 - [A half-hour to learn Rust](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
@@ -834,7 +862,8 @@ Get started with Rust:
 - [Clear explanation of Rust's module system](http://www.sheshbabu.com/posts/rust-module-system/)
   \- Very good explanation of how modules work.
 - [easy_rust](https://github.com/Dhghomon/easy_rust)
-  \- Rust explained using easy English.
+  \- Easy Rust. Rust explained using easy English.
+     Also available as [a book](https://dhghomon.github.io/easy_rust/Chapter_1.html).
 - [idiomatic-rust](https://github.com/mre/idiomatic-rust)
   \- Aggregates articles, talks and repos which deal with concise, idiomatic Rust.
 - [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/)
@@ -860,6 +889,8 @@ Intermediate:
   \- A few easy tricks around compilation parameters to achieve greater performance.
 - [Creating a Rust function that returns a &str or String](https://hermanradtke.com/2015/05/29/creating-a-rust-function-that-returns-string-or-str.html)
   \- Learn to leverage `Cow` to handle string operations.
+- [Delete Cargo Integration Tests](https://matklad.github.io/2021/02/27/delete-cargo-integration-tests.html)
+  \- A collection of tips towards shorter compile times with tests.
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
   \- Practical guide to handling errors the Rust way.
 - [Generic returns in Rust](https://blog.jcoglan.com/2019/04/22/generic-returns-in-rust/)
@@ -883,7 +914,10 @@ Intermediate:
   \- Guide for applications with strong security requirements.
 - [The Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/introduction.html)
   \- Learn about Rust 2018 features.
-- [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - The missing macro tutorial.
+- [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html)
+  \- The missing macro tutorial.
+- [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
+  \- A collection of Rust performance related tips.
 - [The Rust Reference](https://doc.rust-lang.org/stable/reference/)
   \- Reference for all language constructs, syntax, types, attributes etc.
 - [Working with strings in Rust](https://fasterthanli.me/blog/2020/working-with-strings-in-rust/)
@@ -902,6 +936,8 @@ Evangelism:
   \- A success story from Dropbox.  Very insightful for rewrites overall, not just about Rust.
 - [Rust Companies](https://github.com/omarabid/rust-companies)
   \- List of companies using Rust in production.
+- [Speed of Rust vs C](https://kornel.ski/rust-c-speed)
+  \- Rust has some substantial wins over C.
 - [Why Discord is switching from Go to Rust](https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
   \- A success story from Discord.
 - [Why is Rust the Most Loved Programming Language?](https://matklad.github.io/2020/02/14/why-rust-is-loved.html)
