@@ -927,6 +927,13 @@ Intermediate:
 
 Advanced:
 
+- [Crust of Rust: Subtyping and Variance](https://www.youtube.com/watch?v=iVYWDIW71jk)
+  \- (Video) Detailed, practical explanation of type/lifetime covariance, contravariance and invariance.
+     Also covers the basics of `PhantomData`. All this actually explains a lot of the borrow checker's
+     behavior and errors.
+- [Crust of Rust: The Drop Check](https://www.youtube.com/watch?v=TJOFSMpJdzg)
+  \- (Video) A follow up to the above, covering the drop check, which is closely related to
+     `PhantomData` and type variance.
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [Writing an OS in Rust (Second Edition)](https://os.phil-opp.com/)
 
