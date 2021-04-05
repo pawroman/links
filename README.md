@@ -405,6 +405,8 @@ Programming fonts I found the most eye-pleasing and readable.
 
 - [--force considered harmful; understanding git's --force-with-lease](https://blog.developer.atlassian.com/force-with-lease/)
   \- Why `git push --force-with-lease` is better than `git push --force`
+- [delta](https://github.com/dandavison/delta)
+  \- A great-looking and featureful CLI git diff viewer.
 - [Git in a Nutshell](http://www.aosabook.org/en/git.html)
   \- Overview of how git is implemented.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
@@ -722,6 +724,9 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   \- Good book if you know Python basics.
 - [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
   \- (PDF). Free book collecting Python antipatterns and common mistakes.
+- [I Want A New Duck](https://glyph.twistedmatrix.com/2020/07/new-duck.html)
+  \- Advertises `typing.Protocol` (aka. structural typing) as a way to marry
+     Python's "duck typing" and mypy type checking.
 - [I'm not feeling the async pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/)
   \- Introduction to the concept of backpressure, as well as advice on how
      to deal with it in Python's `asyncio`.
@@ -1013,6 +1018,9 @@ Less known, but very useful things in the standard library:
      using any intrinsics manually.
 - [The Evolution of a Rust Programmer](https://blog.antoyo.xyz/evolution-rust-programmer)
   \- Tongue-in-cheek post on different Rust programming styles.
+- [totally_safe_transmute, line-by-line](https://blog.yossarian.net/2021/03/16/totally_safe_transmute-line-by-line)
+  \- A breakdown of a delightful low-level memory access hack, allowing
+     transmute without any unsafe code.
 
 Breaking things:
 
