@@ -585,7 +585,7 @@ Articles / blog posts:
 - [Unlearning toxic behaviors in a code review culture](https://medium.com/@sandya.sankarram/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
 - [Users hate change](https://gist.github.com/sleepyfox/a4d311ffcdc4fd908ec97d1c245e57dc)
   \- Arguments for not changing your product if it works and giving users a choice.
-- [What Got You Here Won't Get You There](https://medium.com/agileconnexions/what-got-you-here-wont-get-you-there-f294e0e061d)
+- [What Got You Here Won't Get You There (Book Summary)](https://jamesclear.com/book-summaries/what-got-you-here-wont-get-you-there)
   \- Generic tips for leaders.
 - [When your coworker does great work, tell their manager](https://jvns.ca/blog/2020/07/14/when-your-coworker-does-great-work-tell-their-manager/)
   \- There's a lot of work being done that's not being recognized.  This is one way to help your coworkers.
@@ -722,7 +722,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
   - [Slides](https://speakerdeck.com/roguelynn/advanced-asyncio-solving-real-world-production-problems)
 - [Fluent Python (book)](http://shop.oreilly.com/product/0636920032519.do)
   \- Good book if you know Python basics.
-- [How to Make Mistakes in Python](https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
+- [How to Make Mistakes in Python](https://web.archive.org/web/20210203141055/https://www.oreilly.com/programming/free/files/how-to-make-mistakes-in-python.pdf)
   \- (PDF). Free book collecting Python antipatterns and common mistakes.
 - [I Want A New Duck](https://glyph.twistedmatrix.com/2020/07/new-duck.html)
   \- Advertises `typing.Protocol` (aka. structural typing) as a way to marry
@@ -751,8 +751,8 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
 
 Python internals and advanced topics:
 
-- [CPython internals](http://pgbovine.net/cpython-internals.htm)
-  \- Video lectures on Python 2.7 source code. Dated, but still mostly relevant.
+- [CPython internals (video playlist)](https://www.youtube.com/playlist?list=PLzV58Zm8FuBL6OAv1Yu6AwXZrnsFbbR0S)
+  \- Video lectures on Python 2.7 source code. Dated (Python has evolved a bit since 2.7!), but still mostly relevant.
 - [How Python does Unicode](https://www.b-list.org/weblog/2017/sep/05/how-python-does-unicode/)
   \- Learn how `str` works under the hood and what does `len(str)` actually return.
 - [Inside Python dict](https://github.com/eleweek/inside_python_dict)
