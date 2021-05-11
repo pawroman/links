@@ -324,6 +324,11 @@ I'm not a big fan of GUI, but there are a few good ones I use:
   \- Print posters (e.g. large images spanning multiple paper pages)
 - [QDirStat](https://github.com/shundhammer/qdirstat) - Analyze disk usage by directory / file type.
 
+Linux Desktop specific:
+- [Gestures](https://gitlab.com/cunidev/gestures)
+  \- A simple GUI for [libinput-gestures](https://github.com/bulletmark/libinput-gestures).
+     Easily assign touchpad multi-touch gestures to arbitrary actions.  Also has a useful wiki.
+
 ## Data
 
 Books
@@ -370,6 +375,10 @@ Date and time
   \- Good practices for HTTP headers.
 - [Laws of UX](https://lawsofux.com/)
   \- Collection of principles to consider while designing user interfaces.
+- [My current HTML boilerplate (April 9, 2021)](https://www.matuzo.at/blog/html-boilerplate/)
+  \- A useful HTML boilerplate with in-depth explanations.
+- [Opting your Website out of Google's FLoC Network](https://paramdeo.com/blog/opting-your-website-out-of-googles-floc-network)
+  \- How to opt your website out of the newest Google tracking mechanism.
 
 ## Distributed Systems and Cloud Computing
 
@@ -860,6 +869,11 @@ Meta: book of Rust books:
 - [The Little Book of Rust Books](https://lborb.github.io/book/)
   \- Aggregates all the Rust related books available freely online.
 
+Quick references / cheatsheets:
+
+- [Rust Language Cheat Sheet](https://cheats.rs/)
+- [Rust Memory Container Cheat-sheet](https://github.com/usagi/rust-memory-container-cs)
+
 Get started with Rust:
 
 - [A half-hour to learn Rust](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
@@ -875,7 +889,6 @@ Get started with Rust:
   \- Rust language showcase, demonstrates the features of the language by example.
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
   \- How to accomplish common tasks using idiomatic Rust and libraries.
-- [Rust Language Cheat Sheet](https://cheats.rs/)
 - [rust-book-summary](https://github.com/psibi/rust-book-summary)
   \- TLDR summary of [The Rust Programming Language Book](https://doc.rust-lang.org/stable/book/).
 - [Tour of Rust](https://tourofrust.com/)
@@ -948,6 +961,9 @@ Evangelism:
   \- A success story from Dropbox.  Very insightful for rewrites overall, not just about Rust.
 - [Rust Companies](https://github.com/omarabid/rust-companies)
   \- List of companies using Rust in production.
+- [Rust is for Professionals](https://gregoryszorc.com/blog/2021/04/13/rust-is-for-professionals/)
+  > (...) Rust disposes software to a lower defect rate, reduces total development and deployment costs,
+  > and is exceptionally satisfying to use.
 - [Speed of Rust vs C](https://kornel.ski/rust-c-speed)
   \- Rust has some substantial wins over C.
 - [Why Discord is switching from Go to Rust](https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
