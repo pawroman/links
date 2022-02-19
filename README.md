@@ -543,7 +543,7 @@ Books and Resources:
 
 Articles / blog posts:
 
-- [22 Principles for Great Product Managers](https://reeve.blog/blog/principles/)
+- [22 Principles for Great Product Managers (archived)](https://web.archive.org/web/20210228211201/https://reeve.blog/blog/principles/)
   \- Do product management right.
 - [Commit messages guide](https://github.com/RomuloOliveira/commit-messages-guide)
   \- How to write commit messages well.
