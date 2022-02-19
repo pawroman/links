@@ -20,6 +20,7 @@ but if you see anything that's not working, please let me know!
 - [Other Lists](#other-lists)
 - [Algorithms](#algorithms)
 - [Architecture and Programming Patterns](#architecture-and-programming-patterns)
+- [Assorted "How Stuff Works"](#assorted-how-stuff-works)
 - [Career Development](#career-development)
 - [Code Quality and Good Practices](#code-quality-and-good-practices)
 - [Command Line Tools](#command-line-tools)
@@ -160,6 +161,11 @@ Visualizing Architecture:
        to be readable.
   - [Visualising software architecture with the C4 model (video)](https://www.youtube.com/watch?v=x2-rSnhpw0g)
     \- An introductory talk about this model.
+
+## Assorted "How Stuff Works"
+
+- [How does UTF-8 turn “😂” into “F09F9882”?](https://sethmlarson.dev/blog/utf-8)
+  \- A nice walk-through of UTF-8 internals.
 
 ## Career Development
 
@@ -499,6 +505,8 @@ Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wiki
   \- Learn from other people's mistakes.
 - [The Distributed System ToolKit: Patterns for Composite Containers](https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns/)
   \- Explains Sidecar, Ambassador and Adapter container patterns.
+- [Two reasons Kubernetes is so complex](https://buttondown.email/nelhage/archive/two-reasons-kubernetes-is-so-complex/)
+  \- The K8S complexity has good reasons behind it.
 
 `kubectl` quick reference:
 
@@ -891,6 +899,8 @@ Get started with Rust:
   \- How to accomplish common tasks using idiomatic Rust and libraries.
 - [rust-book-summary](https://github.com/psibi/rust-book-summary)
   \- TLDR summary of [The Rust Programming Language Book](https://doc.rust-lang.org/stable/book/).
+- [The simplest guide to error handling in Rust](https://kerkour.com/rust-error-handling)
+  \- A very concise intro to error handling.
 - [Tour of Rust](https://tourofrust.com/)
   \- Similar to "Rust by Example", but more approachable and with more narrative.
 
@@ -905,12 +915,14 @@ Intermediate:
      work in Rust.
 - [Cheap tricks for high-performance Rust](https://deterministic.space/high-performance-rust.html)
   \- A few easy tricks around compilation parameters to achieve greater performance.
+- [Context-preserving error handling](https://kazlauskas.me/entries/errors)
+  \- How to preserve error context while using `thiserror` library.
 - [Creating a Rust function that returns a &str or String](https://hermanradtke.com/2015/05/29/creating-a-rust-function-that-returns-string-or-str.html)
   \- Learn to leverage `Cow` to handle string operations.
 - [Delete Cargo Integration Tests](https://matklad.github.io/2021/02/27/delete-cargo-integration-tests.html)
   \- A collection of tips towards shorter compile times with tests.
 - [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
-  \- Practical guide to handling errors the Rust way.
+  \- Practical guide to handling errors the "raw" Rust way.
 - [Generic returns in Rust](https://blog.jcoglan.com/2019/04/22/generic-returns-in-rust/)
   \- On handling `From/Into` traits and how `Iterator::collect()` works.
 - [How To Write Fast Rust Code](http://likebike.com/posts/How_To_Write_Fast_Rust_Code.html)
@@ -966,6 +978,8 @@ Evangelism:
   > and is exceptionally satisfying to use.
 - [Speed of Rust vs C](https://kornel.ski/rust-c-speed)
   \- Rust has some substantial wins over C.
+- [Sustainability with Rust](https://aws.amazon.com/blogs/opensource/sustainability-with-rust/)
+  \- Some pros of Rust from the Amazon AWS team.
 - [Why Discord is switching from Go to Rust](https://blog.discordapp.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
   \- A success story from Discord.
 - [Why is Rust the Most Loved Programming Language?](https://matklad.github.io/2020/02/14/why-rust-is-loved.html)
@@ -1024,6 +1038,8 @@ Less known, but very useful things in the standard library:
      2019-11-13.
 - [How I Wrote a Modern C++ Library in Rust](https://hsivonen.fi/modern-cpp-in-rust/)
 - [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
+- [Mocking Time in Async Rust](https://www.ditto.live/blog/mocking-time-in-async-rust)
+  \- A neat idea for mocking time in async tests.
 - [Optimizations That Aren't, Or Are They?](https://oribenshir.github.io/afternoon_rusting/blog/copy-on-write)
   \- Copy on Write in Rust and C++.
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
@@ -1077,6 +1093,8 @@ Breaking things:
      most production failures, even in complex distributed systems.
 - [TDD, Where Did It All Go Wrong (video)](https://www.youtube.com/watch?v=EZ05e7EMOLM)
   \- A talk on how to do TDD right.
+- [Testing Distributed Systems](https://asatarin.github.io/testing-distributed-systems/)
+  \- A curated mega-list of resources related to testing distributed systems.
 - [Tests that sometimes fail](https://samsaffron.com/archive/2019/05/15/tests-that-sometimes-fail)
   \- Good discussion regarding "flaky" tests, enumerating strategies for dealing
      with them and common causes of flakiness.
@@ -1096,3 +1114,5 @@ Links related to data visualization.
   reflect the data, tell a story, and look professional."
 - [matplotlib colormaps](https://bids.github.io/colormap/)
   \- Perceptually uniform colormaps (long merged into Matplotlib).
+- [Stop Using Pie-Charts](https://earthly.dev/blog/stop-using-pie-charts/)
+  \- Why Pie Charts are unreadable and what do use instead.
