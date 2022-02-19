@@ -964,6 +964,8 @@ Advanced:
 - [Crust of Rust: The Drop Check](https://www.youtube.com/watch?v=TJOFSMpJdzg)
   \- (Video) A follow up to the above, covering the drop check, which is closely related to
      `PhantomData` and type variance.
+- [min-sized-rust](https://github.com/johnthagen/min-sized-rust)
+  \- How to minimize Rust binary size.
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [Writing an OS in Rust (Second Edition)](https://os.phil-opp.com/)
 
