@@ -917,6 +917,8 @@ Intermediate:
   \- A few easy tricks around compilation parameters to achieve greater performance.
 - [Context-preserving error handling](https://kazlauskas.me/entries/errors)
   \- How to preserve error context while using `thiserror` library.
+- [Creating a Rust function that accepts String or &str](https://hermanradtke.com/2015/05/06/creating-a-rust-function-that-accepts-string-or-str.html/)
+  \- Use `Into<String>` to accept `&str` or `String` without cloning.
 - [Creating a Rust function that returns a &str or String](https://hermanradtke.com/2015/05/29/creating-a-rust-function-that-returns-string-or-str.html)
   \- Learn to leverage `Cow` to handle string operations.
 - [Delete Cargo Integration Tests](https://matklad.github.io/2021/02/27/delete-cargo-integration-tests.html)
