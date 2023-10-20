@@ -273,11 +273,16 @@ Other:
 - [ctop](https://github.com/bcicen/ctop) - `top` for containers.
 - [DBCLI](https://www.dbcli.com) - Collection of great CLI database clients,
     e.g. [pgcli](https://www.pgcli.com), [mycli](https://www.mycli.net) etc.
+- [direnv](https://github.com/direnv/direnv)
+  \- Per dir/project env var management.  You can use it to activate Python virtual envs,
+     store development environment credentials, personal access tokens, etc.
+     It "just works" and is fast, compared to some other tools.
 - [dive](https://github.com/wagoodman/dive)
   \- Inspect Docker images, layer by layer.  Useful to search for spurious/unneeded files.
 - [dua](https://github.com/Byron/dua-cli)
   \- Aka. `dua-cli`.  A (fast!) disk usage analyzer and cleaner.  Also has a nice interactive mode.
-- [exa](https://github.com/ogham/exa) - Better than `ls`.  Also has a `tree`-like switch (`-T`).
+- [eza](https://github.com/eza-community/eza) - Better than `ls`.  Also has a `tree`-like switch (`-T`).
+  A maintained fork of `exa`.
 - [fd](https://github.com/sharkdp/fd) - Better than `find`.
 - [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard) - Makes GDB so much better.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
@@ -350,6 +355,12 @@ Date and time
   \- Why "just store all times in UTC" is sometimes not the best approach.
 - [Your Calendrical Fallacy Is...](https://yourcalendricalfallacyis.com/)
   \- A collection of common timekeeping fallacies.
+
+Storage Formats:
+
+- [Delta Lake](https://delta.io/)
+  \- A promising new "data lake" format, based on parquet.  Widely supported across
+     vendors, frameworks and programming languages.
 
 ### Databases
 
@@ -790,6 +801,9 @@ Python internals and advanced topics:
 - [bleach](https://github.com/mozilla/bleach)
   \- Sanitize untrusted strings so that they are HTML safe.
 - [click](https://click.palletsprojects.com/en/7.x/) - Command line argument parser and then some.
+- [delta-rs (aka. deltalake)](https://github.com/delta-io/delta-rs)
+  \- A library for interacting with the [Delta Lake](https://delta.io/) format, written
+     in Rust.
 - [httpx](https://github.com/encode/httpx)
   \- Requests-inspired HTTP client with both sync and async APIs.
 - [irc3](https://github.com/gawel/irc3/) - IRC client based on `asyncio`.
@@ -865,6 +879,8 @@ Less known, but very useful things in the standard library:
   \- A low-overhead sampling Python profiler.
 - [pyflame](https://github.com/uber/pyflame)
   \- Flame graph profiler based on ptrace (Linux only).
+- [ruff](https://github.com/astral-sh/ruff)
+  \- An extremely fast Python linter, written in Rust.
 - [scalene](https://github.com/emeryberger/scalene)
   \- A high-performance CPU and memory profiler for Python.
 
@@ -1007,10 +1023,14 @@ Evangelism:
   \- Parse and format human-readable date/times and durations.
 - [parking_lot](https://github.com/Amanieu/parking\_lot)
   \- Synchronization primitives faster than standard library.
+- [PyO3](https://github.com/PyO3/pyo3)
+  \- Expose Rust libraries to Python, and interact with Python from Rust.
+     Widely used and well-supported.
 - [reqwest](https://github.com/seanmonstar/reqwest)
   \- Async HTTP client library, with a blocking mode.  Featureful and well documented.
-- [rust-cpython](https://github.com/dgrunwald/rust-cpython)
-  \- Expose Rust libraries to Python. Targets stable Rust.
+- [rust-phf](https://github.com/rust-phf/rust-phf)
+  \- Generate hash tables using
+     [perfect hash functions](https://en.wikipedia.org/wiki/Perfect_hash_function) at compile time.
 - [serde](https://github.com/serde-rs/serde)
   \- The (de)serialization framework for Rust.  Extremely well done.
 - [static_assertions](https://github.com/nvzqz/static-assertions-rs)
@@ -1070,10 +1090,15 @@ Breaking things:
 
 ### Rust tools
 
+- [cargo-binstall](https://github.com/cargo-bins/cargo-binstall)
+  \- An effort to bring standardized binary installation to Rust tools.  Can save you
+     some compilation time in the CI.
 - [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)
   \- Find out what takes most of the space in your executable.
 - [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz)
   \- [Fuzzing](https://en.wikipedia.org/wiki/Fuzzing) Rust code.
+- [cargo-semver-checks](https://github.com/obi1kenobi/cargo-semver-checks)
+  \- Check for Rust semver violations.
 - [std::dbg](https://doc.rust-lang.org/std/macro.dbg.html)
   \- Standard library debug macro, to replace ad-hoc `println!` debugging.
      Stabilized in 1.32.0.
