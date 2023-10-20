@@ -591,7 +591,7 @@ Articles / blog posts:
      the possibility you might be wrong.
      > The next time you find yourself making a judgment, don't invoke 'strong opinions, weakly held'.
        Instead, ask: "how much are you willing to bet on that?" Doing so will jolt people into the types of thinking you want to encourage.
-- [The Framing of the Developer](https://www.svese.de/impact-vs-backlog-frame-in-software-development)
+- [The Framing of the Developer (archived)](https://web.archive.org/web/20201202114900/https://www.svese.de/impact-vs-backlog-frame-in-software-development)
   \- Discusses the "Impact oriented" framing vs "Backlog oriented".
      Advocates that we should ditch the backlog frame; instead focus on impact and
      the delivered value.
@@ -752,7 +752,7 @@ Also see: [Status of Python branches](https://devguide.python.org/#status-of-pyt
      David Beazley (`dabeaz`).
 - [Python 3 Module of the Week](https://pymotw.com/3/)
   \- Tutorials for standard library modules.
-- [Python API Checklist](https://devchecklists.com/python-api-checklist/en/)
+- [Python API Checklist](https://devchecklists.com/en/checklist/python-api-checklist)
   \- Quite a few boxes to tick for good Python APIs.
 - [Python Cheatsheet](https://github.com/gto76/python-cheatsheet)
   \- A pretty comprehensive cheatsheet.
@@ -998,6 +998,9 @@ Evangelism:
 
 - [assert_cmd](https://github.com/assert-rs/assert_cmd)
   \- Easily test CLI applications.
+- [camino](https://github.com/camino-rs/camino)
+  \- `UTF-8` `Path` and `PathBuf`, for when low-level nitty-gritty
+     details of the OS-specific path encoding don't matter.
 - [cmd_lib](https://github.com/rust-shell-script/rust_cmd_lib)
   \- Makes running shell commands from Rust very succinct.
 - [humantime](https://github.com/tailhook/humantime)
@@ -1015,6 +1018,7 @@ Evangelism:
 - [structopt](https://github.com/TeXitoi/structopt)
   \- Parse CLI args (with env var fallbacks) easily, by defining a struct.
      Reduces CLI args parsing logic to virually zero.
+     Recently merged into [clap](https://github.com/clap-rs/clap).
 - [wiremock](https://github.com/LukeMathWalker/wiremock-rs)
   \- Excellent HTTP mocking library, e.g. for testing HTTP clients.  Async compatible.
 
@@ -1066,6 +1070,8 @@ Breaking things:
 
 ### Rust tools
 
+- [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)
+  \- Find out what takes most of the space in your executable.
 - [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz)
   \- [Fuzzing](https://en.wikipedia.org/wiki/Fuzzing) Rust code.
 - [std::dbg](https://doc.rust-lang.org/std/macro.dbg.html)
