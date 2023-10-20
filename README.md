@@ -1,6 +1,6 @@
 # links
 
-[![Build Status](https://github.com/pawroman/links/workflows/Test/badge.svg)](https://github.com/pawroman/links/actions)
+[![Build Status](https://github.com/pawroman/links/actions/workflows/main.yml/badge.svg)](https://github.com/pawroman/links/actions)
 ![Python version used for testing](https://img.shields.io/badge/Python-3.9-blue.svg)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
 
