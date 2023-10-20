@@ -104,7 +104,7 @@ Articles:
   \- Explained very clearly, with great interactive examples.
      Also explores BFS and Dijkstra's algorithm.
   - [Implementation of A*](https://www.redblobgames.com/pathfinding/a-star/implementation.html)
-    \- A follow up on the article, with implementation tips.
+    \- A follow-up on the article, with implementation tips.
 - [Rendezvous hashing](https://en.wikipedia.org/wiki/Rendezvous_hashing)
 - [Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling)
   \- Sample items from very large or infinite collections.
