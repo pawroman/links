@@ -308,7 +308,7 @@ Other:
 - [sd](https://github.com/chmln/sd)
   \- A simpler, more intuitive `sed` replacement.
 - [speedtest-cli](https://github.com/sivel/speedtest-cli) - Speedtest from a command line.
-- [stern](https://github.com/wercker/stern)
+- [stern](https://github.com/stern/stern)
   \- Tail multiple k8s logs (like `kubetail`) but more quickly (and optionally in JSON format).
 - [storm](https://github.com/emre/storm)
   \- Manage SSH connections (`.ssh/config`).
@@ -646,9 +646,9 @@ Estimating time:
   * te, sigma_te - expected time and its stdev
   ```
 
-Talking about technical debt with business people
+Talking about technical debt with business people:
 
-(From Kent Beck's twitter: https://twitter.com/KentBeck/status/1187766114706542593 )
+(From Kent Beck's twitter: https://web.archive.org/web/20191028001516/https://twitter.com/KentBeck/status/1187766114706542593 )
 
 - "Investing in improving structure" over "Paying off technical debt"
 - "Resilience & Scaling" over "Technical debt work"
