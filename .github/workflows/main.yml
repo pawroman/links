@@ -2,14 +2,11 @@ name: Test
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
   schedule:
-    - cron:  '0 20 * * *'    # every day at 20:00 UTC
-
-env:
-  USER_AGENT: "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0"
+    - cron: "0 20 * * *" # every day at 20:00 UTC
 
 jobs:
   test-links-valid:
@@ -20,59 +17,44 @@ jobs:
         GITHUB_TOKEN: $LYCHEE_GITHUB_TOKEN
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Check external links using lychee
-      run: |
-        lychee --verbose --timeout 45 --user-agent="$USER_AGENT" README.md
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check external links using lychee
+        run: |
+          lychee --verbose --timeout 45 README.md
 
   test-links-sorted:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      id: cache
-      env:
-        cache-name: cache-pip-poetry
-      with:
-        path: ~/.cache
-        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/poetry.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-${{ env.cache-name }}-
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.13"
 
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v1
-      with:
-        python-version: "3.9"
+      - name: Install uv
+        run: |
+          pip install uv
 
-    - name: CI setup
-      run: |
-        make ci_setup
+      - name: Install dependencies
+        run: |
+          uv sync
+          uv tool install rust-just
 
-    - name: Install dependencies
-      run: |
-        make install
-      if: steps.cache.outputs.cache-hit != 'true'
+      - name: Check ruff format
+        run: |
+          just check_format
 
-    - name: Black (code formatting) check
-      run: |
-        make check_black
+      - name: Check mypy
+        run: |
+          just check_mypy
 
-    - name: Mypy (typecheck) check
-      run: |
-        make check_mypy
+      - name: Check ruff
+        run: |
+          just check_ruff
 
-    - name: Flake8 (lint) check
-      run: |
-        make lint
-
-    - name: isort (imports) check
-      run: |
-        make check_isort
-
-    - name: Test if links are sorted in README.md
-      run: |
-        make test_not_external
+      - name: Test if links are sorted in README.md
+        run: |
+          just test

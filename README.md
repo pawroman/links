@@ -1,8 +1,7 @@
 # links
 
 [![Build Status](https://github.com/pawroman/links/actions/workflows/main.yml/badge.svg)](https://github.com/pawroman/links/actions)
-![Python version used for testing](https://img.shields.io/badge/Python-3.9-blue.svg)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
+![Python version used for testing](https://img.shields.io/badge/Python-3.13-blue.svg)
 
 Links to programming related resources I found useful or interesting.
 A personal "awesome list".
@@ -32,6 +31,7 @@ but if you see anything that's not working, please let me know!
 - [Docker](#docker)
 - [Eye Candy](#eye-candy)
     - [Fonts](#fonts)
+    - [Icons](#icons)
     - [Themes](#themes)
 - [git](#git)
     - [git help](#git-help)
@@ -221,8 +221,6 @@ Code quality measures:
 
 Legacy / Refactoring / Maintenance:
 
-- [The Ship of Theseus to NOT rewrite a legacy system from scratch (FKA. Avoid rewriting a legacy system from scratch, by strangling it)](https://web.archive.org/web/20241209060056/https://understandlegacycode.com/blog/ship-of-theseus-avoid-rewrite-legacy-system/)
-  \- A very reasonable approach to rolling out new systems, without full rewrites.
 - [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
   \- Learn what not to do :)
 - [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
@@ -231,6 +229,8 @@ Legacy / Refactoring / Maintenance:
 - [Preventing the Collapse of Civilization](https://www.youtube.com/watch?v=ZSRHeXYDLko)
   \- A good talk touching on software simplicity and knowledge transfer
      in software development.
+- [The Ship of Theseus to NOT rewrite a legacy system from scratch (FKA. Avoid rewriting a legacy system from scratch, by strangling it)](https://web.archive.org/web/20241209060056/https://understandlegacycode.com/blog/ship-of-theseus-avoid-rewrite-legacy-system/)
+  \- A very reasonable approach to rolling out new systems, without full rewrites.
 - [When costs are nonlinear, keep it small.](https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/)
   \- Talks about the importance of regular maintenance:
    > Do the easy boring job regularly, instead of the hard scary job in a panic.
