@@ -1,30 +1,19 @@
-[tool.poetry]
+[project]
 name = "links"
-version = "0.1.0"
-description = ""
+version = "0.2.0"
+description = "Personal links"
 authors = ["Paweł Romanowski <pawroman@pawroman.dev>"]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-black = "^22.1.0"
-flake8 = "^3.8"
-isort = "^5.4"
-lxml = "^4.6"
-mistune = "^0.8.4"
-mypy = "^0.910"
-pytest = "^7.0"
-pytest-asyncio = "^0.18.1"
-xdoctest = "^0.15.10"
-httpx = "^0.16"
-brotlipy = "^0.7"
+requires-python = ">= 3.13"
 
-[tool.poetry.dev-dependencies]
-
-[tool.pytest.ini_options]
-minversion = "6.0"
-addopts = "--xdoctest -p pytest_asyncio"
-markers = [
-    "external: marks tests as connecting to external services (deselect with '-m \"not external\"')"
+dependencies = [
+    "lxml",
+    "mistune==0.8.4",
+    "mypy",
+    "pytest",
+    "ruff>=0.13.1",
+    "types-lxml>=2025.8.25",
+    "xdoctest",
 ]
 
 [tool.mypy]
@@ -32,11 +21,12 @@ check_untyped_defs = true
 
 [[tool.mypy.overrides]]
 module = [
-    "lxml",
     "mistune"
 ]
 ignore_missing_imports = true
 
-[build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+[tool.pytest.ini_options]
+addopts = "--xdoctest"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]

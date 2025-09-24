@@ -1,13 +1,18 @@
 pre-commit:
-  parallel: true
+  piped: true
   commands:
-    black:
-      run: make -s check_black
-    mypy:
-      run: make -s check_mypy
-    quick_test:
-      run: make -s quick_test
-    flake8:
-      run: make -s lint
-    isort:
-      run: make -s check_isort
+    format:
+      run: just format
+      priority: 1
+      stage_fixed: true
+
+    format_isort:
+      run: just format_isort
+      priority: 2
+      stage_fixed: true
+
+    check:
+      run: just check
+
+    test:
+      run: just test -q
