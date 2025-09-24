@@ -24,7 +24,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Check external links using lychee
         run: |
-          lychee --verbose -X head --user-agent="$USER_AGENT" --timeout 45 --max-concurrency 16 --exclude dropbox.tech README.md
+          # some websites reject requests from GitHub
+          lychee --verbose -X head --user-agent="$USER_AGENT" --timeout 45 --max-concurrency 16 --exclude dropbox.tech --exclude kerkour.com --exclude toptal.com --exclude reddit.com --exclude usenix.org README.md
+          # dropbox.tech doesn't like HEAD requests
           lychee --verbose -X get  --user-agent="$USER_AGENT" --timeout 45 --max-concurrency 1  --include dropbox.tech README.md
 
   test-links-sorted:
