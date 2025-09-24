@@ -24,7 +24,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Check external links using lychee
         run: |
-          lychee --verbose --user-agent="$USER_AGENT" --timeout 45 README.md
+          lychee --verbose -X head --user-agent="$USER_AGENT" --timeout 45 --max-concurrency 16 --exclude dropbox.tech README.md
+          lychee --verbose -X get  --user-agent="$USER_AGENT" --timeout 45 --max-concurrency 1  --include dropbox.tech README.md
 
   test-links-sorted:
     runs-on: ubuntu-latest

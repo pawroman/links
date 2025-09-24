@@ -1011,7 +1011,7 @@ Evangelism:
   \- A success story from Discord.
 - [Why is Rust the Most Loved Programming Language?](https://matklad.github.io/2020/02/14/why-rust-is-loved.html)
   \- Author's personal
-- [Why Rust](https://christine.website/blog/why-rust-2020-02-15)
+- [Why Rust](https://xeiaso.net/blog/why-rust-2020-02-15/)
   \- Compares Rust to Go in a few aspects.
 - [Why Rust for safe systems programming](https://www.microsoft.com/en-us/msrc/blog/2019/07/why-rust-for-safe-systems-programming/)
   \- Reasons for Rust from Microsoft.
