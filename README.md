@@ -221,7 +221,7 @@ Code quality measures:
 
 Legacy / Refactoring / Maintenance:
 
-- [Avoid rewriting a legacy system from scratch, by strangling it](https://understandlegacycode.com/blog/avoid-rewriting-a-legacy-system-from-scratch-by-strangling-it/)
+- [The Ship of Theseus to NOT rewrite a legacy system from scratch (FKA. Avoid rewriting a legacy system from scratch, by strangling it)](https://web.archive.org/web/20241209060056/https://understandlegacycode.com/blog/ship-of-theseus-avoid-rewrite-legacy-system/)
   \- A very reasonable approach to rolling out new systems, without full rewrites.
 - [How To Write Unmaintainable Code](https://github.com/Droogans/unmaintainable-code)
   \- Learn what not to do :)
@@ -401,8 +401,8 @@ Storage Formats:
 
 - [Complexity Explained](https://complexityexplained.github.io/)
   \- Complexity science fundamentals, good to keep in mind when dealing with complex systems.
-- [Nines are not enough: meaningful metrics for clouds](https://blog.acolyer.org/2019/06/19/nines-are-not-enough/)
-  \- Explains the relationships between SLA, SLI and SLO and how to approach defining them.
+- [Nines are not enough: meaningful metrics for clouds](https://web.archive.org/web/20230526180850/https://blog.acolyer.org/2019/06/19/nines-are-not-enough/)
+  \- Explains the relationships between SLA, SLI and SLO and how to approach defining them (archived).
 
 Also see the [Data](#data) section.
 
@@ -421,6 +421,11 @@ Programming fonts I found the most eye-pleasing and readable.
 
 - [Hack](https://sourcefoundry.org/hack/)
   \- My font of choice. Very easy on the eyes, and very unambiguous.
+
+### Icons
+
+- [Feather Icons](https://github.com/feathericons/feather)
+  \- Light-weight SVG icons, MIT licensed.
 
 ### Themes
 
@@ -481,6 +486,8 @@ Programming fonts I found the most eye-pleasing and readable.
 - [Modern Microprocessors - A 90-Minute Guide!](http://www.lighterra.com/papers/modernmicroprocessors/)
   \- Exceptionally good article on how modern CPUs work. This explains why a lot of low-level
   optimizations work.
+- [Napkin Math](https://github.com/sirupsen/napkin-math)
+  \- Latency/throughput and cost numbers in computer systems.
 - [Performance speed limits](https://travisdowns.github.io/blog/2019/06/11/speed-limits.html)
   \- Super-low-level details of how fast can a CPU execute code.
 - [The Fallacy of Premature Optimization](https://ubiquity.acm.org/article.cfm?id=1513451)
@@ -495,7 +502,7 @@ Programming fonts I found the most eye-pleasing and readable.
 
 Latency visualized:
 
-[![](https://camo.githubusercontent.com/77f72259e1eb58596b564d1ad823af1853bc60a3/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67)](https://gist.github.com/GLMeece/b00c9c97a06a957af7426b1be5bc8be6)
+[![](https://camo.githubusercontent.com/b425440f6447aded36e9e2dc9fcfd2e97dfaf9811b518d71fa92a5f3d94f9e07/687474703a2f2f692e696d6775722e636f6d2f6b307431652e706e67)](https://gist.github.com/GLMeece/b00c9c97a06a957af7426b1be5bc8be6)
 
 Precision of IEEE 754 Floating Point Values (credit: [Wikipedia](https://en.wikipedia.org/wiki/IEEE_754)):
 
@@ -622,9 +629,9 @@ Articles / blog posts:
 - [Why software developers (quite honestly) hate Agile](https://www.objectstyle.com/agile/why-developers-hate-agile)
   \- What went wrong with the agile movement and why
      [Software Craftsmanship approach](https://en.wikipedia.org/wiki/Software_craftsmanship) might be better.
-- [Work is Work](https://codahale.com/work-is-work/)
+- [Work is Work](https://web.archive.org/web/20250719100829/https://codahale.com/work-is-work/)
   \- Getting effective in management and getting work done in an organization
-     is hard work.  There are some universal principles to follow though.
+     is hard work.  There are some universal principles to follow though (archived)
 - [Your Company Culture is Who You Hire, Fire, and Promote](https://www.linkedin.com/pulse/your-companys-culture-who-you-hire-fire-promote-part-1-sepah)
   - Part 2: [Anatomy of an Asshole](https://www.linkedin.com/pulse/your-company-culture-who-you-hire-fire-promote-part-2-sepah)
   - Part 3: [Breaking Bad: Why Good People Become Evil Bosses](https://www.linkedin.com/pulse/breaking-bad-why-good-people-become-evilbosses-dr-cameron-sepah)
@@ -926,7 +933,7 @@ Intermediate:
   \- Explains static vs dynamic dispatch (trait objects).
 - [Accurate mental model for Rust's reference types](https://docs.rs/dtolnay/0.0.6/dtolnay/macro._02__reference_types.html)
   \- Explains what `&T` and `&mut T` really are.
-- [Allocations in Rust](https://speice.io/2019/02/understanding-allocations-in-rust.html)
+- [Allocations in Rust](https://speice.io/2019/02/understanding-allocations-in-rust/)
   \- Good, in depth intro to how different memory allocation mechanisms
      work in Rust.
 - [Cheap tricks for high-performance Rust](https://deterministic.space/high-performance-rust.html)
@@ -968,7 +975,7 @@ Intermediate:
   \- A collection of Rust performance related tips.
 - [The Rust Reference](https://doc.rust-lang.org/stable/reference/)
   \- Reference for all language constructs, syntax, types, attributes etc.
-- [Working with strings in Rust](https://fasterthanli.me/blog/2020/working-with-strings-in-rust/)
+- [Working with strings in Rust](https://fasterthanli.me/articles/working-with-strings-in-rust)
   \- In-depth article on Rust strings, and their ins and outs, with comparison to C.
 - [Wrapper Types in Rust: Choosing Your Guarantees](https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/)
   \- Overview of pointer, reference, cell and synchronous wrapper types.
@@ -1006,9 +1013,9 @@ Evangelism:
   \- Author's personal
 - [Why Rust](https://christine.website/blog/why-rust-2020-02-15)
   \- Compares Rust to Go in a few aspects.
-- [Why Rust for safe systems programming](https://msrc-blog.microsoft.com/2019/07/22/why-rust-for-safe-systems-programming/)
+- [Why Rust for safe systems programming](https://www.microsoft.com/en-us/msrc/blog/2019/07/why-rust-for-safe-systems-programming/)
   \- Reasons for Rust from Microsoft.
-  - Follow up to [We need a safer systems programming language](https://msrc-blog.microsoft.com/2019/07/18/we-need-a-safer-systems-programming-language/)
+  - Follow up to [We need a safer systems programming language](https://www.microsoft.com/en-us/msrc/blog/2019/07/we-need-a-safer-systems-programming-language/)
 
 ### Rust libraries
 
@@ -1068,8 +1075,8 @@ Less known, but very useful things in the standard library:
 - [Is It Time to Rewrite the Operating System in Rust?](https://www.infoq.com/presentations/os-rust)
 - [Mocking Time in Async Rust](https://www.ditto.live/blog/mocking-time-in-async-rust)
   \- A neat idea for mocking time in async tests.
-- [Optimizations That Aren't, Or Are They?](https://oribenshir.github.io/afternoon_rusting/blog/copy-on-write)
-  \- Copy on Write in Rust and C++.
+- [Optimizations That Aren't, Or Are They?](https://web.archive.org/web/20201111051443/https://oribenshir.github.io/afternoon_rusting/blog/copy-on-write)
+  \- Copy on Write in Rust and C++ (archived).
 - [Read Rust](https://readrust.net/) - A large collection of Rust related posts.
 - [Rust serialization: What's ready for production today?](https://blog.logrocket.com/rust-serialization-whats-ready-for-production-today/)
   \- A quick overview and benchmark of Rust serialization crates.  Published 2020-08-28.
